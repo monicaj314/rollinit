@@ -1,3 +1,7 @@
+
+
+
+
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -19,7 +23,7 @@ var db = mongoose.connection;
 //var Tournament = require("./models/Tournament.js");
 
 //var routes = require('./routes/index.js');
-//var users = require('./routes/users');
+var users = require('./routes/users');
 
 // var request = require('request');
 
@@ -59,6 +63,7 @@ app.use(session({
     resave: true
 }));
 
+// Passport Init
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -92,9 +97,8 @@ app.use(function(req, res, next){
 });
 
 
-// app.use('/', routes);
-//app.use('/users', users);
-
+//app.use('/', routes);
+app.use('/users', users);
 require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
@@ -103,7 +107,7 @@ require("./routes/html-routes.js")(app);
 // ---------  define local MongoDB URI ----------
 
 
-var localMongo = "mongodb://localhost/DDrepo"
+var localMongo = "mongoose.connect('mongodb://localhost/rollinit')";
 //var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds125481.mlab.com:25481/heroku_0p3792pt"
 
 if (process.env.MONGODB_URI){
@@ -130,8 +134,8 @@ if (process.env.MONGODB_URI){
 // });
 
 
-
-var PORT = process.env.PORT || 8888;
+// Set Port
+var PORT = process.env.PORT || 8880;
 // Listener
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);

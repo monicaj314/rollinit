@@ -23,17 +23,17 @@ module.exports = function (app) {
      res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
    });
 
-//   app.get("/gameMLQ", function(req, res){
-//     res.sendFile(path.join(__dirname + "./../public/html/gameMLQ.html"))
-//   });
+   app.get("/login", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/login.html"))
+   });
 
-//   app.get("/login", function(req, res){
-//     res.sendFile(path.join(__dirname + "./../public/html/login.html"))
-//   });
+   app.get("/register", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/register.html"))
+   });
 
-//   app.get("/tournaments", function(req, res){
-//     res.sendFile(path.join(__dirname + "./../public/html/tournaments.html"))
-//   });
+   app.get("/logout", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/logout.html"))
+   });
 
 
 };
