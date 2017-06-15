@@ -96,7 +96,8 @@ app.use(function(req, res, next){
     next();
 });
 
-
+//var routes = require('./routes/index.js');
+var users = require('./routes/users');
 //app.use('/', routes);
 app.use('/users', users);
 require("./routes/html-routes.js")(app);
@@ -110,13 +111,13 @@ require("./routes/html-routes.js")(app);
 var localMongo = "mongoose.connect('mongodb://localhost/rollinit')";
 //var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds125481.mlab.com:25481/heroku_0p3792pt"
 
-if (process.env.MONGODB_URI){
+//if (process.env.MONGODB_URI){
     // this executes if this is being executed in heroku app
-    mongoose.connect(process.env.MONGODB_URI);
-} else {
+    //mongoose.connect(process.env.MONGODB_URI);
+//} else {
     // this ececutes if this is being executed on local machine
     mongoose.connect(localMongo);
-}
+//}
 
 
 // // =========  End databse configuration  ================

@@ -122,6 +122,10 @@ router.post('/login',
   function(req, res) {
     console.log("router.post/login")
     res.redirect('/');
+    // localStorage.setItem('currentUser', req.user.username);
+    // console.log("localStorage username");
+    // var currentUser = localStorage.getItem('currentUser');
+    // console.log(currentUser);
   });
 
 router.get('/logout', function(req, res){
