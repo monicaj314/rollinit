@@ -1,6 +1,8 @@
 
 
 
+var currentUser = {};
+
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
@@ -116,16 +118,16 @@ passport.deserializeUser(function(id, done) {
 
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect: '/', failureRedirect: '/login' 
-    // ,failureFlash: true
-}),
+  passport.authenticate('local', {successRedirect: '/', failureRedirect: '/login',failureFlash: true}),
   function(req, res) {
-    console.log("router.post/login")
-    res.redirect('/');
+    // console.log("router.post/login")
+    
     // localStorage.setItem('currentUser', req.user.username);
-    // console.log("localStorage username");
     // var currentUser = localStorage.getItem('currentUser');
+    // console.log("localStorage username");
     // console.log(currentUser);
+
+    res.redirect('/');
   });
 
 router.get('/logout', function(req, res){
