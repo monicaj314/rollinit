@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>D_D Char</title>
+
+    <!-- JQuery Link -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Home JavaScript -->
+	 <script type="text/javascript" src="../js/char.js" ></script>
+	
+	<!-- Reset CSS Link -->
+	<link rel="stylesheet" type="text/css" href="../css/reset.css"> 
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Font Link -->
+   	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
+
+    <!-- Local CSS Link -->
+    <link rel="stylesheet" type="text/css" href="../css/char.css">
+
+	<!-- Firebase Link -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
+</head>
+
+ <body>
+	<div class="header">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      	<a class="navbar-brand" href="index.html">
+			    	<h2>P &amp; N</h2>
+			    </a>
+		    </div>
+		      <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/login">Log-In</a></li>
+                    <li class="nav-tab"><a class="nav-anc" href="/register">Register</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/logout">Log-Out</a></li>
+							
+		        <!--<li class="nav-tab"><a class="nav-anc" href="about.html">About Us</a></li>
+		        <li class="nav-tab"><a class="nav-anc" href="contact.html">Contact Us</a></li>-->
+		      </ul>
+		  </div>
+		</nav>
+	</div>
+
+<div class="container register-container" id="register-container">
+    <h2 class="page-header"> Register </h2>
+            <!--<div class="alert alert-danger"> 
+            </div>-->
+    <form method="post" action="/users/register">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="Name" name="name">
+        </div>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" placeholder="Username" name="username">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" placeholder="Email" name="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="password">
+        </div>
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="password2">
+        </div>
+        <!--<div class="form-group">
+            <label>Dungeon Master Status (can be adjusted later)</label>
+            <select class="form-control" name"dm">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>-->
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+</div>
+      
+
+      <footer class="footer">
+        <p>© 2016 Paden Quid App, Inc.</p>
+      </footer>
+
+
+
+</body>
+
+</html>
