@@ -53,6 +53,7 @@ router.post('/register', function(req,res){
             email: email, 
             username: username,
             password: password,
+            profile: {}
             // dm: dm
         });
 

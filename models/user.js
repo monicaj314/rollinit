@@ -21,7 +21,10 @@ var UserSchema = mongoose.Schema({
     },
     name: {
         type: String,
-    // },
+    },
+    profile: {
+        type: Object,
+    //},
     // dm: {
     //     type: Boolean,
     }
