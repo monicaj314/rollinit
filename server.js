@@ -14,26 +14,16 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost/quidapp');
 var db = mongoose.connection;
 
 
-//var logger = require("morgan");
-//var Player = require("./models/Player.js");
-//var Tournament = require("./models/Tournament.js");
 
-//var routes = require('./routes/index.js');
 var users = require('./routes/users');
+var characters = require('./routes/characters');
 
-// var request = require('request');
 
 // Initialize Express
 var app = express();
-
-// view engine for HANDLEBARS
-// app.set('views', path.join(__dirname, 'views'));
-// app.engine('handlebars', exphbs({defaultLayout: 'layout'}));
-// app.set('view engine', 'handlebars');
 
 
 // BodyParser and Middleware 
@@ -44,13 +34,6 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 
 
-// ============== This is if you use Morgan ================
-// // Use morgan and body parser with our app
-// //app.use(logger("dev"));
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({
-//   extended: false
-// }));
 
 // Make public a static dir
 app.use(express.static(path.join(__dirname, 'assets')));
@@ -96,18 +79,17 @@ app.use(function(req, res, next){
     next();
 });
 
-//var routes = require('./routes/index.js');
+
 var users = require('./routes/users');
-//app.use('/', routes);
+var characters = require('./routes/characters');
+app.use('/characters', characters);
 app.use('/users', users);
 require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
 
+
 // =========  Database configuration with mongoose ===============
-// ---------  define local MongoDB URI ----------
-
-
 var localMongo = "mongoose.connect('mongodb://localhost/rollinit')";
 //var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds125481.mlab.com:25481/heroku_0p3792pt"
 
@@ -120,19 +102,6 @@ var localMongo = "mongoose.connect('mongodb://localhost/rollinit')";
 //}
 
 
-// // =========  End databse configuration  ================
-
-// var db = mongoose.connection;
-
-// // Show any mongoose errors
-// db.on("error", function(error) {
-//   console.log("Mongoose Error: ", error);
-// });
-
-// // Once logged in to the db through mongoose, log a success message
-// db.once("open", function() {
-//   console.log("Mongoose connection successful.");
-// });
 
 
 // Set Port

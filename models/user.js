@@ -24,10 +24,17 @@ var UserSchema = mongoose.Schema({
     },
     profile: {
         type: Object,
+    },
+    characters: [
+        {
+            type: Object,
+            ref: "Character"
+        }
+    ]
+
     //},
     // dm: {
     //     type: Boolean,
-    }
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);

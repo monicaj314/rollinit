@@ -28,7 +28,14 @@ module.exports = function (app) {
   });
 
    app.get("/char", function(req, res){
-     res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
+     if(req.user){
+        console.log("yes user")
+        console.log(req.user)
+        res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
+      } else {
+        console.log("no user")
+        res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
+      }
    });
 
    app.get("/login", function(req, res){
@@ -41,6 +48,10 @@ module.exports = function (app) {
 
    app.get("/logout", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/logout.html"))
+   });
+
+   app.get("/profile", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/profile.html"))
    });
 
 
