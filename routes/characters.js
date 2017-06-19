@@ -5,18 +5,38 @@ var currentUser = {};
 
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
+var bcrypt = require('bcryptjs');
+
+mongoose.connect('mongodb://localhost/rollinit');
+var db = mongoose.connection;
 
 var Character = require('../models/character');
 var User = require('../models/user');
 
 
+router.get('/all', function (req, res) {
+    //UserModel.findOne({_id: id}, function (err, user) { ... });
+    User.find({}).populate("characters")
+    .exec(function (error, doc) {
+        // Send any errors to the browser
+        if (error) {
+            res.send(error);
+        }
+        // Or send the doc to the articles in handlebars
+        else {
+            res.send(doc);
+        }
+    })
+});
+    
 
 
 // Add Character
 router.post('/add', function(req,res){
     console.log('req.user');
     console.log(req.user);
-    var userID = req.user.id;
+    var userID = req.user._id;
     console.log("userID1");
     console.log(userID);
     var name = req.body.name;
@@ -59,7 +79,7 @@ router.post('/add', function(req,res){
             else {
                 console.log("userID2");
                 console.log(userID);
-                User.findOneAndUpdate({ "_id": userID }, {$push: {"character": character._id}})
+                User.findOneAndUpdate({ "_id": userID }, {$push: {"characters": character}})
                 // Execute the above query
                 .exec(function(err, doc) {
                     if (err) {

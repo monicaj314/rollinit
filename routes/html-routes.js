@@ -5,6 +5,14 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var mongoose = require('mongoose');
+var bcrypt = require('bcryptjs');
+
+mongoose.connect('mongodb://localhost/rollinit');
+var db = mongoose.connection;
+
+var Character = require('../models/character');
+var User = require('../models/user');
 
 // Routes
 // =============================================================
@@ -29,9 +37,18 @@ module.exports = function (app) {
 
    app.get("/char", function(req, res){
      if(req.user){
-        console.log("yes user")
-        console.log(req.user)
-        res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
+        // console.log("yes user")
+        // console.log(req.user)
+        User.find({}).populate("characters")
+          .exec(function (error, doc) {
+            if (error) {
+              res.send(error);
+            } else {
+              console.log("doc")
+              console.log(doc)
+              res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
+          }
+        })
       } else {
         console.log("no user")
         res.sendFile(path.join(__dirname + "./../assets/html/char.html"))

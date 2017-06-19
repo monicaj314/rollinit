@@ -8,7 +8,7 @@
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	<!-- Home JavaScript -->
-	 <!--<script type="text/javascript" src="../js/char.js" ></script>-->
+	 <script type="text/javascript" src="../js/char-func.js" ></script>
 	
 	<!-- Reset CSS Link -->
 	<link rel="stylesheet" type="text/css" href="../css/reset.css"> 
@@ -48,35 +48,41 @@
 		</nav>
 	</div>
 
+	<div class="current-char-all">
+		<h2> Current Characters: </h2>
+		<div class="current-char" id="current-char">
+			<h4>Looks like you currently have no characters.</h4>
+		</div>
+	</div>
 
-<div class="container register-container" id="register-container">
-    <h2 class="page-header"> Character Creator </h2>
-            <!--<div class="alert alert-danger"> 
-            </div>-->
-    <form method="post" action="/characters/add">
-        <div class="form-group">
-            <label>Name</label>
-            <input type="text" class="form-control" placeholder="Georbush Algor" name="name">
-        </div>
-        <div class="form-group">
-            <label>Age</label>
-            <input type="number" class="form-control" placeholder="42" name="age">
-        </div>
-        <div class="form-group">
-            <label>Gender</label>
-            <input type="text" class="form-control" placeholder="Male" name="gender">
-        </div>
-        <div class="form-group">
-            <label>Race</label>
-            <input type="text" class="form-control" placeholder="Human" name="race">
-        </div>
-        <div class="form-group">
-            <label>Level</label>
-            <input type="number" class="form-control" placeholder="1" name="level">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-</div>
+	<div class="container register-container" id="register-container">
+		<h2 class="page-header"> Character Creator </h2>
+				<!--<div class="alert alert-danger"> 
+				</div>-->
+		<form method="post" action="/characters/add">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" class="form-control" placeholder="Georbush Algor" name="name">
+			</div>
+			<div class="form-group">
+				<label>Age</label>
+				<input type="number" class="form-control" placeholder="42" name="age">
+			</div>
+			<div class="form-group">
+				<label>Gender</label>
+				<input type="text" class="form-control" placeholder="Male" name="gender">
+			</div>
+			<div class="form-group">
+				<label>Race</label>
+				<input type="text" class="form-control" placeholder="Human" name="race">
+			</div>
+			<div class="form-group">
+				<label>Level</label>
+				<input type="number" class="form-control" placeholder="1" name="level">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
 
 
 	<div class="outter-footer">

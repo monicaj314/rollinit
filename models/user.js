@@ -4,6 +4,7 @@
 
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+var Schema = mongoose.Schema;
 
   mongoose.connect('mongodb://localhost/rollinit');
   var db = mongoose.connection;
@@ -27,7 +28,7 @@ var UserSchema = mongoose.Schema({
     },
     characters: [
         {
-            type: Object,
+            type: Schema.Types.ObjectId,
             ref: "Character"
         }
     ]
