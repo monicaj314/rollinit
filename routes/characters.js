@@ -7,6 +7,7 @@ var express = require('express');
 var router = express.Router();
 
 var Character = require('../models/character');
+var User = require('../models/user');
 
 
 
@@ -15,6 +16,9 @@ var Character = require('../models/character');
 router.post('/add', function(req,res){
     console.log('req.user');
     console.log(req.user);
+    var userID = req.user.id;
+    console.log("userID1");
+    console.log(userID);
     var name = req.body.name;
     var age = req.body.age;
     var gender = req.body.gender;
@@ -31,9 +35,6 @@ router.post('/add', function(req,res){
 
     var errors = req.validationErrors();
     if(errors){
-        // res.render('register',{
-        //     errors:errors
-        // });
         console.log('yes errors')
         console.log(errors);
         for (i=0; i < errors.length; i++){
@@ -49,29 +50,27 @@ router.post('/add', function(req,res){
         });
 
         Character.createCharacter(newCharacter, function(err, character){
-            if(err) throw err;
+            console.log("character");
             console.log(character);
-            // if (error) {
-            //     console.log(error);
-            //     }
-            //     // Otherwise
-            // else {
-            //     // Use the article id to find and update it's note
-            //     User.findOneAndUpdate({ "_id": req.params.id }, {$push: {"character": doc._id }})
-
-            //     // Execute the above query
-            //     .exec(function(err, doc) {
-            //         // Log any errors
-            //         if (err) {
-            //         console.log(err);
-            //         }
-            //         else {
-            //         // Or send the document to the browser
-            //         res.send(doc);
-            //         res.redirect('/char');
-            //         }
-            //     });
-            // }
+            if (err) {
+                console.log(err);
+                }
+                // Otherwise
+            else {
+                console.log("userID2");
+                console.log(userID);
+                User.findOneAndUpdate({ "_id": userID }, {$push: {"character": character._id}})
+                // Execute the above query
+                .exec(function(err, doc) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    else {
+                        //res.send(doc);
+                        //res.redirect('/char');
+                    }
+                });
+            }
         });
 
         //req.flash('success_msg', "You are registered and can now log-in");

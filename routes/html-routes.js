@@ -46,9 +46,9 @@ module.exports = function (app) {
      res.sendFile(path.join(__dirname + "./../assets/html/register.html"))
    });
 
-   app.get("/logout", function(req, res){
-     res.sendFile(path.join(__dirname + "./../assets/html/logout.html"))
-   });
+  //  app.get("/logout", function(req, res){
+  //    res.sendFile(path.join(__dirname + "./../assets/html/logout.html"))
+  //  });
 
    app.get("/profile", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/profile.html"))
