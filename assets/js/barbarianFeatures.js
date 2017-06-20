@@ -1,12 +1,12 @@
-[
-  {
+
+
+[{
     _id: "barbarianLevel1",
     level: 1,
     ability_score_bonuses: 0,
     prof_bonus: 2,
     feature_choices: [],
-    features: [
-      {
+    features: [{
         url: "http://www.rollinit.com/charcreator/features/1",
         name: "Rage",
         desc: [
@@ -35,7 +35,7 @@
     index: 1,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/1"
   },
@@ -45,8 +45,7 @@
     ability_score_bonuses: 0,
     prof_bonus: 2,
     feature_choices: [],
-    features: [
-      {
+    features: [{
         url: "http://www.rollinit.com/charcreator/features/3",
         name: "Reckless Attack",
         desc: [
@@ -69,7 +68,7 @@
     index: 2,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/2"
   },
@@ -79,8 +78,7 @@
     ability_score_bonuses: 0,
     prof_bonus: 2,
     feature_choices: [],
-    features: [
-      {
+    features: [{
         url: "http://www.rollinit.com/charcreator/features/5",
         name: "Primal Path",
         desc: [
@@ -103,7 +101,7 @@
     index: 3,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     subclass: {
       url: "http://www.rollinit.com/charcreator/subclasses/1",
@@ -129,15 +127,13 @@
     ability_score_bonuses: 1,
     prof_bonus: 2,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/7",
-        name: "Ability Score Improvement 1",
-        desc: [
-          "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/7",
+      name: "Ability Score Improvement 1",
+      desc: [
+        "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+      ]
+    }],
     class_specific: {
       rage_count: 3,
       rage_damage_bonus: 2,
@@ -146,7 +142,7 @@
     index: 4,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/4"
   },
@@ -156,8 +152,7 @@
     ability_score_bonuses: 1,
     prof_bonus: 3,
     feature_choices: [],
-    features: [
-      {
+    features: [{
         url: "http://www.rollinit.com/charcreator/features/8",
         name: "Extra Attack",
         desc: [
@@ -180,7 +175,7 @@
     index: 5,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/5"
   },
@@ -190,15 +185,13 @@
     ability_score_bonuses: 1,
     prof_bonus: 3,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/10",
-        name: "Mindless Rage",
-        desc: [
-          "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/10",
+      name: "Mindless Rage",
+      desc: [
+        "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage."
+      ]
+    }],
     class_specific: {
       rage_count: 4,
       rage_damage_bonus: 2,
@@ -207,7 +200,7 @@
     index: 6,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/6"
   },
@@ -217,16 +210,14 @@
     ability_score_bonuses: 1,
     prof_bonus: 3,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/11",
-        name: "Feral Instinct",
-        desc: [
-          "By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
-          "Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/11",
+      name: "Feral Instinct",
+      desc: [
+        "By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
+        "Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
+      ]
+    }],
     class_specific: {
       rage_count: 4,
       rage_damage_bonus: 2,
@@ -235,7 +226,7 @@
     index: 7,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/7"
   },
@@ -245,15 +236,13 @@
     ability_score_bonuses: 2,
     prof_bonus: 3,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/12",
-        name: "Ability Score Improvement 2",
-        desc: [
-          "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/12",
+      name: "Ability Score Improvement 2",
+      desc: [
+        "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+      ]
+    }],
     class_specific: {
       rage_count: 4,
       rage_damage_bonus: 2,
@@ -262,7 +251,7 @@
     index: 8,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/8"
   },
@@ -272,15 +261,13 @@
     ability_score_bonuses: 2,
     prof_bonus: 4,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/13",
-        name: "Brutal Critical",
-        desc: [
-          "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/13",
+      name: "Brutal Critical",
+      desc: [
+        "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
+      ]
+    }],
     class_specific: {
       rage_count: 4,
       rage_damage_bonus: 3,
@@ -289,7 +276,7 @@
     index: 9,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/9"
   },
@@ -299,16 +286,14 @@
     ability_score_bonuses: 2,
     prof_bonus: 4,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/14",
-        name: "Intimidating Presence",
-        desc: [
-          "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
-          " If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/14",
+      name: "Intimidating Presence",
+      desc: [
+        "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
+        " If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
+      ]
+    }],
     class_specific: {
       rage_count: 4,
       rage_damage_bonus: 3,
@@ -317,7 +302,7 @@
     index: 10,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/10"
   },
@@ -327,16 +312,14 @@
     ability_score_bonuses: 2,
     prof_bonus: 4,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/15",
-        name: "Relentless Rage",
-        desc: [
-          "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
-          "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/15",
+      name: "Relentless Rage",
+      desc: [
+        "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
+        "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
+      ]
+    }],
     class_specific: {
       rage_count: 4,
       rage_damage_bonus: 3,
@@ -345,7 +328,7 @@
     index: 11,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/11"
   },
@@ -355,15 +338,13 @@
     ability_score_bonuses: 3,
     prof_bonus: 4,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/16",
-        name: "Ability Score Improvement 3",
-        desc: [
-          "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/16",
+      name: "Ability Score Improvement 3",
+      desc: [
+        "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+      ]
+    }],
     class_specific: {
       rage_count: 5,
       rage_damage_bonus: 3,
@@ -372,7 +353,7 @@
     index: 12,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/12"
   },
@@ -382,15 +363,13 @@
     ability_score_bonuses: 3,
     prof_bonus: 5,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/17",
-        name: "Brutal Critical (2 dice)",
-        desc: [
-          "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/17",
+      name: "Brutal Critical (2 dice)",
+      desc: [
+        "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
+      ]
+    }],
     class_specific: {
       rage_count: 5,
       rage_damage_bonus: 3,
@@ -399,7 +378,7 @@
     index: 13,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/13"
   },
@@ -409,15 +388,13 @@
     ability_score_bonuses: 3,
     prof_bonus: 5,
     feature_choices: [],
-    features: [
-      {
-        name: "Retaliation",
-        url: "http://www.dnd5eapi.co/api/features/18",
-        desc: [
-          "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon Attack against that creature."
-        ]
-      }
-    ],
+    features: [{
+      name: "Retaliation",
+      url: "http://www.dnd5eapi.co/api/features/18",
+      desc: [
+        "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon Attack against that creature."
+      ]
+    }],
     class_specific: {
       rage_count: 5,
       rage_damage_bonus: 3,
@@ -426,7 +403,7 @@
     index: 14,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/14"
   },
@@ -436,15 +413,13 @@
     ability_score_bonuses: 3,
     prof_bonus: 5,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/19",
-        name: "Persistent Rage",
-        desc: [
-          "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/19",
+      name: "Persistent Rage",
+      desc: [
+        "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."
+      ]
+    }],
     class_specific: {
       rage_count: 5,
       rage_damage_bonus: 3,
@@ -453,7 +428,7 @@
     index: 15,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/15"
   },
@@ -463,15 +438,13 @@
     ability_score_bonuses: 4,
     prof_bonus: 5,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/20",
-        name: "Ability Score Improvement 4",
-        desc: [
-          "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/20",
+      name: "Ability Score Improvement 4",
+      desc: [
+        "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+      ]
+    }],
     class_specific: {
       rage_count: 5,
       rage_damage_bonus: 4,
@@ -480,7 +453,7 @@
     index: 16,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/16"
   },
@@ -490,15 +463,13 @@
     ability_score_bonuses: 4,
     prof_bonus: 6,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/21",
-        name: "Brutal Critical (3 dice)",
-        desc: [
-          "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/21",
+      name: "Brutal Critical (3 dice)",
+      desc: [
+        "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level."
+      ]
+    }],
     class_specific: {
       rage_count: 6,
       rage_damage_bonus: 4,
@@ -507,7 +478,7 @@
     index: 17,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/17"
   },
@@ -517,15 +488,13 @@
     ability_score_bonuses: 4,
     prof_bonus: 6,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/22",
-        name: "Indomitable Might",
-        desc: [
-          "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/22",
+      name: "Indomitable Might",
+      desc: [
+        "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
+      ]
+    }],
     class_specific: {
       rage_count: 6,
       rage_damage_bonus: 4,
@@ -534,7 +503,7 @@
     index: 18,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/18"
   },
@@ -544,15 +513,13 @@
     ability_score_bonuses: 5,
     prof_bonus: 6,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/23",
-        name: "Ability Score Improvement 5",
-        desc: [
-          "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/23",
+      name: "Ability Score Improvement 5",
+      desc: [
+        "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+      ]
+    }],
     class_specific: {
       rage_count: 6,
       rage_damage_bonus: 4,
@@ -561,7 +528,7 @@
     index: 19,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/19"
   },
@@ -571,15 +538,13 @@
     ability_score_bonuses: 5,
     prof_bonus: 6,
     feature_choices: [],
-    features: [
-      {
-        url: "http://www.rollinit.com/charcreator/features/24",
-        name: "Fast Movement",
-        desc: [
-          "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
-        ]
-      }
-    ],
+    features: [{
+      url: "http://www.rollinit.com/charcreator/features/24",
+      name: "Fast Movement",
+      desc: [
+        "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
+      ]
+    }],
     class_specific: {
       rage_count: 9999,
       rage_damage_bonus: 4,
@@ -588,7 +553,7 @@
     index: 20,
     class: {
       name: "Barbarian",
-      url: "http://www.rollinit.com/charcreator/classes/barbarian"
+        url: "http://www.rollinit.com/charcreator/classes/barbarian"
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/20"
   }
