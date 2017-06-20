@@ -16,8 +16,9 @@ var User = require('../models/user');
 
 
 router.get('/all', function (req, res) {
-    //UserModel.findOne({_id: id}, function (err, user) { ... });
-    User.find({}).populate("characters")
+    console.log("req.user")
+    console.log(req.user)
+    User.findOne({_id: req.user._id}).populate("characters")
     .exec(function (error, doc) {
         // Send any errors to the browser
         if (error) {
@@ -97,6 +98,16 @@ router.post('/add', function(req,res){
 
         res.redirect('/char');
     }
+});
+
+router.get("/delete/:id", function(req, res) {
+  Character.findByIdAndRemove(req.params.id, function (err, doc){
+    if(err) { 
+      throw err; 
+    } else {
+      res.redirect('/char');
+    };
+  });
 });
 
 

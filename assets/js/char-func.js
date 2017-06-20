@@ -1,14 +1,30 @@
 
 
 $(document).ready(function() {
-    console.log( "ready!" );
 
     console.log("/characters/all activiated")
     $.getJSON("/characters/all", function(req, res) {
-        console.log("req");
-        console.log(req);
-        console.log("res");
-        console.log(res);
+        if(req.characters.length>0){
+            // console.log("req.characters");
+            // console.log(req.characters);
+            $("#current-char").empty();
+            var charArray = req.characters;
+            for (var i = 0; i< charArray.length; i++){
+                $("#current-char").append("<div data-id='" + charArray[i]._id + "'>" 
+                + "<h4 class='char-name'>Name: " + charArray[i].name + "</h4>" 
+                + "<h5 class='char-level'>Level: " + charArray[i].level + "</h5>"
+                + "<h5 class='char-age char-age" + charArray[i]._id +" hide'>Age: " + charArray[i].age + "</h5>"
+                + "<h5 class='char-gender char-gender" + charArray[i]._id +" hide'>Gender: " + charArray[i].gender + "</h5>"
+                + "<h5 class='char-race char-race" + charArray[i]._id +" hide'>Race: " + charArray[i].race + "</h5>"
+                +"<button data-id='" + charArray[i]._id + "' class='expand-char expand-char" + charArray[i]._id +"'>Expand</button> "
+                +"<button data-id='" + charArray[i]._id + "' class='close-char close-char" + charArray[i]._id +" hide'>Close</button> "
+                +"<button data-id='" + charArray[i]._id + "' class='delete-char'>Delete</button>"
+                + "</div>");
+                console.log(i);
+                console.log("charArray[i]");
+                console.log(charArray[i]);
+            }
+        }
     });
     // $.getJSON("/scrape", function(data) {
     //     // For each one
@@ -22,7 +38,31 @@ $(document).ready(function() {
     // });
 });
 
-$(document).on("click", ".deletecomment", function() {
+$(document).on("click", ".expand-char", function() {
+    console.log("expanded clicked")
+    var thisId = $(this).attr("data-id");
+    console.log("thisId");
+    console.log(thisId);
+    $(".char-age"+thisId).removeClass("hide");
+    $(".char-race"+thisId).removeClass("hide");
+    $(".char-gender"+thisId).removeClass("hide");
+    $(".close-char"+thisId).removeClass("hide");
+    $(".expand-char"+thisId).addClass("hide");
+});
+
+$(document).on("click", ".close-char", function() {
+    console.log("close clicked")
+    var thisId = $(this).attr("data-id");
+    console.log("thisId");
+    console.log(thisId);
+    $(".char-age"+thisId).addClass("hide");
+    $(".char-race"+thisId).addClass("hide");
+    $(".char-gender"+thisId).addClass("hide");
+    $(".close-char"+thisId).addClass("hide");
+    $(".expand-char"+thisId).removeClass("hide");
+});
+
+$(document).on("click", ".delete-char", function() {
   // Grab the id associated with the article from the submit button
   
   var thisId = $(this).attr("data-id");
@@ -30,7 +70,7 @@ $(document).on("click", ".deletecomment", function() {
   console.log(thisId);
   $.ajax({
     method: "GET",
-    url: "/deletecomment/" + thisId
+    url: "/characters/delete/" + thisId
   })
     // With that done, add the comment information to the page
     .done(function(data) {
