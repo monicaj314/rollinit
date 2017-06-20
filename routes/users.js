@@ -53,6 +53,7 @@ router.post('/register', function(req,res){
             email: email, 
             username: username,
             password: password,
+            profile: {}
             // dm: dm
         });
 
@@ -131,6 +132,7 @@ router.post('/login',
   });
 
 router.get('/logout', function(req, res){
+    console.log("/users/logout has been clicked")
     req.logout();
     req.flash('success_msg', 'You are logged out. Come again soon!')
     res.redirect('/login');

@@ -4,6 +4,7 @@
 
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+var Schema = mongoose.Schema;
 
   mongoose.connect('mongodb://localhost/rollinit');
   var db = mongoose.connection;
@@ -21,10 +22,20 @@ var UserSchema = mongoose.Schema({
     },
     name: {
         type: String,
-    // },
+    },
+    profile: {
+        type: Object,
+    },
+    characters: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Character"
+        }
+    ]
+
+    //},
     // dm: {
     //     type: Boolean,
-    }
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);
