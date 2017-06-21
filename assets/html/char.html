@@ -2,13 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>D_D Char</title>
+	<title>Roll Init</title>
 
     <!-- JQuery Link -->
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	<!-- Home JavaScript -->
-	 <script type="text/javascript" src="../js/char.js" ></script>
+	 <script type="text/javascript" src="../js/char-func.js" ></script>
 	
 	<!-- Reset CSS Link -->
 	<link rel="stylesheet" type="text/css" href="../css/reset.css"> 
@@ -20,6 +20,7 @@
    	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
 
     <!-- Local CSS Link -->
+	<link rel="stylesheet" type="text/css" href="../css/all.css">
     <link rel="stylesheet" type="text/css" href="../css/char.css">
 
 	<!-- Firebase Link -->
@@ -28,25 +29,89 @@
 </head>
 
  <body>
-	<div class="header">
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      	<a class="navbar-brand" href="index.html">
-			    	<h2>P &amp; N</h2>
-			    </a>
-		    </div>
-		      <ul class="nav navbar-nav navbar-right">
-                <li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
-		      	<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
-		        
-		        <!--<li class="nav-tab"><a class="nav-anc" href="about.html">About Us</a></li>
-		        <li class="nav-tab"><a class="nav-anc" href="contact.html">Contact Us</a></li>-->
-		      </ul>
-		  </div>
+	<div class="header">	
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<h2>R I</h2>
+					</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/login">Log-In</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/register">Register</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/users/logout">Log-Out</a></li>
+				</ul>
+			</div>
 		</nav>
 	</div>
 
+	<div class="current-char-all">
+		<h2> Current Characters: </h2>
+		<div class="current-char" id="current-char">
+			<h4>Looks like you currently have no characters.</h4>
+		</div>
+	</div>
+
+	<div class="container register-container" id="register-container">
+		<h2 class="page-header"> Character Creator </h2>
+				<!--<div class="alert alert-danger"> 
+				</div>-->
+		<form method="post" action="/characters/add">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" class="form-control" placeholder="Georbush Algor" name="name">
+			</div>
+			<div class="form-group">
+				<label>Age</label>
+				<input type="number" class="form-control" placeholder="42" name="age">
+			</div>
+			<div class="form-group">
+				<label>Gender</label>
+				<input type="text" class="form-control" placeholder="Male" name="gender">
+			</div>
+			<div class="form-group">
+				<label>Race</label>
+				<input type="text" class="form-control" placeholder="Human" name="race">
+			</div>
+			<div class="form-group">
+				<label>Level</label>
+				<input type="number" class="form-control" placeholder="1" name="level">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+
+
+	<div class="outter-footer">
+		<div class="footer row">
+			<div class="col-md-12" id="footer-text">
+				<div class="row footer-center-row">
+					<div class="footer-textbox">
+						<p class="footer-text footer-name">Roll Init</p>
+						<p class="footer-text footer-info">Git Hub Location: https://github.com/monicaj314/rollinit</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+</body>
+
+</html> 
+
+
+<!--===========================================================-->
+<!--Original Character Creater-->
+<!--===========================================================-->
+
+
+
+<!--
 	<div class="container">
 		<div class="row">
 			<div class="welcome">
@@ -177,9 +242,6 @@
 									</select>
 								</div>
 
-								<!-- <div class="create-row">
-									Need to add Specialty
-								</div> -->
 
 								<div class="create-row">
 									<label class="char-label" id="char-level-label">Level:</label>
@@ -241,23 +303,4 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="outter-footer">
-		<div class="footer row">
-			<div class="col-md-12" id="footer-text">
-				<div class="row footer-center-row">
-					<div class="footer-textbox">
-						<p class="footer-text footer-name">Pace &amp; Nash</p>
-						<p class="footer-text footer-info">Git Hub Location</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-
-
-</body>
-
-</html> 
+	</div>-->
