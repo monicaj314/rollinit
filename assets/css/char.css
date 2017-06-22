@@ -11,10 +11,6 @@
 	background-color: #f1dea3;
 }
 
-p.footer-text.footer-name {
-    margin: 10px 0 10px 50px;
-}
-
 input.form-control, select.form-control {
 	width: 500px !IMPORTANT;
 	display: inline-block;
