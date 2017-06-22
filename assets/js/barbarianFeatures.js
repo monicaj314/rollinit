@@ -1,5 +1,5 @@
-[{
-    _id: "barbarianLevel1",
+[
+  { _id: "barbarianLevel1",
     level: 1,
     ability_score_bonuses: 0,
     prof_bonus: 2,
@@ -37,8 +37,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/1"
   },
-  {
-    _id: "barbarianLevel2",
+  { _id: "barbarianLevel2",
     level: 2,
     ability_score_bonuses: 0,
     prof_bonus: 2,
@@ -70,8 +69,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/2"
   },
-  {
-    _id: "barbarianLevel3",
+  { _id: "barbarianLevel3",
     level: 3,
     ability_score_bonuses: 0,
     prof_bonus: 2,
@@ -119,8 +117,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/3"
   },
-  {
-    _id: "barbarianLevel4",
+  { _id: "barbarianLevel4",
     level: 4,
     ability_score_bonuses: 1,
     prof_bonus: 2,
@@ -144,8 +141,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/4"
   },
-  {
-    _id: "barbarianLevel5",
+  { _id: "barbarianLevel5",
     level: 5,
     ability_score_bonuses: 1,
     prof_bonus: 3,
@@ -177,8 +173,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/5"
   },
-  {
-    _id: "barbarianLevel6",
+  { _id: "barbarianLevel6",
     level: 6,
     ability_score_bonuses: 1,
     prof_bonus: 3,
@@ -202,8 +197,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/6"
   },
-  {
-    _id: "barbarianLevel7",
+  { _id: "barbarianLevel7",
     level: 7,
     ability_score_bonuses: 1,
     prof_bonus: 3,
@@ -228,8 +222,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/7"
   },
-  {
-    _id: "barbarianLevel8",
+  { _id: "barbarianLevel8",
     level: 8,
     ability_score_bonuses: 2,
     prof_bonus: 3,
@@ -253,8 +246,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/8"
   },
-  {
-    _id: "barbarianLevel9",
+  { _id: "barbarianLevel9",
     level: 9,
     ability_score_bonuses: 2,
     prof_bonus: 4,
@@ -278,8 +270,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/9"
   },
-  {
-    _id: "barbarianLevel10",
+  { _id: "barbarianLevel10",
     level: 10,
     ability_score_bonuses: 2,
     prof_bonus: 4,
@@ -304,8 +295,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/10"
   },
-  {
-    _id: "barbarianLevel11",
+  { _id: "barbarianLevel11",
     level: 11,
     ability_score_bonuses: 2,
     prof_bonus: 4,
@@ -330,8 +320,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/11"
   },
-  {
-    _id: "barbarianLevel12",
+  { _id: "barbarianLevel12",
     level: 12,
     ability_score_bonuses: 3,
     prof_bonus: 4,
@@ -355,8 +344,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/12"
   },
-  {
-    _id: "barbarianLevel13",
+  { _id: "barbarianLevel13",
     level: 13,
     ability_score_bonuses: 3,
     prof_bonus: 5,
@@ -380,8 +368,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/13"
   },
-  {
-    _id: "barbarianLevel14",
+  { _id: "barbarianLevel14",
     level: 14,
     ability_score_bonuses: 3,
     prof_bonus: 5,
@@ -405,8 +392,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/14"
   },
-  {
-    _id: "barbarianLevel15",
+  { _id: "barbarianLevel15",
     level: 15,
     ability_score_bonuses: 3,
     prof_bonus: 5,
@@ -430,8 +416,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/15"
   },
-  {
-    _id: "barbarianLevel16",
+  { _id: "barbarianLevel16",
     level: 16,
     ability_score_bonuses: 4,
     prof_bonus: 5,
@@ -455,8 +440,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/16"
   },
-  {
-    _id: "barbarianLevel17",
+  { _id: "barbarianLevel17",
     level: 17,
     ability_score_bonuses: 4,
     prof_bonus: 6,
@@ -480,8 +464,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/17"
   },
-  {
-    _id: "barbarianLevel18",
+  { _id: "barbarianLevel18",
     level: 18,
     ability_score_bonuses: 4,
     prof_bonus: 6,
@@ -505,8 +488,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/18"
   },
-  {
-    _id: "barbarianLevel19",
+  { _id: "barbarianLevel19",
     level: 19,
     ability_score_bonuses: 5,
     prof_bonus: 6,
@@ -530,8 +512,7 @@
     },
     url: "http://www.rollinit.com/charcreator/classes/barbarian/level/19"
   },
-  {
-    _id: "barbarianLevel20",
+  { _id: "barbarianLevel20",
     level: 20,
     ability_score_bonuses: 5,
     prof_bonus: 6,
