@@ -1,0 +1,35 @@
+
+.navbar{
+    background-color: #2a3961;
+    border: 0px;
+    border-radius: 0px;
+}
+
+.navbar-brand{
+    padding: 0px 15px;
+    color: #fecc16;
+    border-right: solid 2px #ffffff;
+}
+
+.navbar-brand:hover{
+    background-color: #bb3636;
+    color: #fecc16;
+}
+
+.navbar-brand>h2{
+    margin: 10px;
+}
+
+.navbar-nav>.nav-tab{
+    border-left: solid 2px #ffffff;
+    color: #bb3636;
+}
+
+.navbar-nav>.nav-tab>a{
+    color: #fecc16;
+}
+
+.navbar-nav>.nav-tab>a:hover{
+    color: #fecc16;
+    background-color: #bb3636;
+}

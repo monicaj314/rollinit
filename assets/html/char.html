@@ -2,16 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>D_D Char</title>
-
+	<title>Roll Init</title>
     <!-- JQuery Link -->
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	<!-- Home JavaScript -->
-	 <script type="text/javascript" src="../js/char.js" ></script>
-	
+	 <script type="text/javascript" src="../js/char-func.js" ></script>
+
 	<!-- Reset CSS Link -->
-	<link rel="stylesheet" type="text/css" href="../css/reset.css"> 
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 
     <!-- Bootstrap Link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -20,6 +19,7 @@
    	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
 
     <!-- Local CSS Link -->
+	<link rel="stylesheet" type="text/css" href="../css/all.css">
     <link rel="stylesheet" type="text/css" href="../css/char.css">
 
 	<!-- Firebase Link -->
@@ -29,235 +29,96 @@
 
  <body>
 	<div class="header">
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      	<a class="navbar-brand" href="index.html">
-			    	<h2>P &amp; N</h2>
-			    </a>
-		    </div>
-		      <ul class="nav navbar-nav navbar-right">
-                <li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
-		      	<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
-		        
-		        <!--<li class="nav-tab"><a class="nav-anc" href="about.html">About Us</a></li>
-		        <li class="nav-tab"><a class="nav-anc" href="contact.html">Contact Us</a></li>-->
-		      </ul>
-		  </div>
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<h2>R I</h2>
+					</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/login">Log-In</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/register">Register</a></li>
+					<li class="nav-tab"><a class="nav-anc" href="/users/logout">Log-Out</a></li>
+				</ul>
+			</div>
 		</nav>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="welcome">
-				<h1>Character Creator</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-			<ul class="nav nav-tabs row">
-				<li role="presentation" class="active" id="list-new"><a class="option-tab" id="tab-new" data-toggle="tab">New Character</a></li>
-
-				<li role="presentation" class="" id="list-lib"><a class="option-tab" id="tab-lib" data-toggle="tab">Character Library</a></li>
-
-				<li role="presentation" class="" id="list-import"><a class="option-tab" id="tab-import" data-toggle="tab" >Import Character</a></li>
-
-			</ul>
-			<div class="tab-content row">
-				<div class="col-md-12 option-pane tab-pane fade in active" id="option-new">
-					<div class="row option-title">
-						<h3>Create New Character</h3>
-					</div>
-					<div class="row option-body">
-						<div class="panel-body">
-							<form class= id="new-char-form" enctype="text/plain" action="">
-
-								<div class="create-row">
-									<label class="char-label" id="char-name-label">Character Name:</label>
-									<input type="text" value="" name="char-name" placeholder="Marlor Dofwenson" class="char-input" id="char-name-input">
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="player-name-label">Player Name:</label>
-									<input type="text" value="" name="player-name" placeholder="John Smith" class="char-input" id="player-name-input">
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-gender-label">Gender:</label>
-									<select id="char-gender-input" class="char-gender-input form-control">
-										<option>Male</option>
-										<option>Female</option>
-										<option>Other</option>
-									</select>
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-age-label">Age:</label>
-									<input type="text" value="" name="char-age" placeholder="107" class="char-input" id="char-age-input">years
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-height-label">Height:</label>
-									<input type="text" value="" name="char-ht-ft" placeholder="5" class="char-input" id="char-ht-ft-input">ft.
-									<input type="text" value="" name="char-ht-in" placeholder="10" class="char-input" id="char-ht-in-input">in.
-								</div>
-								
-								<div class="create-row">
-									<label class="char-label" id="char-wt-label">Weight:</label>
-									<input type="text" value="" name="char-wt" placeholder="250" class="char-input" id="char-wt-input">lbs.
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-race-label">Race:</label>
-									<select id="char-race-input" class="char-input form-control">
-										<option>Dragonborn</option>
-										<option>Dwarf</option>
-										<option>Eladrin</option>
-										<option>Elf</option>
-										<option>Gnome</option>
-										<option>Half-elf</option>
-										<option>Half-Ord</option>
-										<option>Halfling</option>
-										<option>Human</option>
-										<option>Kenku</option>
-										<option>Tiefling</option>
-									</select>
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-algign-label">Alignment:</label>
-									<select id="char-align-input" class="char-input form-control">
-										<option>Lawful Good</option>
-										<option>Neutral Good</option>
-										<option>Chaotic Good</option>
-										<option>Lawful Neutral</option>
-										<option>Neutral Neutral</option>
-										<option>Chaotic Neutral</option>
-										<option>Lawful Evil</option>
-										<option>Neutral Evil</option>
-										<option>Chaotic Evil</option>
-									</select>
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-exp-label">Exp Points:</label>
-									<input type="text" value="" name="char-exp" placeholder="1" class="char-input" id="char-exp-input">
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-back-label">Background:</label>
-									<select id="char-back-input" class="char-input form-control">
-										<option>Acolyte</option>
-										<option>Charlatan</option>
-										<option>Criminal</option>
-										<option>Entertainer</option>
-										<option>Folk Hero</option>
-										<option>Guild Artisan</option>
-										<option>Hermit</option>
-										<option>Noble</option>
-										<option>Outlander</option>
-										<option>Sage</option>
-										<option>Sailor</option>
-										<option>Soldier</option>
-										<option>Urchin</option>
-									</select>
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-class-label">Class:</label>
-									<select id="char-class-input" class="char-input form-control">
-										<option>Barbarian</option>
-										<option>Bard</option>
-										<option>Druid</option>
-										<option>Monk</option>
-										<option>Paladin</option>
-										<option>Ranger</option>
-										<option>Sorcerer</option>
-										<option>Warlock</option>
-									</select>
-								</div>
-
-								<!-- <div class="create-row">
-									Need to add Specialty
-								</div> -->
-
-								<div class="create-row">
-									<label class="char-label" id="char-level-label">Level:</label>
-									<select id="char-level-input" class="char-input form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-										<option>11</option>
-										<option>12</option>
-										<option>13</option>
-										<option>14</option>
-										<option>15</option>
-										<option>16</option>
-										<option>17</option>
-										<option>18</option>
-										<option>19</option>
-										<option>20</option>
-									</select>
-								</div>
-
-								<div class="create-row">
-									<label class="char-label" id="char-hp-label">Hit Points:</label>
-									<input type="text" value="" name="char-hp-max" placeholder="5" class="char-input" id="char-hp-max-input">
-									<input type="text" value="" name="char-hp-base" placeholder="10" class="char-input" id="char-hp-base-input">
-									<input type="text" value="" name="char-hp-con" placeholder="10" class="char-input" id="char-hp-con-input">
-									<input type="text" value="" name="char-hp-race" placeholder="10" class="char-input" id="char-hp-race-input">
-								</div>
-								
-							</form>
-							<button class="btn btn-success btn-char create-button" id="new-char-button">Create</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 option-pane tab-pane fade" id="option-lib">
-					<div class="row option-title">
-						<h3>Existing Character Lib</h3>
-					</div>
-					<div class="row option-body">
-						<p>this is where you can see existing character sheets</p>
-						<div class="col-md-12" id="add-char-here">
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 option-pane tab-pane fade" id="option-import">
-					<div class="row option-title">
-						<h3>Import Character Sheet</h3>
-					</div>
-					<div class="row option-body">
-						<p>this is where you can import Character Sheet from other Location</p>
-					</div>
-				</div>
-			</div>
+<div class="container register-container" id="register-container">
+	<div class="current-char-all">
+		<h2> Current Characters: </h2>
+		<div class="current-char subtitle" id="current-char">
+			<h4>Looks like you currently have no characters.</h4>
 		</div>
 	</div>
 
+		<h2 class="page-header"> Character Creator </h2>
+				<!--<div class="alert alert-danger">
+				</div>-->
+		<form method="post" action="/characters/add">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" class="form-control" placeholder="Georbush Algor" name="name">
+			</div>
+			<div class="form-group">
+				<label>Age</label>
+				<input type="number" min=1 class="form-control" placeholder="42" name="age">
+			</div>
+			<div class="form-group">
+				<label>Gender</label>
+				<select class="form-control" name="gender">
+					<option>Male</option>
+					<option>Female</option>
+					<option>Other</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Race</label>
+				<select class="form-control" name="race">
+					<option>Dragonborn</option>
+					<option>Dwarf</option>
+					<option>Eladrin</option>
+					<option>Elf</option>
+					<option>Gnome</option>
+					<option>Half-elf</option>
+					<option>Half-Ord</option>
+					<option>Halfling</option>
+					<option>Human</option>
+					<option>Kenku</option>
+					<option>Tiefling</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Class:</label>
+				<select class="form-control" name="class">
+					<option>Barbarian</option>
+					<option>Bard</option>
+					<option>Druid</option>
+					<option>Monk</option>
+					<option>Paladin</option>
+					<option>Ranger</option>
+					<option>Sorcerer</option>
+					<option>Warlock</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Level</label>
+				<input type="number" min=1 class="form-control" placeholder="1" name="level">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
 	<div class="outter-footer">
 		<div class="footer row">
 			<div class="col-md-12" id="footer-text">
 				<div class="row footer-center-row">
 					<div class="footer-textbox">
-						<p class="footer-text footer-name">Pace &amp; Nash</p>
-						<p class="footer-text footer-info">Git Hub Location</p>
+						<p class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-
-
-</body>
-
-</html> 
