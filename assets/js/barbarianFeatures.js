@@ -1,5 +1,3 @@
-
-
 [{
     _id: "barbarianLevel1",
     level: 1,
