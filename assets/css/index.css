@@ -1,0 +1,21 @@
+.jumbotron-fluid {
+	background-color:#2A3961; 
+	color: white;
+	min-height: 350px;
+}
+
+.features>ul{
+	font-size:1.1em;
+	list-style-type:none;
+}
+
+li.d20 {
+	background:url('../images/d20.png') no-repeat;
+	min-height:55px;
+	padding-left: 40px;
+}
+
+.welcome {
+	text-align:center;
+}
+
