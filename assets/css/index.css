@@ -15,16 +15,15 @@ li.d20 {
 	padding-left: 40px;
 }
 
-.welcome {
+.welcome, .wrapper {
 	text-align:center;
 }
 
 .how-to {
 	display: block;
-	padding:100px;
+	padding:80px;
 	vertical-align: center;
 	margin-bottom:75px;
-	overflow-y:auto;
 }
 
 .step{
