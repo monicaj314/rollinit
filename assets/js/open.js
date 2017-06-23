@@ -63,6 +63,16 @@ $( document ).ready(function() {
 	});
 
 
+	$("#signup, .check-us").on("click", function(){
+		$("#log-in, #login-tab").removeClass("active");
+		$("#register, #register-tab").addClass("active");
+	});
+
+	$("#login").on("click", function(){
+		$("#log-in, #login-tab").addClass("active");
+		$("#register, #register-tab").removeClass("active");
+	});
+
 	// Sign Up Button 
 	$("#btnSignUp").on("click", function(snap){
 	var firstName = $("#new-first-name-input").val().trim();
@@ -94,6 +104,8 @@ $( document ).ready(function() {
 			var isAnonymous = user.isAnonymous;
 			var uid = user.uid;
 			var providerData = user.providerData;
+
+
 
 
 			//Removing Log-In page

@@ -7,7 +7,7 @@
 
 .navbar-brand{
     padding: 0px 15px;
-    position: fixed;
+    position: absolute;
     color:white;
     left: 0;
 }
@@ -66,7 +66,8 @@ p.footer-text.footer-name {
 
 .outer-footer {
     width:100%;
-    position:fixed;
+    height: 100px;
+    position:relative;
     bottom: 0;
     background-color: #2A3961;
     color: white;

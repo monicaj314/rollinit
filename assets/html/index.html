@@ -43,6 +43,7 @@
 						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
 						<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
 						<li id="login" class="nav-tab" data-toggle="modal" data-target="#login-container"><a class="nav-anc">Log-In</a></li>
+						<li id="signup" class="nav-tab"><a class="nav-anc" data-toggle="modal" data-target="#login-container">Register</a></li>
 						<li class="nav-tab"><a class="nav-anc" href="/users/logout">Log-Out</a></li>
 					</ul>
 				</div>
@@ -74,83 +75,121 @@
 				</div>
 				
 			</div>
+			<div class="welcome">
+				<button data-toggle="modal" data-target="#login-container" class="btn btn-default check-us" role="button">Check us out!</button>
+			</div>
 		</div>
 	</div>
-	<!-- Login/Register modal -->
-	<div class="modal fade" tabindex="1" role="dialog" id="login-container">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<!-- How it works -->
+	<div class="wrapper">
+		<div class="container how-to">
+			<div class="row step step-one">
+				<div class="col-md-6">
+					<h3>Choose to be a Player or a Game Master</h3>
 				</div>
-				<div class="modal-body">
-					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#log-in" data-toggle="tab" aria-controls="log-in" role="tab">Login</a></li>
-						<li role="presentation"><a href="#register" data-toggle="tab" aria-controls="register" role="tab">Register</a></li>
-					</ul>
-					<!-- Register tab -->
-					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane" id="register">
-							<form method="post" action="/users/register">
-								<div class="form-group">
-									<label>Name</label>
-									<input type="text" class="form-control" placeholder="Name" name="name">
-								</div>
-								<div class="form-group">
-									<label>Username</label>
-									<input type="text" class="form-control" placeholder="Username" name="username">
-								</div>
-								<div class="form-group">
-									<label>Email</label>
-									<input type="text" class="form-control" placeholder="Email" name="email">
-								</div>
-								<div class="form-group">
-									<label>Password</label>
-									<input type="password" class="form-control" placeholder="Password" name="password">
-								</div>
-								<div class="form-group">
-									<label>Confirm Password</label>
-									<input type="password" class="form-control" placeholder="Password" name="password2">
-								</div>
-								<button type="submit" class="btn btn-default">Submit</button>
-							</form>
-						</div>
-						
-						
-						<!-- Login Tab -->
-						<div role="tabpanel" class="tab-pane active" id="log-in">
-							<form method="post" action="/users/login">
-								<div class="form-group">
-									<label>Username</label>
-									<input type="text" class="form-control" name="username" placeholder="Username">
-								</div>
-								<div class="form-group">
-									<label>Password</label>
-									<input type="password" class="form-control" name="password" placeholder="Password">
-								</div>
-								<button type="submit" class="btn btn-default">Submit</button>
-							</form>
+				<div class="col-md-6">
+					<img src="../images/choose-wisely.png" alt="Choose to be a Player or a Game Master" />
+				</div>
+			</div>
+			<div class="row step step-two">
+				<div class="col-md-6">
+					<img src="../images/customize.png" alt="Players can customize their character and generate a detailed character sheet" />
+				</div>
+				<div class="col-md-6">
+					<h3>Players can customize their character and generate a detailed character sheet</h3>
+				</div>
+			</div>
+			<div class="row step step-three">
+				<div class="col-md-6">
+					<h3>Game Masters can start a new campaign and invite Players to join</h3>
+				</div>
+				<div class="col-lg-6">
+					<img src="../images/dungeon-key.png" alt="Game Masters can start a new campaign and invite Players to join" />
+				</div>
+			</div>
+			<div class="row step step-four">
+				<div class="col-md-6">
+					<img src="../images/journal.png" alt="Track your game progress with Quest Logs, Session Notes, and Campaign Journal" />
+				</div>
+				<div class="col-md-6">
+					<h3>Track your game progress with Quest Logs, Session Notes, and Campaign Journal</h3>
+				</div>
+			</div>
+					<div class="welcome">
+			<button data-toggle="modal" data-target="#login-container" class="btn btn-default check-us" role="button">Check us out!</button>
+		</div>
+		</div>
+
+		<!-- Login/Register modal -->
+		<div class="modal fade" tabindex="1" role="dialog" id="login-container">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<ul class="nav nav-tabs" role="tablist">
+							<li id="login-tab" role="presentation"><a href="#log-in" data-toggle="tab" aria-controls="log-in" role="tab">Login</a></li>
+							<li id="register-tab" role="presentation" class="active"><a href="#register" data-toggle="tab" aria-controls="register" role="tab">Register</a></li>
+						</ul>
+						<!-- Register tab -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="register">
+								<form method="post" action="/users/register">
+									<div class="form-group">
+										<label>Name</label>
+										<input type="text" class="form-control" placeholder="Name" name="name">
+									</div>
+									<div class="form-group">
+										<label>Username</label>
+										<input type="text" class="form-control" placeholder="Username" name="username">
+									</div>
+									<div class="form-group">
+										<label>Email</label>
+										<input type="text" class="form-control" placeholder="Email" name="email">
+									</div>
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" class="form-control" placeholder="Password" name="password">
+									</div>
+									<div class="form-group">
+										<label>Confirm Password</label>
+										<input type="password" class="form-control" placeholder="Password" name="password2">
+									</div>
+									<button type="submit" class="btn btn-default">Submit</button>
+								</form>
+							</div>
+							
+							<!-- Login Tab -->
+							<div role="tabpanel" class="tab-pane" id="log-in">
+								<form method="post" action="/users/login">
+									<div class="form-group">
+										<label>Username</label>
+										<input type="text" class="form-control" name="username" placeholder="Username">
+									</div>
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" class="form-control" name="password" placeholder="Password">
+									</div>
+									<button type="submit" class="btn btn-default">Submit</button>
+								</form>
+							</div>
 						</div>
 					</div>
-					
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
-				</div><!-- /.modal-content -->
-				</div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-				<div class="outer-footer">
-					<div class="footer row">
-						<div class="col-md-12" id="footer-text">
-							<div class="row footer-center-row">
-								<div class="footer-textbox">
-									<p class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+					</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					<div class="outer-footer">
+						<div class="footer row">
+							<div class="col-md-12" id="footer-text">
+								<div class="row footer-center-row">
+									<div class="footer-textbox">
+										<p class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</body>
-		</html>
+				</body>
+			</html>

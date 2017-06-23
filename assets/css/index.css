@@ -19,3 +19,27 @@ li.d20 {
 	text-align:center;
 }
 
+.how-to {
+	display: block;
+	padding:100px;
+	vertical-align: center;
+	margin-bottom:75px;
+	overflow-y:auto;
+}
+
+.step{
+		margin-bottom:30px;
+		border-radius:10px;
+		background-color:gray;
+}
+
+.step-one>div>img, .step-three>div>img {
+	margin:5px,0,5px,0;
+	float:right;
+}
+
+img {
+	height:250px;
+	width: 250px;
+}
+
