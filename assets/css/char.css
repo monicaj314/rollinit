@@ -10,3 +10,12 @@
 .charLibName {
 	background-color: #f1dea3;
 }
+
+input.form-control, select.form-control {
+	width: 500px !IMPORTANT;
+	display: inline-block;
+}
+
+label {
+	width: 100px;
+}
