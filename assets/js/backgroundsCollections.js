@@ -10,6 +10,7 @@
                 ],
             skillProf: ["Insight", "Religion"],
             languages: 2,
+            toolProf: null,
             equipment: ["A holy symbol (a gift to you when you entered the priesthood)", 
                 "a prayer book or prayer wheel", 
                 "5 sticks of incense", 
