@@ -68,18 +68,24 @@
     },
 
     featuresArray: [
-      {
-        _id: "58f40badc9e7ce9f721534dc",
+      { _id: "sorcererLevel1",
         level: 1,
         ability_score_bonuses: 0,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Spellcasting"
+            name: "Spellcasting",
+            def: [
+              "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells."
+            ],
           },
           {
-            name: "Sorcerous Origin"
+            name: "Sorcerous Origin",
+            def: [
+              "Choose a sorcerous origin, which describes the source of your innate magical power: Draconic Bloodline or Wild Magic, both detailed at the end of the class description.",
+              "Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level."
+            ],
           }
         ],
         spellcasting: {
@@ -105,21 +111,32 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534dd",
+      { _id: "sorcererLevel2",
         level: 2,
         ability_score_bonuses: 0,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Font of Magic"
+            name: "Font of Magic",
+            def: [
+              "At 2nd level, you tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.",
+              "Sorcery Points",
+              "You have 2 sorcery points, and you gain more as you reach higher levels, as shown in the Sorcery Points column of the Sorcerer table. You can never have more sorcery points than shown on the table for your level. You regain all spent sorcery points when you finish a long rest."
+            ],
           },
           {
-            name: "Flexible Casting: Creating Spell Slots"
+            name: "Flexible Casting: Creating Spell Slots",
+            def: [
+              "You can transform unexpended sorcery points into one spell slot as a bonus action on your turn. The Creating Spell Slots table shows the cost of creating a spell slot of a given level. You can create spell slots no higher in level than 5th. ",
+              "Any spell slot you create with this feature vanishes when you finish a long rest."
+            ],
           },
           {
-            name: "Flexible Casting: Converting Spell Slot"
+            name: "Flexible Casting: Converting Spell Slot",
+            def: [
+              "As a bonus action on your turn, you can expend one spell slot and gain a number of sorcery points equal to the slot’s level.."
+            ],
           }
         ],
         spellcasting: {
@@ -166,8 +183,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534de",
+      { _id: "sorcererLevel3",
         level: 3,
         ability_score_bonuses: 0,
         prof_bonus: 2,
@@ -221,15 +237,17 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e3",
+      { _id: "sorcererLevel4",
         level: 4,
         ability_score_bonuses: 1,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 1"
+            name: "Ability Score Improvement 1",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -276,8 +294,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534df",
+      { _id: "sorcererLevel5",
         level: 5,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -327,8 +344,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e0",
+      { _id: "sorcererLevel6",
         level: 6,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -378,8 +394,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e1",
+      { _id: "sorcererLevel7",
         level: 7,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -429,15 +444,17 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e2",
+      { _id: "sorcererLevel8",
         level: 8,
         ability_score_bonuses: 2,
         prof_bonus: 3,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 2"
+            name: "Ability Score Improvement 2",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -484,8 +501,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e4",
+      { _id: "sorcererLevel9",
         level: 9,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -535,8 +551,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e5",
+      { _id: "sorcererLevel10",
         level: 10,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -590,8 +605,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e6",
+      { _id: "sorcererLevel11",
         level: 11,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -641,15 +655,17 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e7",
+      { _id: "sorcererLevel12",
         level: 12,
         ability_score_bonuses: 3,
         prof_bonus: 4,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 3"
+            name: "Ability Score Improvement 3",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -696,8 +712,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e8",
+      { _id: "sorcererLevel13",
         level: 13,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -747,8 +762,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534e9",
+      { _id: "sorcererLevel14",
         level: 14,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -798,8 +812,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534ea",
+      { _id: "sorcererLevel15",
         level: 15,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -849,15 +862,17 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f3",
+      { _id: "sorcererLevel16",
         level: 16,
         ability_score_bonuses: 4,
         prof_bonus: 5,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 4"
+            name: "Ability Score Improvement 4",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -904,8 +919,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534ed",
+      { _id: "sorcererLevel17",
         level: 17,
         ability_score_bonuses: 4,
         prof_bonus: 6,
@@ -959,8 +973,7 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534eb",
+      { _id: "sorcererLevel18",
         level: 18,
         ability_score_bonuses: 4,
         prof_bonus: 6,
@@ -1010,15 +1023,17 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534ec",
+      { _id: "sorcererLevel19",
         level: 19,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 5"
+            name: "Ability Score Improvement 5",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -1065,15 +1080,17 @@
           name: "Sorcerer"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534ee",
+      { _id: "sorcererLevel20",
         level: 20,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Sorcerous Restoration"
+            name: "Sorcerous Restoration",
+            def: [
+              "At 20th level, you regain 4 expended sorcery points whenever you finish a short rest."
+            ],
           }
         ],
         spellcasting: {
