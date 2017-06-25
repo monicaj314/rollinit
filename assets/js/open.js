@@ -88,7 +88,7 @@ $( document ).ready(function() {
 		var errorCode = error.code;
 		var errorMessage = error.message;
 	});
-	});
+});
 
 	// When there is a change to who is logged in
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -104,9 +104,6 @@ $( document ).ready(function() {
 			var isAnonymous = user.isAnonymous;
 			var uid = user.uid;
 			var providerData = user.providerData;
-
-
-
 
 			//Removing Log-In page
 			$("#btnLogOut").removeClass("hide");
