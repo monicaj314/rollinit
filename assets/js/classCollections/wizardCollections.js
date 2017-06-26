@@ -68,18 +68,24 @@
     },
 
     featuresArray: [
-      {
-        _id: "58f40badc9e7ce9f72153506",
+      { _id: "wizardLevel1",
         level: 1,
         ability_score_bonuses: 0,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Spellcasting"
+            name: "Spellcasting",
+            def: [
+              "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+            ],
           },
           {
-            name: "Arcane Recovery"
+            name: "Arcane Recovery",
+            def: [
+              "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
+              "For example, if you’re a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+            ],
           }
         ],
         spellcasting: {
@@ -102,15 +108,18 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153505",
+      { _id: "wizardLevel2",
         level: 2,
         ability_score_bonuses: 0,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Arcane Tradition"
+            name: "Arcane Tradition",
+            def: [
+              "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools: Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Necromancy, or Transmutation, all detailed at the end of the class description.",
+              "Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
+            ],
           }
         ],
         spellcasting: {
@@ -133,8 +142,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153504",
+      { _id: "wizardLevel3",
         level: 3,
         ability_score_bonuses: 0,
         prof_bonus: 2,
@@ -160,15 +168,17 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153507",
+      { _id: "wizardLevel4",
         level: 4,
         ability_score_bonuses: 1,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 1"
+            name: "Ability Score Improvement 1",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -191,8 +201,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153508",
+      { _id: "wizardLevel5",
         level: 5,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -218,8 +227,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153509",
+      { _id: "wizardLevel6",
         level: 6,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -245,8 +253,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153511",
+      { _id: "wizardLevel7",
         level: 7,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -272,15 +279,17 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f7215350f",
+      { _id: "wizardLevel8",
         level: 8,
         ability_score_bonuses: 2,
         prof_bonus: 3,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 2"
+            name: "Ability Score Improvement 2",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -303,8 +312,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f7215350b",
+      { _id: "wizardLevel9",
         level: 9,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -330,8 +338,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f7215350a",
+      { _id: "wizardLevel0",
         level: 10,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -357,8 +364,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f7215350c",
+      { _id: "wizardLevel11",
         level: 11,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -384,15 +390,17 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f7215350d",
+      { _id: "wizardLevel12",
         level: 12,
         ability_score_bonuses: 3,
         prof_bonus: 4,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 3"
+            name: "Ability Score Improvement 3",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -415,8 +423,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f7215350e",
+      { _id: "wizardLevel13",
         level: 13,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -442,8 +449,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153512",
+      { _id: "wizardLevel14",
         level: 14,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -469,8 +475,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153510",
+      { _id: "wizardLevel15",
         level: 15,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -496,15 +501,17 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153513",
+      { _id: "wizardLevel16",
         level: 16,
         ability_score_bonuses: 4,
         prof_bonus: 5,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 4"
+            name: "Ability Score Improvement 4",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -527,8 +534,7 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153514",
+      { _id: "wizardLevel17",
         level: 17,
         ability_score_bonuses: 4,
         prof_bonus: 6,
@@ -554,15 +560,18 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f7215351a",
+      { _id: "wizardLevel18",
         level: 18,
         ability_score_bonuses: 4,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Spell Mastery"
+            name: "Spell Mastery",
+            def: [
+              "Starting at 14th level, you can increase the power of your simpler spells. When you cast a wizard spell of 1st through 5th level that deals damage, you can deal maximum damage with that spell.",
+              "The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12. This damage ignores resistance and immunity."
+            ],
           }
         ],
         spellcasting: {
@@ -585,15 +594,17 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153517",
+      { _id: "wizardLevel19",
         level: 19,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 5"
+            name: "Ability Score Improvement 5",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -616,15 +627,18 @@
           name: "Wizard"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153515",
+      { _id: "wizardLevel20",
         level: 20,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Signature Spell"
+            name: "Signature Spell",
+            def: [
+              "At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.",
+              "By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels."
+            ],
           }
         ],
         spellcasting: {
