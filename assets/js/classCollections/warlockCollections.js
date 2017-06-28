@@ -65,18 +65,23 @@
     },
 
     featuresArray: [
-      {
-        _id: "58f40badc9e7ce9f721534ef",
+      { _id: "warlockLevel1",
         level: 1,
         ability_score_bonuses: 0,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Otherworldly Patron"
+            name: "Otherworldly Patron",
+            def: [
+              "At 1st level, you have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One, each of which is detailed at the end of the class description. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
+            ],
           },
           {
-            name: "Pact Magic"
+            name: "Pact Magic",
+            def: [
+              "Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level (minimum of 1)."
+            ],
           }
         ],
         spellcasting: {
@@ -104,8 +109,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f0",
+      { _id: "warlockLevel2",
         level: 2,
         ability_score_bonuses: 0,
         prof_bonus: 2,
@@ -140,8 +144,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f1",
+      { _id: "warlockLevel3",
         level: 3,
         ability_score_bonuses: 0,
         prof_bonus: 2,
@@ -176,15 +179,17 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f2",
+      { _id: "warlockLevel4",
         level: 4,
         ability_score_bonuses: 1,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 1"
+            name: "Ability Score Improvement 1",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -212,8 +217,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f4",
+      { _id: "warlockLevel5",
         level: 5,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -248,8 +252,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f5",
+      { _id: "warlockLevel6",
         level: 6,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -280,8 +283,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534fd",
+      { _id: "warlockLevel7",
         level: 7,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -316,15 +318,17 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f7",
+      { _id: "warlockLevel8",
         level: 8,
         ability_score_bonuses: 2,
         prof_bonus: 3,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 2"
+            name: "Ability Score Improvement 2",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -352,8 +356,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f6",
+      { _id: "warlockLevel9",
         level: 9,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -388,8 +391,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f8",
+      { _id: "warlockLevel10",
         level: 10,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -420,15 +422,19 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534f9",
+      { _id: "warlockLevel11",
         level: 11,
         ability_score_bonuses: 2,
         prof_bonus: 4,
         feature_choices: [],
         features: [
           {
-            name: "Mystic Arcanum (6th level)"
+            name: "Mystic Arcanum (6th level)",
+            def: [
+              "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.",
+              "You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.",
+              "At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+            ],
           }
         ],
         spellcasting: {
@@ -456,15 +462,17 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534fa",
+      { _id: "warlockLevel12",
         level: 12,
         ability_score_bonuses: 3,
         prof_bonus: 4,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 3"
+            name: "Ability Score Improvement 3",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           },
           {
             name: "Choose: Additional Eldritch Invocation"
@@ -495,15 +503,19 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534fb",
+      { _id: "warlockLevel13",
         level: 13,
         ability_score_bonuses: 3,
         prof_bonus: 5,
         feature_choices: [],
         features: [
           {
-            name: "Mystic Arcanum (7th level)"
+            name: "Mystic Arcanum (7th level)",
+            def: [
+              "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.",
+              "You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.",
+              "At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+            ],
           }
         ],
         spellcasting: {
@@ -531,8 +543,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534fc",
+      { _id: "warlockLevel14",
         level: 14,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -563,15 +574,19 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534fe",
+      { _id: "warlockLevel15",
         level: 15,
         ability_score_bonuses: 3,
         prof_bonus: 5,
         feature_choices: [],
         features: [
           {
-            name: "Mystic Arcanum (8th level)"
+            name: "Mystic Arcanum (8th level)",
+            def: [
+              "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.",
+              "You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.",
+              "At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+            ],
           },
           {
             name: "Choose: Additional Eldritch Invocation"
@@ -602,15 +617,17 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534ff",
+      { _id: "warlockLevel16",
         level: 16,
         ability_score_bonuses: 4,
         prof_bonus: 5,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 5"
+            name: "Ability Score Improvement 5",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -638,15 +655,19 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153503",
+      { _id: "warlockLevel17",
         level: 17,
         ability_score_bonuses: 4,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Mystic Arcanum (9th level)"
+            name: "Mystic Arcanum (9th level)",
+            def: [
+              "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th- level spell from the warlock spell list as this arcanum.",
+              "You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.",
+              "At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th- level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
+            ],
           }
         ],
         spellcasting: {
@@ -674,8 +695,7 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153501",
+      { _id: "warlockLevel18",
         level: 18,
         ability_score_bonuses: 4,
         prof_bonus: 6,
@@ -710,15 +730,17 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153500",
+      { _id: "warlockLevel19",
         level: 19,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 6"
+            name: "Ability Score Improvement 6",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -746,15 +768,18 @@
           name: "Warlock"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f72153502",
+      { _id: "warlockLevel20",
         level: 20,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Eldritch Master"
+            name: "Eldritch Master",
+            def: [
+              "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature.",
+              "Once you regain spell slots with this feature, you must finish a long rest before you can do so again."
+            ],
           },
           {
             name: "Choose: Additional Eldritch Invocation"
