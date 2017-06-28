@@ -33,3 +33,7 @@
     color: #fecc16;
     background-color: #bb3636;
 }
+
+p.footer-text.footer-name {
+    margin: 10px 0 10px 50px;
+}
