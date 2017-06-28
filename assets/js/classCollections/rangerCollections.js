@@ -72,23 +72,73 @@
         name: "Hunter"
       }
     ],
+    subclassSpecifics: [
+      {
+        name: "Fighting Style",
+        choice: 1,
+        level: 2,
+        options: [
+          {
+            name: "Archery",
+            "desc": [
+              "You gain a +2 bonus to attack rolls you make with ranged weapons."
+            ],
+          },
+          {
+            name: "Defense",
+            "desc": [
+              "While you are wearing armor, you gain a +1 bonus to AC."
+            ],
+          },
+          {
+            name: "Dueling",
+            "desc": [
+              "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+            ],
+          },
+          {
+            name: "Two-Weapon Fighting",
+            "desc": [
+              "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+            ],
+          }
+        ]
+      },
+    ],
     spellcasting: {
       class: "Ranger"
     },
 
     featuresArray: [
-      {
-        _id: "58f40badc9e7ce9f721534b8",
+      { _id: "rangerLevel1",
         level: 1,
         ability_score_bonuses: 0,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Favored Enemy (1 type)"
+            name: "Favored Enemy (1 type)",
+            def: [
+              "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
+              "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
+              "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+              "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
+              "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+            ],
           },
           {
-            name: "Natural Explorer (1 terrain type)"
+            name: "Natural Explorer (1 terrain type)",
+            def: [
+              "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.",
+              "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+              "• Difficult terrain doesn’t slow your group’s travel.",
+              "• Your group can’t become lost except by magical means.",
+              "• Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+              "• If you are traveling alone, you can move stealthily at a normal pace.",
+              "• When you forage, you find twice as much food as you normally would.",
+              "• While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
+              "You choose additional favored terrain types at 6th and 10th level."
+            ],
           }
         ],
         spellcasting: {
@@ -108,19 +158,23 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534b6",
+      { _id: "rangerLevel2",
         level: 2,
         ability_score_bonuses: 0,
         prof_bonus: 2,
-        feature_choices: [
-          {
-            name: "Choose: Fighting Style"
-          }
-        ],
+        feature_choices: [],
         features: [
           {
-            name: "Spellcasting"
+            name: "Spellcasting",
+            def: [
+              "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does."
+            ],
+          },
+          {
+            name: "Fighting Style",
+            def: [
+              "You adopt a particular style of fighting as your specialty. Choose one of the fighting style options. You can’t take a Fighting Style option more than once, even if you later get to choose again."
+            ]
           }
         ],
         spellcasting: {
@@ -140,18 +194,23 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534b3",
+      { _id: "rangerLevel3",
         level: 3,
         ability_score_bonuses: 0,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Ranger Archetype"
+            name: "Ranger Archetype",
+            def: [
+              "At 3rd level, you choose an archetype that you strive to emulate: Hunter or Beast Master, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level."
+            ],
           },
           {
-            name: "Primeval Awareness"
+            name: "Primeval Awareness",
+            def: [
+              "Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn’t reveal the creatures’ location or number."
+            ],
           }
         ],
         spellcasting: {
@@ -171,15 +230,17 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534b5",
+      { _id: "rangerLevel4",
         level: 4,
         ability_score_bonuses: 1,
         prof_bonus: 2,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 1"
+            name: "Ability Score Improvement 1",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -199,15 +260,17 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534b7",
+      { _id: "rangerLevel5",
         level: 5,
         ability_score_bonuses: 1,
         prof_bonus: 3,
         feature_choices: [],
         features: [
           {
-            name: "Extra Attack"
+            name: "Extra Attack",
+            def: [
+              "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+            ],
           }
         ],
         spellcasting: {
@@ -227,18 +290,35 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534bb",
+      { _id: "rangerLevel6",
         level: 6,
         ability_score_bonuses: 1,
         prof_bonus: 3,
         feature_choices: [],
         features: [
           {
-            name: "Favored Enemy (2 types)"
+            name: "Favored Enemy (2 types)",
+            def: [
+              "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
+              "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
+              "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+              "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
+              "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+            ],
           },
           {
-            name: "Natural Explorer (2 terrain types)"
+            name: "Natural Explorer (2 terrain types)",
+            def: [
+              "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.",
+              "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+              "• Difficult terrain doesn’t slow your group’s travel.",
+              "• Your group can’t become lost except by magical means.",
+              "• Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+              "• If you are traveling alone, you can move stealthily at a normal pace.",
+              "• When you forage, you find twice as much food as you normally would.",
+              "• While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
+              "You choose additional favored terrain types at 6th and 10th level."
+            ],
           }
         ],
         spellcasting: {
@@ -258,8 +338,7 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534ba",
+      { _id: "rangerLevel7",
         level: 7,
         ability_score_bonuses: 1,
         prof_bonus: 3,
@@ -282,18 +361,24 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534b9",
+      { _id: "rangerLevel8",
         level: 8,
         ability_score_bonuses: 2,
         prof_bonus: 3,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 2"
+            name: "Ability Score Improvement 2",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           },
           {
-            name: "Land’s Stride"
+            name: "Land’s Stride",
+            def: [
+              "Starting at 8th level, moving through non-magical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
+              "In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell."
+            ],
           }
         ],
         spellcasting: {
@@ -313,8 +398,7 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534bc",
+      { _id: "rangerLevel9",
         level: 9,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -337,18 +421,32 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534bd",
+      { _id: "rangerLevel10",
         level: 10,
         ability_score_bonuses: 2,
         prof_bonus: 4,
         feature_choices: [],
         features: [
           {
-            name: "Natural Explorer (3 terrain types)"
+            name: "Natural Explorer (3 terrain types)",
+            def: [
+              "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.",
+              "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+              "• Difficult terrain doesn’t slow your group’s travel.",
+              "• Your group can’t become lost except by magical means.",
+              "• Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+              "• If you are traveling alone, you can move stealthily at a normal pace.",
+              "• When you forage, you find twice as much food as you normally would.",
+              "• While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
+              "You choose additional favored terrain types at 6th and 10th level."
+            ],
           },
           {
-            name: "Hide in Plain Sight"
+            name: "Hide in Plain Sight",
+            def: [
+              "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.",
+              "Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit."
+            ],
           }
         ],
         spellcasting: {
@@ -368,8 +466,7 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534bf",
+      { _id: "rangerLevel11",
         level: 11,
         ability_score_bonuses: 2,
         prof_bonus: 4,
@@ -392,15 +489,17 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c2",
+      { _id: "rangerLevel12",
         level: 12,
         ability_score_bonuses: 3,
         prof_bonus: 4,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 4"
+            name: "Ability Score Improvement 4",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -420,8 +519,7 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534be",
+      { _id: "rangerLevel13",
         level: 13,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -444,18 +542,27 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c0",
+      { _id: "rangerLevel14",
         level: 14,
         ability_score_bonuses: 3,
         prof_bonus: 5,
         feature_choices: [],
         features: [
           {
-            name: "Favored Enemy (3 enemies)"
+            name: "Favored Enemy (3 enemies)",
+            def: [
+              "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
+              "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
+              "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+              "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
+              "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+            ],
           },
           {
-            name: "Vanish"
+            name: "Vanish",
+            def: [
+              "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail."
+            ],
           }
         ],
         spellcasting: {
@@ -475,8 +582,7 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c1",
+      { _id: "rangerLevel15",
         level: 15,
         ability_score_bonuses: 3,
         prof_bonus: 5,
@@ -499,15 +605,17 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c4",
+      { _id: "rangerLevel16",
         level: 16,
         ability_score_bonuses: 4,
         prof_bonus: 5,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 4"
+            name: "Ability Score Improvement 4",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -527,8 +635,7 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c3",
+      { _id: "rangerLevel17",
         level: 17,
         ability_score_bonuses: 4,
         prof_bonus: 6,
@@ -551,15 +658,18 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c5",
+      { _id: "rangerLevel18",
         level: 18,
         ability_score_bonuses: 4,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Feral Senses"
+            name: "Feral Senses",
+            def: [
+              "At 18th level, you gain preternatural senses that help you fight creatures you can’t see. When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it.",
+              "You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened."
+            ],
           }
         ],
         spellcasting: {
@@ -579,15 +689,17 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c6",
+      { _id: "rangerLevel19",
         level: 19,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Ability Score Improvement 5"
+            name: "Ability Score Improvement 5",
+            def: [
+              "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature."
+            ],
           }
         ],
         spellcasting: {
@@ -607,15 +719,17 @@
           name: "Ranger"
         }
       },
-      {
-        _id: "58f40badc9e7ce9f721534c8",
+      { _id: "rangerLevel20",
         level: 20,
         ability_score_bonuses: 5,
         prof_bonus: 6,
         feature_choices: [],
         features: [
           {
-            name: "Foe Slayer"
+            name: "Foe Slayer",
+            def: [
+              "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
+            ],
           }
         ],
         spellcasting: {
