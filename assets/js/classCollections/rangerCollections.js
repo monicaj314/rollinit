@@ -72,6 +72,39 @@
         name: "Hunter"
       }
     ],
+    subclassSpecifics: [
+      {
+        name: "Fighting Style",
+        choice: 1,
+        level: 2,
+        options: [
+          {
+            name: "Archery",
+            "desc": [
+              "You gain a +2 bonus to attack rolls you make with ranged weapons."
+            ],
+          },
+          {
+            name: "Defense",
+            "desc": [
+              "While you are wearing armor, you gain a +1 bonus to AC."
+            ],
+          },
+          {
+            name: "Dueling",
+            "desc": [
+              "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+            ],
+          },
+          {
+            name: "Two-Weapon Fighting",
+            "desc": [
+              "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+            ],
+          }
+        ]
+      },
+    ],
     spellcasting: {
       class: "Ranger"
     },
@@ -129,17 +162,19 @@
         level: 2,
         ability_score_bonuses: 0,
         prof_bonus: 2,
-        feature_choices: [
-          {
-            name: "Choose: Fighting Style"
-          }
-        ],
+        feature_choices: [],
         features: [
           {
             name: "Spellcasting",
             def: [
               "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does."
             ],
+          },
+          {
+            name: "Fighting Style",
+            def: [
+              "You adopt a particular style of fighting as your specialty. Choose one of the fighting style options. You can’t take a Fighting Style option more than once, even if you later get to choose again."
+            ]
           }
         ],
         spellcasting: {

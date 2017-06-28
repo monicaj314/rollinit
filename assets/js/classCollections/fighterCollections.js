@@ -73,6 +73,7 @@
       {
         name: "Fighting Style",
         choice: 1,
+        level: 1,
         options: [
           {
             name: "Archery",
@@ -129,14 +130,14 @@
               {
                 name:"Improved Critical",
                 def:[
-                  "Beginning when you choose this archetype at 3rd level, your weapon attacks sco re a critical hit on a roll o f 19 or 20."
+                  "Beginning when you choose this archetype at 3rd level, your weapon attacks sco re a critical hit on a roll of 19 or 20."
                 ]
               },
               {
                 name:"Remarkable Athlete",
                 def:[
                   "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn’t already use your proficiency bonus.",
-                  "In addition, when you make a running long jump, the distance you can cover increases by a number o f feet equal to your Strength modifier."
+                  "In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
                 ]
               },
               {
@@ -154,7 +155,7 @@
               {
                 name:"Survivor",
                 def:[
-                  "At 18th level, you attain the pinnacle o f resilience in battle. At the start o f each o f your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half o f your hit points left. You don’t gain this benefit if you have 0 hit points."
+                  "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don’t gain this benefit if you have 0 hit points."
                 ]
               }
             ]
@@ -162,7 +163,7 @@
           {
             name: "Battle Master",
             def:[
-                  "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons o f history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters o f great skill and knowledge."
+                  "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge."
                 ],
             benefits:[
               {
@@ -175,7 +176,7 @@
           {
             name:"Eldritch Knight",
             def: [
-              "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools o f magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter’s reach in combat. These knights learn a comparatively small number o f spells, committing them to memory instead o f keeping them in a spellbook."
+              "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter’s reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook."
             ],
             benefits:[
               {
@@ -206,7 +207,7 @@
           {
             name: "Fighting Style",
             def: [
-              "You adopt a particular style o f fighting as your specialty. Choose one o f the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again."
+              "You adopt a particular style of fighting as your specialty. Choose one of the fighting style options. You can’t take a Fighting Style option more than once, even if you later get to choose again."
             ]
           }
         ],
