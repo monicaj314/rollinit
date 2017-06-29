@@ -53,16 +53,13 @@
       }
     ],
     starting_equipment: {
-      class: "Sorcerer"
+      class: "Sorcerer",
+      equipment: "You start with the following equipment, in addition to the equipment granted by your background:\n • (a) a light c rossbow and 20 bolts or (b) any simple\n weapon\n • (a) a component pouch or (b) an arcane focus\n • (a) a dungeoneer’s pack or (b) an explorer’s pack\n • Two daggers"
     },
     class_levels: {
       class: "Sorcerer"
     },
-    subclasses: [
-      {
-        name: "Draconic"
-      }
-    ],
+   
     spellcasting: {
       class: "Sorcerer"
     },

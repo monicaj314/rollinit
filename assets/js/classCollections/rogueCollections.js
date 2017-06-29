@@ -77,16 +77,12 @@
       }
     ],
     starting_equipment: {
-      class: "Rogue"
+      class: "Rogue",
+      equipment: "You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a rapier or (b) a shortsword\n• (a) a shortbow and quiver of 20 arrows or (b) a shortsword\n• (a) a burglar’s pack, (b) a dungeoneer’s pack, or (c)  an explorer’s pack\n• Leather armor, two daggers, and thieves’ tools"
     },
     class_levels: {
       class: "Rogue"
     },
-    subclasses: [
-      {
-        name: "Thief"
-      }
-    ],
 
     featuresArray: [
       { _id: "rogueLevel1",

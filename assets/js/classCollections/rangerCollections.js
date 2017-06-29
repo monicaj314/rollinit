@@ -62,15 +62,45 @@
       }
     ],
     starting_equipment: {
-      class: "Ranger"
+      class: "Ranger",
+      equipment: "You start with the following equipment, in addition to the equipment granted by your background:\n • (a) scale mail or (b) leather armor\n • (a) two shortswords or (b) two simple melee w eapons\n • (a) a dungeoneer’s pack or (b) an explorer’s pack\n • A longbow and a quiver of 20 arrows"
     },
     class_levels: {
       class: "Ranger"
+    
     },
-    subclasses: [
+    fightingStyles: [
       {
-        name: "Hunter"
-      }
+        name: "Fighting Style",
+        choice: 1,
+        level: 2,
+        options: [
+          {
+            name: "Archery",
+            "desc": [
+              "You gain a +2 bonus to attack rolls you make with ranged weapons."
+            ],
+          },
+          {
+            name: "Defense",
+            "desc": [
+              "While you are wearing armor, you gain a +1 bonus to AC."
+            ],
+          },
+          {
+            name: "Dueling",
+            "desc": [
+              "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+            ],
+          },
+          {
+            name: "Two-Weapon Fighting",
+            "desc": [
+              "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+            ],
+          }
+        ]
+      },
     ],
     subclassSpecifics: [
       {
