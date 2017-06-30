@@ -52,13 +52,9 @@
       class: "Cleric"
     },
     class_levels: {
-      class: "Cleric"
+      class: "Cleric",
+      equipment:"You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a mace or (b) a warhammer (if proficient)\n• (a) scale mail, (b) leather armor, or (c) chain mail (if proficient)\n• (a) a light crossbow and 20 bolts or (b) any simple weapon\n• (a) a priest’s pack or (b) an explorer’s pack\n• A shield and a holy symbol"
     },
-    subclasses: [
-      {
-        name: "Life"
-      }
-    ],
     spellcasting: {
       class: "Cleric"
     },
@@ -71,23 +67,9 @@
         feature_choices: [],
         features: [
           {
-            name: "Spellcasting",
+            name: "Spellcasting", 
             def: [
               "As a conduit for divine power, you can cast cleric spells."
-            ]
-          },
-          {
-            name: "Divine Domain",
-            def: [
-              "Choose one domain related to your deity: Knowledge, Life, Light, Nature, Tempest, Trickery, or War. Only the Life domain is detailed in the Open Game Licensed SRD. Additional Domains are described in the official rulebooks or products from other publishers.",
-              "Your domain grants you domain spells and other features when you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels."
-            ],
-          },
-          {
-            name: "Domain Spells 1",
-            def: [
-              "Each domain has a list of spells—its domain spells— that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day.",
-              "If you have a domain spell that doesn’t appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
             ]
           }
         ],

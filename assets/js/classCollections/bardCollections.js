@@ -134,13 +134,9 @@
 		class: "Bard"
 	},
 	class_levels: {
-		class: "Bard"
+		class: "Bard",
+        equipment:"You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a rapier, (b) a longsword, or (c) any simple weapon\n• (a) a diplomat’s pack or (b) an entertainer's pack\n• (a) a lute or (b) any other musical instrument\n• Leather armor and a dagger "
 	},
-	subclasses: [
-		{
-			name: "Lore",
-		}
-	],
 	spellcasting: {
 		class: "Bard"
 	},
