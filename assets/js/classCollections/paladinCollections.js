@@ -63,11 +63,8 @@
     spellcasting: {
       class: "Paladin"
     },
-<<<<<<< HEAD
     fightingStyles: [
-=======
-    subclassSpecifics: [
->>>>>>> 2a2d93d4534ed42ad0ec2c355609b58340d8da86
+
       {
         name: "Fighting Style",
         choice: 1,
