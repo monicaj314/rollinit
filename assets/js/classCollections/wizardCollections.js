@@ -53,16 +53,13 @@
       }
     ],
     starting_equipment: {
-      class: "Wizard"
+      class: "Wizard",
+      equipment: "You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a quarterstaff or (b) a dagger\n• (a) a component pouch or (b) an arcane focus\n• (a) a scholar’s pack or (b) an explorer’s pack\n• A spellbook"
     },
     class_levels: {
       class: "Wizard"
     },
-    subclasses: [
-      {
-        name: "Evocation"
-      }
-    ],
+
     spellcasting: {
       class: "Wizard"
     },

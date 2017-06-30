@@ -53,20 +53,18 @@
       }
     ],
     starting_equipment: {
-      class: "Paladin"
+      class: "Paladin",
+      equipment: "You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a martial weapon and a shield or (b) two martial\nweapons\n• (a) five javelins or (b) any simple melee weapon\n• (a) a priest’s pack or (b) an explorer’s pack\n• Chain mail and a holy symbol"
     },
     class_levels: {
       class: "Paladin"
     },
-    subclasses: [
-      {
-        name: "Devotion"
-      }
-    ],
+    
     spellcasting: {
       class: "Paladin"
     },
-    subclassSpecifics: [
+    fightingStyles: [
+
       {
         name: "Fighting Style",
         choice: 1,

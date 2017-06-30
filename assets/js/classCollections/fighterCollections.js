@@ -64,12 +64,7 @@
     class_levels: {
       class: "Fighter"
     },
-    subclasses: [
-      {
-        name: "Champion"
-      }
-    ],
-    subclassSpecifics: [
+    fightingStyles: [
       {
         name: "Fighting Style",
         choice: 1,
@@ -112,86 +107,10 @@
             ],
           }
         ]
-      },
-
-      {
-        name: "Martial Archetype",
-        def: [
-          "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. Choose Champion, Battle Master, or Eldritch Knight. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level."
-        ],
-        level: 3,
-        options: [
-          {
-            name:"Champion",
-            def: [
-              "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows."
-            ],
-            benefits:[
-              {
-                name:"Improved Critical",
-                def:[
-                  "Beginning when you choose this archetype at 3rd level, your weapon attacks sco re a critical hit on a roll of 19 or 20."
-                ]
-              },
-              {
-                name:"Remarkable Athlete",
-                def:[
-                  "Starting at 7th level, you can add half your proficiency bonus (round up) to any Strength, Dexterity, or Constitution check you make that doesn’t already use your proficiency bonus.",
-                  "In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier."
-                ]
-              },
-              {
-                name:"Additional Fighting Style",
-                def:[
-                  "At 10th level, you can choose a second option from the Fighting Style class feature."
-                ]
-              },
-              {
-                name: "Superior Critical",
-                def: [
-                  "Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20."
-                ]
-              },
-              {
-                name:"Survivor",
-                def:[
-                  "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don’t gain this benefit if you have 0 hit points."
-                ]
-              }
-            ]
-          },
-          {
-            name: "Battle Master",
-            def:[
-                  "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge."
-                ],
-            benefits:[
-              {
-                name:"",
-                def:[
-                  ""]
-              }
-            ]
-          },
-          {
-            name:"Eldritch Knight",
-            def: [
-              "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter’s reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook."
-            ],
-            benefits:[
-              {
-                name:"",
-                def:[
-                  ""
-                  ]
-              }
-            ]
-          }
-        ]
       }
     ],
 
-    featuresArray: [
+      featuresArray: [
       { _id: "fighterLevel1",
         level: 1,
         ability_score_bonuses: 0,
