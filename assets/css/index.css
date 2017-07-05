@@ -1,0 +1,52 @@
+.jumbotron-fluid {
+	background-color:#2A3961; 
+	color: white;
+	min-height: 350px;
+}
+
+.features>ul{
+	font-size:1.1em;
+	list-style-type:none;
+}
+
+li.d20 {
+	background:url('../images/d20.png') no-repeat;
+	min-height:55px;
+	padding-left: 40px;
+}
+
+.welcome {
+	text-align:center;
+}
+
+.how-to {
+	display: block;
+	padding:80px;
+	margin-bottom:75px;
+}
+
+.step{
+		margin-bottom:30px;
+		border-radius:10px;
+		background-color:gray;
+}
+
+.step-one>div>img, .step-three>div>img {
+	margin:5px,0,5px,0;
+	float:right;
+}
+
+img {
+	height:250px;
+	width: 250px;
+}
+
+.outer-footer {
+    width:100%;
+    height: 100px;
+    position:relative;
+    bottom: 0;
+    background-color: #2A3961;
+    color: white;
+}
+

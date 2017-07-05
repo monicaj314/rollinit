@@ -63,6 +63,16 @@ $( document ).ready(function() {
 	});
 
 
+	$("#signup, .check-us").on("click", function(){
+		$("#log-in, #login-tab").removeClass("active");
+		$("#register, #register-tab").addClass("active");
+	});
+
+	$("#login").on("click", function(){
+		$("#log-in, #login-tab").addClass("active");
+		$("#register, #register-tab").removeClass("active");
+	});
+
 	// Sign Up Button 
 	$("#btnSignUp").on("click", function(snap){
 	var firstName = $("#new-first-name-input").val().trim();
@@ -78,7 +88,7 @@ $( document ).ready(function() {
 		var errorCode = error.code;
 		var errorMessage = error.message;
 	});
-	});
+});
 
 	// When there is a change to who is logged in
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -94,7 +104,6 @@ $( document ).ready(function() {
 			var isAnonymous = user.isAnonymous;
 			var uid = user.uid;
 			var providerData = user.providerData;
-
 
 			//Removing Log-In page
 			$("#btnLogOut").removeClass("hide");

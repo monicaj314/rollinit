@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Roll Init</title>
 		<!-- JQuery Link -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -13,7 +14,6 @@
 		<!-- Bootstrap Link -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 		<!-- Font Link -->
 		<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
 		<!-- Local CSS Link -->
@@ -24,48 +24,116 @@
 	</head>
 	<body>
 		<div class="header">
-			<nav class="navbar">
+			<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+				<a class="navbar-brand" href="/">
+					<h2>R I</h2>
+				</a>
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/">
-							<h2>R I</h2>
-						</a>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-menu">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
 					</div>
+				</div>
+				<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
-						<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
-						<li id="login" class="nav-tab" data-toggle="modal" data-target="#login-container"><a class="nav-anc">Log-In</a></li>
-						<li class="nav-tab"><a class="nav-anc" href="/register">Register</a></li>
-						<li class="nav-tab"><a class="nav-anc" href="/users/logout">Log-Out</a></li>
+<!-- 						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> -->
+<!-- 						<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li> -->
+						<li id="login" class="nav-tab" data-toggle="modal" data-target="#login-container"><a class="nav-anc">Login</a></li>
+						<li id="signup" class="nav-tab"><a class="nav-anc" data-toggle="modal" data-target="#login-container">Sign Up</a></li>
+						<!--<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>-->
 					</ul>
 				</div>
-			</nav>
-		</div>
-		<div class="current-user-div" id="current-user-div">
-		</div>
+				</nav>
+			</div>
+	
+	<div class="current-user-div" id="current-user-div"></div>
+	<div class="jumbotron-fluid">
 		<div class="container">
 			<div class="row">
 				<div class="welcome">
-					<h1>Home</h1>
-					<p>Welcome to this D and D thing.</p>
+					<h1>Welcome to Roll Initiative</h1>
+					<h3>Your tabletop roleplaying game assistant</h3>
 				</div>
+				<br>
+				<div class="features col-xs-6 col-md-6">
+					<ul>
+						<li class="d20">Easily create your roleplaying character &amp; character sheet</li>
+						<li class="d20">Manage multiple tabletop adventure campaigns</li>
+						<li class="d20">Join a campaign or create your own and invite players</li>
+					</ul>
+				</div>
+				<div class="features col-xs-6 col-md-6">
+					<ul>
+						<li class="d20">Instantly look up your class features, spells, and racial abilities</li>
+						<li class="d20">Roll high with our built-in d4-d20 dice roller</li>
+						<li class="d20">Game Masters, send in-app notifications directly to your players</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="welcome">
+				<button data-toggle="modal" data-target="#login-container" class="btn btn-default check-us" role="button">Check us out!</button>
 			</div>
 		</div>
+	</div>
+	<!-- How it works -->
+	<div class="wrapper">
+	<h1 class="welcome">How it works</h1>
+		<div class="container how-to">
+
+			<div class="row step step-one">
+				<div class="col-md-6">
+					<h3>Choose to be a Player or a Game Master</h3>
+				</div>
+				<div class="col-md-6">
+					<img src="../images/choose-wisely.png" alt="Choose to be a Player or a Game Master" />
+				</div>
+			</div>
+			<div class="row step step-two">
+				<div class="col-md-6">
+					<img src="../images/customize.png" alt="Players can customize their character and generate a detailed character sheet" />
+				</div>
+				<div class="col-md-6">
+					<h3>Players can customize their character and generate a detailed character sheet</h3>
+				</div>
+			</div>
+			<div class="row step step-three">
+				<div class="col-md-6">
+					<h3>Game Masters can start a new campaign and invite Players to join</h3>
+				</div>
+				<div class="col-lg-6">
+					<img src="../images/dungeon-key.png" alt="Game Masters can start a new campaign and invite Players to join" />
+				</div>
+			</div>
+			<div class="row step step-four">
+				<div class="col-md-6">
+					<img src="../images/journal.png" alt="Track your game progress with Quest Logs, Session Notes, and Campaign Journal" />
+				</div>
+				<div class="col-md-6">
+					<h3>Track your game progress with Quest Logs, Session Notes, and Campaign Journal</h3>
+				</div>
+			</div>
+		<div class="welcome">
+			<button data-toggle="modal" data-target="#login-container" class="btn btn-default check-us welcome" role="button">Check us out!</button>
+		</div>
+		</div>
+
 		<!-- Login/Register modal -->
 		<div class="modal fade" tabindex="1" role="dialog" id="login-container">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						</div>
 					<div class="modal-body">
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#log-in" data-toggle="tab" aria-controls="log-in" role="tab">Login</a></li>
-							<li role="presentation"><a href="#register" data-toggle="tab" aria-controls="register" role="tab">Register</a></li>
+							<li id="login-tab" role="presentation"><a href="#log-in" data-toggle="tab" aria-controls="log-in" role="tab">Login</a></li>
+							<li id="register-tab" role="presentation" class="active"><a href="#register" data-toggle="tab" aria-controls="register" role="tab">Register</a></li>
 						</ul>
 						<!-- Register tab -->
 						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane" id="register">
+							<div role="tabpanel" class="tab-pane active" id="register">
 								<form method="post" action="/users/register">
 									<div class="form-group">
 										<label>Name</label>
@@ -87,37 +155,33 @@
 										<label>Confirm Password</label>
 										<input type="password" class="form-control" placeholder="Password" name="password2">
 									</div>
-									<button type="submit" class="btn btn-default">Submit</button>
+										<button type="submit" data-dismiss="modal" class="btn btn-default">Cancel</button>
+										<button id="btnSignUp" type="submit" class="btn btn-primary">Submit</button>
 								</form>
 							</div>
-						
-					
-					<!-- Login Tab -->
-
-						<div role="tabpanel" class="tab-pane active" id="log-in">
-							<form method="post" action="/users/login">
-								<div class="form-group">
-									<label>Username</label>
-									<input type="text" class="form-control" name="username" placeholder="Username">
-								</div>
-								<div class="form-group">
-									<label>Password</label>
-									<input type="password" class="form-control" name="password" placeholder="Password">
-								</div>
-								<button type="submit" class="btn btn-default">Submit</button>
-							</form>
+							
+							<!-- Login Tab -->
+							<div role="tabpanel" class="tab-pane" id="log-in">
+								<form method="post" action="/users/login">
+									<div class="form-group">
+										<label>Username</label>
+										<input type="text" class="form-control" name="username" placeholder="Username">
+									</div>
+									<div class="form-group">
+										<label>Password</label>
+										<input type="password" class="form-control" name="password" placeholder="Password">
+										</div>
+										<button id="btnLogIn" type="submit" class="btn btn-primary">Submit</button>
+										<button type="submit" data-dismiss="modal" class="btn btn-default">Cancel</button>
+									</div>
+								</form>
+							</div>
 						</div>
-					</div>
-	
-				</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
 					</div>
 					</div><!-- /.modal-content -->
 					</div><!-- /.modal-dialog -->
 					</div><!-- /.modal -->
-					<div class="outter-footer">
+					<div class="outer-footer">
 						<div class="footer row">
 							<div class="col-md-12" id="footer-text">
 								<div class="row footer-center-row">

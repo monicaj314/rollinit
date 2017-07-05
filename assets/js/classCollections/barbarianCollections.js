@@ -55,17 +55,13 @@
       }
     ],
     starting_equipment: {
-      class: "Barbarian"
+      class: "Barbarian",
+      equipment: " You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a greataxe or (b) any martial melee weapon\n• (a) two handaxes or (b) any simple weapon\n• An explorer’s pack and four javelins"
+
     },
     class_levels: {
       class: "Barbarian"
     },
-    subclasses: [
-      {
-        name: "Berserker",
-      }
-    ],
-
     featuresArray: [
       {
         _id: "barbarianLevel1",
@@ -161,20 +157,6 @@
         index: 3,
         class: {
           name: "Barbarian",
-        },
-        subclass: {
-          name: "Berserker",
-          subclass_flavor: "Primal Path",
-          desc: [
-            "For some barbarians, rage is a means to an end— that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker’s rage, you thrill in the chaos of battle, heedless of your own health or well-being."
-          ]
-        },
-        subclass: {
-          name: "Totem Warrior",
-          subclass_flavor: "Primal Path",
-          desc: [
-            "For some barbarians, rage is a means to an end— that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker’s rage, you thrill in the chaos of battle, heedless of your own health or well-being."
-          ]
         },
       },
       {
