@@ -37,7 +37,7 @@
     "enzyme": "^2.8.2",
     "react-addons-test-utils": "^15.5.1",
     "react-scripts": "1.0.7",
-    "webpack": "^1.14.0"
+    "webpack": "^2.6.1"
   },
   "dependencies": {
     "axios": "^0.16.2",

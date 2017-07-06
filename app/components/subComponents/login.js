@@ -6,7 +6,31 @@ import helpers from "./../../utilities/helpers"
 
 var LoginContainer = React.createClass({
     getInitialState: function(){
-        return {}
+        return { username: "", password: ""}
+    },
+     handleUsernameChange: function(event) {
+        this.setState({ username: event.target.value });
+    },
+    handlePasswordChange: function(event) {
+        this.setState({ password: event.target.value });
+    },
+     // When a user submits...
+    handleSubmit: function(event) {
+        // prevent the HTML from trying to submit a form if the user hits "Enter" instead of
+        // clicking the button
+        event.preventDefault();
+
+        // Set the parent to have the search term
+        this.props.setTerm(this.state.username, this.state.password);
+        helpers.logIn(this.state.username, this.state.password).then(function(response){
+            console.log("response from Login.js");
+            console.log(response);
+            if (response.data.name !== "") {
+                console.log("Current User " +  response.data.name);
+                //this.setState({ currentUser: response.data.name });
+            }
+        }.bind(this));
+        //this.setState({ username: "" , password: ""});
     },
     // componentDidMount: function() {
     //     console.log("checkUser at least activated.");
@@ -35,17 +59,36 @@ var LoginContainer = React.createClass({
                             </div>
                             <br />
                             <div className="features">
-                                <form method="post" action="">
+                                <form method="post" action="" onSubmit={this.handleSubmit}>
                                         <div class="form-group">
                                             <label>Username</label>
-                                            <input type="text" class="form-control" name="username" placeholder="Username" />
+                                            <input
+                                                value={this.state.username}
+                                                type="text"
+                                                className="form-control"
+                                                id="username"
+                                                onChange={this.handleUsernameChange}
+                                                required
+                                            />
                                         </div>
                                         <div class="form-group">
                                             <label>Password</label>
-                                            <input type="password" class="form-control" name="password" placeholder="Password" />
+                                            <input
+                                                value={this.state.password}
+                                                type="text"
+                                                className="form-control"
+                                                id="username"
+                                                onChange={this.handlePasswordChange}
+                                                required
+                                            />
                                         </div>
-                                        <button id="btnLogIn" type="submit" class="btn btn-primary">Submit</button>
-                                        <button type="submit" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                        <button
+                                            className="btn btn-primary"
+                                            type="submit"
+                                            id="btnLogIn"
+                                        >
+                                            Submit
+                                        </button>
                                     </form>
                             </div>
                         </div>
@@ -55,13 +98,8 @@ var LoginContainer = React.createClass({
         )
     }
 })
-// // An object we'll use to apply inline styles to this component
-// const styles = {
-//   containerStyle: {
-//     marginTop: 50,
-//     textAlign: "center"
-//   }
-// };
+
 
 // Exporting this component as the default (only) export
 export default LoginContainer;
+

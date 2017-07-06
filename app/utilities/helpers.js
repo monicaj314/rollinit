@@ -16,6 +16,11 @@ var helpers = {
   //   console.log("helpers.checkUser Activated");
   //   return path.get("/characters/all");
   // }
+
+  logIn: function(username, password){
+    console.log("helpers.logIn Activated");
+    return axios.get("/user/login")
+  }
 //   router.get('/user', function (req, res) {
 //     console.log("req.user")
 //     console.log(req.user)
