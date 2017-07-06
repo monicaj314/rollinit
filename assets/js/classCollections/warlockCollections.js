@@ -50,16 +50,13 @@
       }
     ],
     starting_equipment: {
-      class: "Warlock"
+      class: "Warlock",
+      equipment: "You start with the following equipment, in addition to the equipment granted by your background:\n • (a) a light c rossbow and 20 bolts or (b) any simple\n weapon\n • (a) a component pouch or (b) an arcane focus\n • (a) a scholar’s pack or (b) a dungeoneer’s pack\n • Leather armor, any simple w eapon, and two daggers"
     },
     class_levels: {
       class: "Warlock"
     },
-    subclasses: [
-      {
-        name: "Fiend"
-      }
-    ],
+    
     spellcasting: {
       class: "Warlock"
     },

@@ -92,13 +92,10 @@
       class: "Druid"
     },
     class_levels: {
-      class: "Druid"
+      class: "Druid",
+      equipment:"You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a w ooden shield or (b) any simple weapon\n• (a) a scimitar or (b) any simple melee weapon\n• Leather armor, an explorer’s pack, and a druidic focus"
     },
-    subclasses: [
-      {
-        name: "Land",
-      }
-    ],
+    
     spellcasting: {
       class: "Druid"
     },

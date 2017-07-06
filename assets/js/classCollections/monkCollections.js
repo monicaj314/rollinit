@@ -152,17 +152,13 @@
       }
     ],
     starting_equipment: {
-      class: "Monk"
+      class: "Monk",
+      equipment:"You start with the following equipment, in addition tothe equipment granted by your background:\n• (a) a shortsword or (b) any simple weapon\n• (a) a dungeoneer’s pack or (b) an explorer’s pack\n• 10 darts"
     },
     class_levels: {
       class: "Monk"
     },
-    subclasses: [
-      {
-        name: "Open Hand"
-      }
-    ],
-
+    
     featuresArray: [
       { _id: "monkLevel1",
         level: 1,

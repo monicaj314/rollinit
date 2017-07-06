@@ -1,7 +1,3 @@
-
-
-
-
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -15,8 +11,6 @@ var localStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var db = mongoose.connection;
-
-
 
 var users = require('./routes/users');
 var characters = require('./routes/characters');
