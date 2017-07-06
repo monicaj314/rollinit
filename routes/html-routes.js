@@ -54,6 +54,10 @@ app.get("/", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/login.html"))
    });
 
+   app.get("/newIndex", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/newIndex.html"))
+   });
+
    app.get("/register", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/register.html"))
    });
