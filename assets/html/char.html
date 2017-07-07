@@ -23,9 +23,10 @@
    	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
 
     <!-- Local CSS Link -->
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<link rel="stylesheet" type="text/css" href="../css/all.css">
     <link rel="stylesheet" type="text/css" href="../css/char.css">
-
+	
 	<!-- Firebase Link -->
     <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 
@@ -55,6 +56,10 @@
 				</div>
 				</nav>
 			</div>
+			
+			<div id="app"></div>
+
+<script src="../js/diceroller.js"></script>
 
 <div class="container register-container" id="register-container">
 	<div class="current-char-all">
@@ -107,6 +112,7 @@
 					<option>Tiefling</option>
 				</select>
 			</div>
+
 			<div class="form-group">
 				<label>Class:</label>
 				<select class="form-control" name="class">
