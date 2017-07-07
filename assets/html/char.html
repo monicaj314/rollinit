@@ -47,7 +47,9 @@
 				<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
  						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> 
+						<li id="profile" class="nav-tab"><a class="nav-anc" href="/profile">Profile</a></li>
 						<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
+
 					</ul>
 				</div>
 				</nav>
@@ -59,15 +61,10 @@
 
 <div class="container register-container" id="register-container">
 	<div class="current-char-all">
-		<!-- <h2> Current Characters: </h2>
-		<div class="current-char subtitle" id="current-char">
-			<h4>Looks like you currently have no characters.</h4>
-		</div> -->
 	</div>
 
 		<h2 class="page-header"> Character Creator </h2>
-				<!--<div class="alert alert-danger">
-				</div>-->
+
 		<form method="post" action="/characters/add">
 			<div class="form-group">
 				<label>Name</label>

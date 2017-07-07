@@ -18,14 +18,14 @@ var User = require('../models/user');
 // =============================================================
 module.exports = function (app) {
 
+
   // Each of the below routes just handles the HTML page that the user gets sent to.
-  // index route loads view.html
 
 app.get("/", function(req, res){
     if(req.user){
       console.log("yes user")
       console.log(req.user)
-      res.sendFile(path.join(__dirname+ "./../assets/html/index.html"))
+      res.sendFile(path.join(__dirname+ "./../assets/html/index.html"));
     } else {
       console.log("no user");
       res.sendFile(path.join(__dirname+ "./../assets/html/index.html"))
