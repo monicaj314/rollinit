@@ -61,4 +61,11 @@ p.footer-text.footer-name {
     box-shadow: none;
 }
 
+.poly-container {
+	float:left;
+	margin: 25px;
+	overflow:auto;
+	font-size: 1em;
+}
+
 
