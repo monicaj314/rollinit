@@ -1,0 +1,96 @@
+
+.navbar{
+    background-color: #2a3961;
+    border: 0px;
+    border-radius: 0px;
+}
+
+.navbar-brand{
+    padding: 0px 15px;
+    position: absolute;
+    color:white;
+    left: 0;
+}
+
+
+.navbar-brand:hover{
+    background-color: #bb3636;
+    color: #fecc16;
+}
+
+.navbar-brand>h2{
+    margin: 10px;
+}
+
+.navbar-nav>.nav-tab>a{
+    color: #fecc16;
+}
+
+.navbar-nav>.nav-tab>a:hover{
+    color: #fecc16;
+    background-color: #bb3636;
+}
+
+.navbar, .navbar-inverse {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-right:30px;
+    min-height: 60px;
+
+}
+
+.nav li {
+    display: inline-block;
+    font-size:1.3em;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+    background-color: #444444;
+    transition: 0.7s all linear;
+    border:none;
+}
+
+p.footer-text.footer-name {
+    margin: 10px 0 10px 50px;
+}
+
+.navbar-collapse, .collapse {
+    float:right;
+    border:none;
+    box-shadow: none;
+}
+
+.poly-container {
+	float:left;
+	margin: 25px;
+	overflow:auto;
+	font-size: 1em;
+}
+
+#register-container {
+    margin-left: 200px;
+}
+
+.poly-container {
+	float:left;
+	margin: 25px 50px 25px 25px;
+	overflow:auto;
+	font-size: 2em;
+}
+
+div.form-group > label {
+    margin: 10px 0 0 0;
+}
+
+#output-box > textarea {
+    height: 50px;
+    width: 90px;
+    margin-left: 10px;
+}
+
+.dice-container > ul {
+    margin-left: -33px;
+}
+
+

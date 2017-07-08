@@ -15,7 +15,6 @@ $( document ).ready(function() {
 	var database = firebase.database();
 	var ref = database.ref();
 
-
 	// Log In Button
 	$("#btnLogIn").on("click", function(){
 	var email = $("#email-input").val().trim();
@@ -33,6 +32,16 @@ $( document ).ready(function() {
 	});
 
 
+	$("#signup, .check-us").on("click", function(){
+		$("#log-in, #login-tab").removeClass("active");
+		$("#register, #register-tab").addClass("active");
+	});
+
+	$("#login").on("click", function(){
+		$("#log-in, #login-tab").addClass("active");
+		$("#register, #register-tab").removeClass("active");
+	});
+
 	// Sign Up Button 
 	$("#btnSignUp").on("click", function(snap){
 	var firstName = $("#new-first-name-input").val().trim();
@@ -48,7 +57,7 @@ $( document ).ready(function() {
 		var errorCode = error.code;
 		var errorMessage = error.message;
 	});
-	});
+});
 
 	// When there is a change to who is logged in
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -65,11 +74,10 @@ $( document ).ready(function() {
 			var uid = user.uid;
 			var providerData = user.providerData;
 
-
 			//Removing Log-In page
 			$("#btnLogOut").removeClass("hide");
 			$("#main-cont").removeClass("hide");
-			$("#log-in-cont").addClass("hide");
+			$("#login").css("display", "none");
 			
 
 			//Log Out Button
@@ -84,16 +92,11 @@ $( document ).ready(function() {
 			});
 			location.reload(true);
 			});
-
-
-
 		};
 	});
-
-
-
-
 });
+
+
 
 
 

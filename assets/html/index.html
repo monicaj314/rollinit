@@ -1,146 +1,236 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>D_D Home</title>
+<!doctype html>
+<html lang="en">
 
-		<!-- JQuery Link -->
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>Roll Init</title>
+    <!--Style Sheets-->
+    <link rel="icon" type="image/png" href="logo.ico" sizes="40x40">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Eagle+Lake" rel="stylesheet">
+    <!-- Firebase/Script Tags-->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/open.js"></script>
 
-	<!-- Home JavaScript -->
-	 <script type="text/javascript" src="../js/open.js" ></script>
-	
-	<!-- Reset CSS Link -->
-	<link rel="stylesheet" type="text/css" href="../css/reset.css"> 
+    <body>
 
-	<!-- Bootstrap Link -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <!--Photo Header-->
+      <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <nav role="navigation" style="z-index: 100">
+              <ul>
+                <li id="login" class="nav-tab" data-toggle="modal" data-target="#login-container"><a class="nav-anc">Login</a></li>
+                <!--<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>-->
+              </ul>
+              <!-- Dropdown Structure -->
+              <ul id="dropdown1" class="dropdown-content">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="char.html">Character Creation</a></li>
+              </ul>
+              <!-- Dropdown Trigger -->
+              <ul class="right">
 
-	<!-- Font Link -->
-	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="large material-icons right">view_headline</i></a></li>
 
-	<!-- Local CSS Link -->
-	<link rel="stylesheet" type="text/css" href="../css/open.css">
+              </ul>
+            </nav>
+            <div class="col offset-s-6">
+              <img id="title" src="../images/dndhighlands.png" alt="titlecoa" style="height: 300px; width:100%">
+            </div>
 
-	<!-- Bootstrap Link  -->
-	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+            <div class="row center" id="adventure">
+              <div>
+                <div id="imgdiv">
+                  <img id="adventuretime" src="../images/adventuretime.png" alt="adventure" style="height:60%; width: 60%">
+                </div>
+              </div>
+            </div>
+            <div class="row" />
+            <div class="row center">
+              <a class="btn-large waves-effect" id="download-button" data-toggle="modal" data-target="#login-container">Create Account</a>
+            </div>
+          </div>
+          <div class="parallax"><img id="landscape" src="../images/highlands.jpg" alt="highlands" style="width: 100%; height: 100%"></div>
+        </div>
+      </div>
+      </div>
+      <!--Icon Section -->
+      <div class="container green darken-4">
+        <div class="section">
+          <div class="row">
+            <div class="col s4">
+              <div class="icon-block">
+                <h5 class="center col m-4">Create and Track<br>Multiple Characters</h5>
+                <h2 class="center"><i class="material-icons center">face</i>
+                </h2>
+              </div>
+            </div>
+            <div class="col s4">
+              <div class="icon-block">
+                <h5 class="center col m-4">Look Up Features,<br>Spells, and Abilities</h5>
+                <h2 class="center"><i class="material-icons center">library_books</i>
+                </h2>
+              </div>
+            </div>
+            <div class="col s4">
+              <div class="icon-block">
+                <h5 class="center col m-4">Invite and<br>Play with Friends</h5>
+                <h2 class="center"><i class="material-icons center">tag_faces</i></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--Modal-->
+  <div class="modal fade" tabindex="1" role="dialog" id="login-container">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <ul class="nav nav-tabs" role="tablist">
+            <li id="login-tab" role="presentation"><a href="#log-in" data-toggle="tab" aria-controls="log-in" role="tab">Login</a></li>
+            <li id="register-tab" role="presentation" class="active"><a href="#register" data-toggle="tab" aria-controls="register" role="tab">Register</a></li>
+          </ul>
+          <!-- Register tab -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="register">
+              <form method="post" action="/users/register">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" class="form-control" placeholder="Name" name="name">
+                </div>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" placeholder="Username" name="username">
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="text" class="form-control" placeholder="Email" name="email">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" placeholder="Password" name="password">
+                </div>
+                <div class="form-group">
+                  <label>Confirm Password</label>
+                  <input type="password" class="form-control" placeholder="Password" name="password2">
+                </div>
+                <button type="submit" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <button id="btnSignUp" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
 
-</head>
+            <!-- Login Tab -->
+            <div role="tabpanel" class="tab-pane" id="log-in">
+              <form method="post" action="/users/login">
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <button data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <button id="btnLogIn" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+      <!--Footer-->
+      <footer class="page-footer green darken-4">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5>Our Company</h5>
+              <p>We are a team of students working on this project like it's our full time
+                job.
+              </p>
+              <p>We also just love Dungeons & Dragons.</p>
+              <br>
+              <h5>Contact Us</h5>
+              <address>
+                <a href="mailto:rollinit@gmail.com">rollinit@gmail.com</a>
+              </address>
+            </div>
+            <div class="col l3 s12">
+            </div>
+            <div class="col l3 s12">
+              <h5>Connect</h5>
+              <i class="icon"> <a href="https://www.facebook.com"><img id="overlay"src="../images/facebook.png"></a></i>
+              <i class="icon"> <a href="https://www.instagram.com"><img id="overlay"src="../images/instagram.png"></a></i>
+              <br>
+              <i class="icon"><a href="https://www.twitter.com"><img id="overlay"src="../images/twitter.png"></a></i>
+              <i class="icon"> <a href="https://plus.google.com"><img id="overlay" src="../images/googleplus.png"></a></i>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            <p id="ourNames">&copy2017 Made by Travis Nash, Paden Pace, Monica Jones, & Keli Poole
+              <a class="brown-text text-lighten-3"></a>
+            </p>
+          </div>
+        </div>
+      </footer>
 
- <body>
 
-	<!--<div class="container" id="log-in-cont">
-		<div class="log-in-div" id="log-in-div">
-				<div class="row row-title">
-					<h1 class="main-title">See you there.</h1>
-				</div>
-				<div class="row under-title-row">
-					<div class="col-lg-6 col-centered">
-							<div class="log-in-panel-outter">
-								<div class="panel-default panel log-in-panel">
-										<div class="row panel-heading log-in-panel-heading">
-											<h2 class="small-h2">Log In</h2>
-										</div>
-										<div class="row panel-body log-in-panel-body">
-											<form id="log-in-form" enctype="text/plain" action="">
-													<div class="row log-in-row">
-														<label class="email-label" id="email-label">Email:</label><br>
-														<input type="text" value="" name="email" placeholder="Bob@Example.com" class="input" id="email-input"><br>
-													</div>
-													<div class="row log-in-row">
-														<label class="password-label" id="password-label">Password:</label><br>
-														<input type="password" value="" name="password" placeholder="password#1" class="box" id="password-input"><br>
-													</div>
-											</form>
-											<div>
-													<button class="btn btn-primary btnLogIn log-in-button" id="btnLogIn">Log In</button>
-											</div>
-										</div>
+      </div>
+      </div>
+ 
+    <script>
+      $(document).ready(function () {
+        (function ($) {
+          $(function () {
+            $('div#login-container').modal();
+            $(".dropdown-button").dropdown();
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+          });
+        });
+      });
+    </script>
+<!-- 					<div class="outer-footer">
+						<div class="footer row">
+							<div class="col-md-12" id="footer-text">
+								<div class="row footer-center-row">
+									<div class="footer-textbox">
+										<br>
+										<div class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></div>
+										<ul> 
+										<br>
+										<li><a href="./apiRace">Race API</a></li>
+										<li><a href="./apiClass">Class API</a></li>
+										<li><a href="./apiEquipment">Equipment API</li>
+										<li><a href="./apiSpells">Spells API</a></li>
+										<li><a href="./apiBackground">Background API</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
-					</div>
-					<div class="col-lg-6 col-centered">
-							<div class="log-in-panel-outter">
-								<div class="panel-default panel log-in-panel">
-										<div class="row panel-heading log-in-panel-heading">
-											<h2 class="small-h2">Register</h2>
-										</div>
-										<div class="row panel-body log-in-panel-body">
-											<form class= id="register-form" enctype="text/plain" action="">
-													<div class="row log-in-row">
-														<label class="first-name-label" id="first-name-label">First Name:</label><br>
-														<input type="text" value="" name="first-name" placeholder="Bob" class="input" id="new-first-name-input"><br>
-													</div>
-													<div class="row log-in-row">
-														<label class="last-name-label" id="last-name-label">Last Name:</label><br>
-														<input type="text" value="" name="last-name" placeholder="Smith" class="input" id="new-last-name-input"><br>
-													</div>
-													<div class="row log-in-row">
-														<label class="email-label" id="email-label">Email:</label><br>
-														<input type="text" value="" name="email" placeholder="Bob@Example.com" class="input" id="new-email-input"><br>
-													</div>
-													<div class="row log-in-row">
-														<label class="password-label" id="password-label">Password:</label><br>
-														<input type="text" value="" name="password" placeholder="password#1" class="box" id="new-password-input"><br>
-													</div>
-											</form>
-											<div>
-													<button class="btn btn-success btnSignUp log-in-button" id="btnSignUp">Sign Up</button>
-											</div>
-										</div>
-								</div>
-							</div>
-					</div>
-				</div>
-		</div>
-	</div>-->
-
-
-
-	 <div class="conatiner " id="main-cont">
-		<div class="header">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header">
-							<button class="btn btn-default btnLogOut hide" id="btnLogOut">Log Out</button>
-					</div>
-						<ul class="nav navbar-nav navbar-right">
-									<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
-							<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li>
-							
-							<!--<li class="nav-tab"><a class="nav-anc" href="about.html">About Us</a></li>
-							<li class="nav-tab"><a class="nav-anc" href="contact.html">Contact Us</a></li>-->
-						</ul>
-				</div>
-			</nav>
-		</div>
-
-		<div class="container">
-			<div class="row">
-				<div class="welcome">
-					<h1>Home</h1>
-
-					<p>Welcome to this D and D thing.</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="outter-footer">
-			<div class="footer row">
-				<div class="col-md-12" id="footer-text">
-					<div class="row footer-center-row">
-						<div class="footer-textbox">
-							<p class="footer-text footer-name">Pace &amp; Nash</p>
-							<p class="footer-text footer-info">Git Hub Location</p>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+					</div> -->
+				</body>
+			</html>
 
-
-</body>
-
-</html> 
