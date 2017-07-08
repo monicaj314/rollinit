@@ -2,10 +2,10 @@
   "name": "d_d_repo",
   "version": "1.0.0",
   "description": "application using DB & Node technology to provide assistance for Dungeons & Dragons",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node server",
     "eject": "react-scripts eject",
     "build": "react-scripts build"
   },
