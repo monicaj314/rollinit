@@ -66,6 +66,7 @@ p.footer-text.footer-name {
 	margin: 25px;
 	overflow:auto;
 	font-size: 1em;
+}
 
 #register-container {
     margin-left: 200px;
@@ -76,6 +77,10 @@ p.footer-text.footer-name {
 	margin: 25px 50px 25px 25px;
 	overflow:auto;
 	font-size: 2em;
+}
+
+div.form-group > label {
+    margin: 10px 0 0 0;
 }
 
 #output-box > textarea {
