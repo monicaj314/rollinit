@@ -18,10 +18,12 @@ router.get('/login', function(req,res){
 
 // Register User
 router.post('/register', function(req,res){
-    var name = req.body.name;
-    var email = req.body.email;
-    var username = req.body.username;
-    var password = req.body.password;
+
+    console.log("router.post/register  req.body")
+    console.log(req.body)
+    console.log("router.post/register  res.body")
+    console.log(res.body)
+    
     var password2 = req.body.password2;
     // var dm = req.body.dm;
 
@@ -116,16 +118,20 @@ passport.deserializeUser(function(id, done) {
 
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/login',failureFlash: true}),
+  passport.authenticate('local'),
   function(req, res) {
-    // console.log("router.post/login")
+
+    console.log("router.post/login  req")
+    console.log(req)
+    console.log("router.post/login  res")
+    console.log(res)
     
     // localStorage.setItem('currentUser', req.user.username);
     // var currentUser = localStorage.getItem('currentUser');
     // console.log("localStorage username");
     // console.log(currentUser);
 
-    res.redirect('/profile');
+    //res.redirect('/profile');
   });
 
 router.get('/logout', function(req, res){

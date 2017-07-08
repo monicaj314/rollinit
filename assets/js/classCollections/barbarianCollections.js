@@ -1,8 +1,8 @@
-[
+var barbarianAll = 
   {
     _id: "barbarianClass",
     name: "Barbarian",
-    hitDie: 12,
+    hit_die: 12,
     skillChoices: [
       {
         from: [
@@ -577,5 +577,7 @@
         },
       }
     ]
-  }
-];
+  };
+
+
+module.exports = barbarianAll;

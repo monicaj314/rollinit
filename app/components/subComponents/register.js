@@ -30,7 +30,7 @@ var RegisterContainer = React.createClass({
         event.preventDefault();
 
         // Set the parent to have the search term
-        this.props.setTerm(this.state.username, this.state.password);
+        //this.props.setTerm(this.state.username, this.state.password);
         helpers.register(
             this.state.name,
             this.state.username, 
@@ -74,10 +74,10 @@ var RegisterContainer = React.createClass({
                             </div>
                             <br />
                             <div className="features">
-                                <form method="post" action="">
-									<div class="form-group">
+                                <form method="post" action="" onSubmit={this.handleSubmit}>
+									<div className="form-group">
 										<label>Name</label>
-										{/*<input type="text" class="form-control" placeholder="Name" name="name" />*/}
+										{/*<input type="text" className="form-control" placeholder="Name" name="name" />*/}
                                         <input
                                             value={this.state.name}
                                             type="text"
@@ -87,40 +87,56 @@ var RegisterContainer = React.createClass({
                                             required
                                         />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 										<label>Username</label>
-										{/*<input type="text" class="form-control" placeholder="Username" name="username" />*/}
+										{/*<input type="text" className="form-control" placeholder="Username" name="username" />*/}
                                         <input
                                             value={this.state.username}
                                             type="text"
                                             className="form-control"
-                                            id="name"
+                                            id="username"
                                             onChange={this.handleUsernameChange}
                                             required
                                         />
                                     </div>
-									<div class="form-group">
+									<div className="form-group">
 										<label>Email</label>
-										<input type="text" class="form-control" placeholder="Email" name="email" />
+										{/*<input type="text" className="form-control" placeholder="Email" name="email" />*/}
                                         <input
                                             value={this.state.email}
                                             type="text"
                                             className="form-control"
-                                            id="name"
+                                            id="email"
                                             onChange={this.handleEmailChange}
                                             required
                                         />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 										<label>Password</label>
-										<input type="password" class="form-control" placeholder="Password" name="password" />
-									</div>
-									<div class="form-group">
+										{/*<input type="password" className="form-control" placeholder="Password" name="password" />*/}
+                                        <input
+                                            value={this.state.password}
+                                            type="text"
+                                            className="form-control"
+                                            id="password"
+                                            onChange={this.handlePasswordChange}
+                                            required
+                                        />
+                                    </div>
+									<div className="form-group">
 										<label>Confirm Password</label>
-										<input type="password" class="form-control" placeholder="Password" name="password2" />
-									</div>
-									<button type="submit" data-dismiss="modal" class="btn btn-default">Cancel</button>
-									<button id="btnSignUp" type="submit" class="btn btn-primary">Submit</button>
+										{/*?<input type="password" className="form-control" placeholder="Password" name="password2" />*/}
+                                        <input
+                                            value={this.state.password2}
+                                            type="text"
+                                            className="form-control"
+                                            id="password2"
+                                            onChange={this.handlePassword2Change}
+                                            required
+                                        />
+                                    </div>
+									<button type="submit" data-dismiss="modal" className="btn btn-default">Cancel</button>
+									<button id="btnSignUp" type="submit" className="btn btn-primary">Submit</button>
 								</form>
                             </div>
                         </div>

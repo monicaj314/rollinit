@@ -51,44 +51,44 @@ var FauxHomeContainer = React.createClass({
                                 </ul>
                             </div>
                         </div>
-                        <div class="row">
-                            <h1 class="welcome">How it works</h1>
-                            <div class="container how-to">
+                        <div className="row">
+                            <h1 className="welcome">How it works</h1>
+                            <div className="container how-to">
 
-                                <div class="row step step-one">
-                                    <div class="col-md-6">
+                                <div className="row step step-one">
+                                    <div className="col-md-6">
                                         <h3>Choose to be a Player or a Game Master</h3>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div className="col-md-6">
                                         <img src="../images/choose-wisely.png" alt="Choose to be a Player or a Game Master" />
                                     </div>
                                 </div>
-                                <div class="row step step-two">
-                                    <div class="col-md-6">
+                                <div className="row step step-two">
+                                    <div className="col-md-6">
                                         <img src="../images/customize.png" alt="Players can customize their character and generate a detailed character sheet" />
                                     </div>
-                                    <div class="col-md-6">
+                                    <div className="col-md-6">
                                         <h3>Players can customize their character and generate a detailed character sheet</h3>
                                     </div>
                                 </div>
-                                <div class="row step step-three">
-                                    <div class="col-md-6">
+                                <div className="row step step-three">
+                                    <div className="col-md-6">
                                         <h3>Game Masters can start a new campaign and invite Players to join</h3>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div className="col-lg-6">
                                         <img src="../images/dungeon-key.png" alt="Game Masters can start a new campaign and invite Players to join" />
                                     </div>
                                 </div>
-                                <div class="row step step-four">
-                                    <div class="col-md-6">
+                                <div className="row step step-four">
+                                    <div className="col-md-6">
                                         <img src="../images/journal.png" alt="Track your game progress with Quest Logs, Session Notes, and Campaign Journal" />
                                     </div>
-                                    <div class="col-md-6">
+                                    <div className="col-md-6">
                                         <h3>Track your game progress with Quest Logs, Session Notes, and Campaign Journal</h3>
                                     </div>
                                 </div>
-                                <div class="welcome">
-                                    <button data-toggle="modal" data-target="#login-container" class="btn btn-default check-us welcome" role="button">Check us out!</button>
+                                <div className="welcome">
+                                    <button data-toggle="modal" data-target="#login-container" className="btn btn-default check-us welcome" role="button">Check us out!</button>
                                 </div>
                             </div>
                         </div>

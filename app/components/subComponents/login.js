@@ -21,7 +21,7 @@ var LoginContainer = React.createClass({
         event.preventDefault();
 
         // Set the parent to have the search term
-        this.props.setTerm(this.state.username, this.state.password);
+        //this.props.setTerm(this.state.username, this.state.password);
         helpers.logIn(this.state.username, this.state.password).then(function(response){
             console.log("response from Login.js");
             console.log(response);
@@ -60,7 +60,7 @@ var LoginContainer = React.createClass({
                             <br />
                             <div className="features">
                                 <form method="post" action="" onSubmit={this.handleSubmit}>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label>Username</label>
                                             <input
                                                 value={this.state.username}
@@ -71,7 +71,7 @@ var LoginContainer = React.createClass({
                                                 required
                                             />
                                         </div>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label>Password</label>
                                             <input
                                                 value={this.state.password}

@@ -2,11 +2,105 @@
 
 
 import React from "react";
-import helpers from "./../../utilities/helpers"
+import helpers from "./../../utilities/helpers";
+import CurrentCharacters from "./currentCharacters";
+import CreateCharacter from "./createCharacter";
+
 
 var CharacterContainer = React.createClass({
     getInitialState: function(){
-        return {}
+        return {
+            options:{
+                class: [
+                    {
+                        name: "Barbarian",
+                        value: "barbarianCollections",
+                    },
+                    {
+                        name: "Bard",
+                        value: "bardCollections",
+                    },
+                    {
+                        name: "Cleric",
+                        value: "clericCollections",
+                    },
+                    {
+                        name: "Druid",
+                        value: "druidCollections",
+                    },
+                    {
+                        name: "Fighter",
+                        value: "fighterCollections",
+                    },
+                    {
+                        name: "Monk",
+                        value: "monkCollections",
+                    },
+                    {
+                        name: "Paladin",
+                        value: "paladinCollections",
+                    },
+                    {
+                        name: "Ranger",
+                        value: "rangerCollections",
+                    },
+                    {
+                        name: "Rogue",
+                        value: "rogueCollections",
+                    },
+                    {
+                        name: "Sorcerer",
+                        value: "sorcererCollections",
+                    },
+                    {
+                        name: "Warlock",
+                        value: "warlockCollections",
+                    },
+                    {
+                        name: "Wizard",
+                        value: "wizardCollections",
+                    }
+                ],
+                race: [
+                    {
+                        name: "Dwarf",
+                        value: "dwarfRace",
+                    },
+                    {
+                        name: "Elf",
+                        value: "elfRace",
+                    },
+                    {
+                        name: "Halfling",
+                        value: "halflingRace",
+                    },
+                    {
+                        name: "Human",
+                        value: "humanRace",
+                    },
+                    {
+                        name: "Dragonborn",
+                        value: "dragonbornRace",
+                    },
+                    {
+                        name: "Gnome",
+                        value: "gnomeRace",
+                    },
+                    {
+                        name: "Half-Elf",
+                        value: "halfElfRace",
+                    },
+                    {
+                        name: "Half-Orc",
+                        value: "halfOrcRace",
+                    },
+                    {
+                        name: "Tiefling",
+                        value: "tieflingRace",
+                    }
+                ],
+            }
+        }
     },
     // componentDidMount: function() {
     //     console.log("checkUser at least activated.");
@@ -19,6 +113,9 @@ var CharacterContainer = React.createClass({
     //         }
     //     }.bind(this));
     // },
+    selectedItem: function(value){
+        console.log("value" + value);
+    },
     // selectDisplay: function (title, value){
     //     this.setState({currentDisplay: value})
     //     console.log(title + " Title select clicked.");
@@ -35,20 +132,12 @@ var CharacterContainer = React.createClass({
                             </div>
                             <br />
                             <div className="features">
-                                <ul>
-                                <h1>Created Characters</h1>
-                                    <li className="char">bob</li>
-                                    <li className="char">Gary</li>
-                                    <li className="char">Shelia</li>
-                                </ul>
+                                <h1>Current Characters</h1>
+                                <CurrentCharacters />
                             </div>
                             <div className="features">
-                                <ul>
-                                <h1>Make a New one</h1>
-                                    <li className="char">Name: </li>
-                                    <li className="char">Age: </li>
-                                    <li className="char">Shelia Factor: </li>
-                                </ul>
+                                <h1>Create A New Character</h1>
+                                <CreateCharacter data={this.state.options} handleClick={this.selectedItem}/>
                             </div>
                         </div>
                     </div>

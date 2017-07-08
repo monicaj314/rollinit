@@ -1,4 +1,4 @@
-[
+var clericAll = 
   {
     _id: "clericClass",
     name: "Cleric",
@@ -782,5 +782,6 @@
         }
       }
     ]
-  }
-];
+};
+
+module.exports = clericAll;

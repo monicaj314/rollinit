@@ -84,8 +84,8 @@ var AllContainer = React.createClass({
                     }
                 ]
             },
-            currentDisplay: "home", 
-            currentUser: ""
+            currentDisplay: "character", 
+            currentUser: "Jim"
         }
     },
     // componentDidMount: function() {
