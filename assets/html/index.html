@@ -7,6 +7,8 @@
 		<!-- JQuery Link -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<!-- Firebase Link  -->
+		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 		<!-- Home JavaScript -->
 		<script type="text/javascript" src="../js/open.js" ></script>
 		<!-- Reset CSS Link -->
@@ -19,8 +21,6 @@
 		<!-- Local CSS Link -->
 		<link rel="stylesheet" type="text/css" href="../css/all.css">
 		<link rel="stylesheet" type="text/css" href="../css/index.css">
-		<!-- Firebase Link  -->
-		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 	</head>
 	<body>
 		<div class="header">
@@ -40,11 +40,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
-<!-- 						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> -->
+ 						<li class="nav-tab"><a class="nav-anc" href="/profile">Profile</a></li> 
 <!-- 						<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li> -->
 						<li id="login" class="nav-tab" data-toggle="modal" data-target="#login-container"><a class="nav-anc">Login</a></li>
 						<li id="signup" class="nav-tab"><a class="nav-anc" data-toggle="modal" data-target="#login-container">Sign Up</a></li>
-						<!--<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>-->
+						<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
 					</ul>
 				</div>
 				</nav>
@@ -171,8 +171,8 @@
 										<label>Password</label>
 										<input type="password" class="form-control" name="password" placeholder="Password">
 										</div>
-										<button id="btnLogIn" type="submit" class="btn btn-primary">Submit</button>
 										<button type="submit" data-dismiss="modal" class="btn btn-default">Cancel</button>
+										<button id="btnLogIn" type="submit" class="btn btn-primary">Submit</button>
 									</div>
 								</form>
 							</div>

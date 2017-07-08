@@ -52,21 +52,19 @@
 				<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
  						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> 
+						<li id="profile" class="nav-tab"><a class="nav-anc" href="/profile">Profile</a></li>
 						<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
+
 					</ul>
 				</div>
 				</nav>
 			</div>
 			
 			<div id="app"></div>
-
 <script src="../js/diceroller.js"></script>
-
+   
 <div class="container register-container" id="register-container">
-	<h2 class="page-header"> Character Creator </h2>
-				<!--<div class="alert alert-danger">
-				</div>-->
-				<div id="app"></div>
+		<h2 class="page-header"> Character Creator </h2>
 		<form method="post" action="/characters/add">
 			<div class="form-group">
 				<label>Name</label>

@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-    console.log("/characters/all activiated")
+    console.log("/characters/all activated")
     $.getJSON("/characters/all", function(req, res) {
         if(req.characters.length>0){
             $("#current-char").empty();
@@ -24,7 +24,6 @@ $(document).ready(function() {
             }
         }
     });
-
 });
 
 $(document).on("click", ".expand-char", function() {
