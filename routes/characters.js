@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 var currentUser = {};
 
 var express = require('express');
@@ -47,11 +41,8 @@ router.post('/add', function(req,res){
     var age = req.body.age;
     var gender = req.body.gender;
     var race = req.body.race;
-<<<<<<< HEAD
-=======
     var className = req.body.className;
     var background = req.body.background;
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
     var level = req.body.level;
 
     console.log(req.body);
@@ -60,11 +51,8 @@ router.post('/add', function(req,res){
     req.checkBody('age', 'Age is required').notEmpty();
     req.checkBody('gender', 'Gender is required').notEmpty();
     req.checkBody('race', 'Race is required').notEmpty();
-<<<<<<< HEAD
-=======
     req.checkBody('className', 'ClassName is required').notEmpty();
     req.checkBody('background', 'Background is required').notEmpty();
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
     req.checkBody('level', 'Level is required').notEmpty();
 
     var errors = req.validationErrors();
@@ -80,11 +68,8 @@ router.post('/add', function(req,res){
             age: age, 
             gender: gender,
             race: race,
-<<<<<<< HEAD
-=======
             className: className,
             background: background,
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
             level: level
         });
 

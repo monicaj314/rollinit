@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 var currentUser = {};
 
 var express = require('express');

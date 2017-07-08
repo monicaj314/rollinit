@@ -13,10 +13,7 @@ var db = mongoose.connection;
 
 var Character = require('../models/character');
 var User = require('../models/user');
-<<<<<<< HEAD
-=======
 var Races = require("./../assets/js/racesCollections/racesCollections.js")
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 
 // Routes
 // =============================================================
@@ -73,54 +70,6 @@ app.get("/char", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/login.html"))
    });
 
-<<<<<<< HEAD
-  app.get("/", function(req, res){
-    if(req.user){
-      console.log("yes user")
-      console.log(req.user)
-      res.sendFile(path.join(__dirname+ "./../assets/html/index.html"))
-    } else {
-      console.log("no user")
-      res.sendFile(path.join(__dirname+ "./../assets/html/index.html"))
-    }
-  
-  });
-
-   app.get("/char", function(req, res){
-     if(req.user){
-        // console.log("yes user")
-        // console.log(req.user)
-        User.find({}).populate("characters")
-          .exec(function (error, doc) {
-            if (error) {
-              res.send(error);
-            } else {
-              console.log("doc")
-              console.log(doc)
-              res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
-          }
-        })
-      } else {
-        console.log("no user")
-        res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
-      }
-   });
-
-   app.get("/login", function(req, res){
-     res.sendFile(path.join(__dirname + "./../assets/html/login.html"))
-   });
-
-   app.get("/register", function(req, res){
-     res.sendFile(path.join(__dirname + "./../assets/html/register.html"))
-   });
-
-  //  app.get("/logout", function(req, res){
-  //    res.sendFile(path.join(__dirname + "./../assets/html/logout.html"))
-  //  });
-
-   app.get("/profile", function(req, res){
-     res.sendFile(path.join(__dirname + "./../assets/html/profile.html"))
-=======
    app.get("/apiRace", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/js/racesCollections/racesCollections.js"))
    });
@@ -154,7 +103,6 @@ app.get("/char", function(req, res){
 
    app.get("/apiBackground", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiBackground.html"))
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
    });
 
    app.get("/register", function(req, res){
