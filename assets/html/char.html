@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Roll Init</title>
 
     <!-- JQuery Link -->
@@ -52,7 +53,11 @@
 				<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
  						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> 
+<<<<<<< HEAD
 						<li id="profile" class="nav-tab"><a class="nav-anc" href="/profile">Profile</a></li>
+=======
+						 <li class="nav-tab"><a class="nav-anc" href="/profile">Profile</a></li>
+>>>>>>> b1f1a09... char page style fix
 						<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
 
 					</ul>
@@ -64,7 +69,12 @@
 <script src="../js/diceroller.js"></script>
    
 <div class="container register-container" id="register-container">
+<<<<<<< HEAD
 		<h2 class="page-header"> Character Creator </h2>
+=======
+	<h2 class="page-header"> Character Creator </h2>
+				<div id="app"></div>
+>>>>>>> b1f1a09... char page style fix
 		<form method="post" action="/characters/add">
 			<div class="form-group">
 				<label>Name</label>
@@ -120,14 +130,14 @@
 		</form>
 	</div>
 	<div id="char-preview-container">
-		<textarea defaultValue="character notes"></textarea>
+		<textarea name="character_notes" cols="35" rows="30" defaultValue="character notes">Character Notes</textarea>
 	</div>
-						<div class="outer-footer">
+					<div class="outer-footer">
 						<div class="footer row">
 							<div class="col-md-12" id="footer-text">
 								<div class="row footer-center-row">
 									<div class="footer-textbox">
-										<p class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
+										<div class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
 									</div>
 								</div>
 							</div>
