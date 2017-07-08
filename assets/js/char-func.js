@@ -2,11 +2,17 @@
 
 $(document).ready(function() {
 
+<<<<<<< HEAD
     console.log("/characters/all activiated")
     $.getJSON("/characters/all", function(req, res) {
         if(req.characters.length>0){
             // console.log("req.characters");
             // console.log(req.characters);
+=======
+    console.log("/characters/all activated")
+    $.getJSON("/characters/all", function(req, res) {
+        if(req.characters.length>0){
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
             $("#current-char").empty();
             var charArray = req.characters;
             for (var i = 0; i< charArray.length; i++){
@@ -16,6 +22,11 @@ $(document).ready(function() {
                 + "<h5 class='char-age char-age" + charArray[i]._id +" hide'>Age: " + charArray[i].age + "</h5>"
                 + "<h5 class='char-gender char-gender" + charArray[i]._id +" hide'>Gender: " + charArray[i].gender + "</h5>"
                 + "<h5 class='char-race char-race" + charArray[i]._id +" hide'>Race: " + charArray[i].race + "</h5>"
+<<<<<<< HEAD
+=======
+                + "<h5 class='char-className char-className" + charArray[i]._id +" hide'>Class: " + charArray[i].className + "</h5>"
+                + "<h5 class='char-background char-background" + charArray[i]._id +" hide'>Background: " + charArray[i].background + "</h5>"
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
                 +"<button data-id='" + charArray[i]._id + "' class='expand-char expand-char" + charArray[i]._id +"'>Expand</button> "
                 +"<button data-id='" + charArray[i]._id + "' class='close-char close-char" + charArray[i]._id +" hide'>Close</button> "
                 +"<button data-id='" + charArray[i]._id + "' class='delete-char'>Delete</button>"
@@ -26,6 +37,7 @@ $(document).ready(function() {
             }
         }
     });
+<<<<<<< HEAD
     // $.getJSON("/scrape", function(data) {
     //     // For each one
     //     for (var i = 0; i < data.length; i++) {
@@ -36,6 +48,8 @@ $(document).ready(function() {
     //     $("#articles").append("<button data-id='" + data[i]._id + "' id='savearticle'>Save Article</button>");
     //     }
     // });
+=======
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 });
 
 $(document).on("click", ".expand-char", function() {
@@ -45,6 +59,11 @@ $(document).on("click", ".expand-char", function() {
     console.log(thisId);
     $(".char-age"+thisId).removeClass("hide");
     $(".char-race"+thisId).removeClass("hide");
+<<<<<<< HEAD
+=======
+    $(".char-className"+thisId).removeClass("hide");
+    $(".char-background"+thisId).removeClass("hide");
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
     $(".char-gender"+thisId).removeClass("hide");
     $(".close-char"+thisId).removeClass("hide");
     $(".expand-char"+thisId).addClass("hide");
@@ -57,6 +76,11 @@ $(document).on("click", ".close-char", function() {
     console.log(thisId);
     $(".char-age"+thisId).addClass("hide");
     $(".char-race"+thisId).addClass("hide");
+<<<<<<< HEAD
+=======
+    $(".char-className"+thisId).addClass("hide");
+    $(".char-background"+thisId).addClass("hide");
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
     $(".char-gender"+thisId).addClass("hide");
     $(".close-char"+thisId).addClass("hide");
     $(".expand-char"+thisId).removeClass("hide");
@@ -78,6 +102,7 @@ $(document).on("click", ".delete-char", function() {
         console.log(data);
     });
 });
+<<<<<<< HEAD
 
 // // When you click the savearticle button
 // $(document).on("click", "#savearticle", function() {
@@ -178,3 +203,5 @@ $(document).on("click", ".delete-char", function() {
 // });
 
 // When you click the savearticle button
+=======
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904

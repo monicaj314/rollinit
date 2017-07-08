@@ -19,6 +19,15 @@ var CharacterSchema = mongoose.Schema({
     race: {
         type: String,
     },
+<<<<<<< HEAD
+=======
+    className: {
+        type: String,
+    },
+    background: {
+        type: String,
+    },
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
     level: {
         type: Number,
     //},

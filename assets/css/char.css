@@ -1,3 +1,4 @@
+
 .charLibcharDiv {
 	border-style: solid;
 	border-width: 2px;
@@ -6,15 +7,34 @@
 	margin: 5px;
 }
 
+#char-preview-container {
+	float:right;
+	position: relative;
+	top: -675px;
+	margin:auto;
+}
+#char-preview-container > textarea {
+	max-width: 300px;
+	position: relative;
+	margin-right:50px;
+}
+
+div#register-container.container.register-container {
+    max-width: 40%;
+	margin-right:60px;
+}
 
 .charLibName {
 	background-color: #f1dea3;
 }
 
+<<<<<<< HEAD
 p.footer-text.footer-name {
     margin: 10px 0 10px 50px;
 }
 
+=======
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 input.form-control, select.form-control {
 	width: 500px !IMPORTANT;
 	display: inline-block;
@@ -23,3 +43,19 @@ input.form-control, select.form-control {
 label {
 	width: 100px;
 }
+<<<<<<< HEAD
+=======
+
+.outer-footer {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: inherit;
+    background-color: #2A3961;
+    color: white;
+}
+
+div.footer-center-row {
+	margin:auto;
+}
+>>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
