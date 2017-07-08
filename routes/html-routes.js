@@ -13,6 +13,7 @@ var db = mongoose.connection;
 
 var Character = require('../models/character');
 var User = require('../models/user');
+var Races = require("./../assets/js/racesCollections/racesCollections.js")
 
 // Routes
 // =============================================================
@@ -70,8 +71,23 @@ app.get("/char", function(req, res){
    });
 
    app.get("/apiRace", function(req, res){
-     res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiRace.html"))
+     res.sendFile(path.join(__dirname + "./../assets/js/racesCollections/racesCollections.js"))
    });
+
+   app.get("/apiRace/:Races?", function(req, res) {
+  var chosen = req.params.Races;
+
+  if (chosen) {
+    console.log(chosen);
+    for (var i = 0; i < Races.length; i++) {
+      if (chosen === Races[i].name) {
+        return res.json(Races[i]);
+      }
+    }
+    return res.json(false);
+  }
+  return res.json(Races);
+});
 
    app.get("/apiClass", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiClass.html"))

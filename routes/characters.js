@@ -1,6 +1,3 @@
-
-
-
 var currentUser = {};
 
 var express = require('express');
