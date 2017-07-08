@@ -18,21 +18,36 @@ var User = require('../models/user');
 // =============================================================
 module.exports = function (app) {
 
-  // Each of the below routes just handles the HTML page that the user gets sent to.
-  // index route loads view.html
-
 app.get("/", function(req, res){
     if(req.user){
       console.log("yes user")
       console.log(req.user)
-      res.sendFile(path.join(__dirname+ "./../assets/html/index.html"))
+      res.sendFile(path.join(__dirname+ "./../assets/html/index.html"));
     } else {
       console.log("no user");
       res.sendFile(path.join(__dirname+ "./../assets/html/index.html"))
     }
   });
 
-   app.get("/char", function(req, res){
+app.get("/char", function(req, res){
+  if(req.user){
+      User.find({}).populate("characters")
+        .exec(function (error, doc) {
+          if (error) {
+              res.send(error);
+            } else {
+              console.log("doc")
+              console.log(doc)
+              res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
+          }
+        })
+      } else {
+        console.log("no user")
+        res.sendFile(path.join(__dirname + "./../assets/html/login.html"))
+      }
+   });
+
+      app.get("/profile", function(req, res){
      if(req.user){
         User.find({}).populate("characters")
           .exec(function (error, doc) {
@@ -41,7 +56,7 @@ app.get("/", function(req, res){
             } else {
               console.log("doc")
               console.log(doc)
-              res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
+              res.sendFile(path.join(__dirname + "./../assets/html/profile.html"))
           }
         })
       } else {
@@ -61,6 +76,4 @@ app.get("/", function(req, res){
    app.get("/profile", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/profile.html"))
    });
-
-
 };

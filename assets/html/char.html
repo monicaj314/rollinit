@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Roll Init</title>
+
     <!-- JQuery Link -->
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	 <!-- React  -->
@@ -11,7 +12,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
 
 	<!-- Home JavaScript -->
-	 <script type="text/javascript" src="../js/char-func.js" ></script>
+	 <!--<script type="text/javascript" src="../js/char-func.js" ></script>-->
 
 	<!-- Reset CSS Link -->
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
@@ -51,34 +52,19 @@
 				<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
  						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> 
+						<li id="profile" class="nav-tab"><a class="nav-anc" href="/profile">Profile</a></li>
 						<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
+
 					</ul>
 				</div>
 				</nav>
 			</div>
 			
 			<div id="app"></div>
-
 <script src="../js/diceroller.js"></script>
-
+   
 <div class="container register-container" id="register-container">
-	<div class="current-char-all">
-		<!-- <h2> Current Characters: </h2>
-		<div class="current-char subtitle" id="current-char">
-			<h4>Looks like you currently have no characters.</h4>
-		</div> -->
-	</div>
-
 		<h2 class="page-header"> Character Creator </h2>
-				<!--<div class="alert alert-danger">
-				</div>-->
-
-				
-				<div id="app">
-				</div>
-
-
-
 		<form method="post" action="/characters/add">
 			<div class="form-group">
 				<label>Name</label>
@@ -98,7 +84,7 @@
 			</div>
 			<div class="form-group">
 				<label>Race</label>
-				<select class="form-control" name="race">
+				<select onchange=(loadJS(this)) class="form-control" name="race">
 					<option>Dragonborn</option>
 					<option>Dwarf</option>
 					<option>Eladrin</option>
@@ -152,6 +138,9 @@
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
+	</div>
+	<div id="char-preview-container">
+		<textarea defaultValue="character notes"></textarea>
 	</div>
 						<div class="outer-footer">
 						<div class="footer row">

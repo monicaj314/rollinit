@@ -7,6 +7,20 @@
 	margin: 5px;
 }
 
+#char-preview-container {
+	float:right;
+}
+#char-preview-container > textarea {
+	height: 600px;
+	max-width: 300px;
+	position: relative;
+	top: -700px;
+	margin-right:50px;
+}
+
+div#register-container.container.register-container {
+    max-width: 40%;
+}
 
 .charLibName {
 	background-color: #f1dea3;
