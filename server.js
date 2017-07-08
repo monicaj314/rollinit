@@ -19,14 +19,6 @@ var db = mongoose.connection;
 var users = require('./routes/users');
 var characters = require('./routes/characters');
 
-<<<<<<< HEAD
-
-var users = require('./routes/users');
-var characters = require('./routes/characters');
-
-=======
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
-
 // Initialize Express
 var app = express();
 
