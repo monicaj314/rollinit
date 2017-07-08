@@ -44,6 +44,8 @@ router.post('/add', function(req,res){
     var age = req.body.age;
     var gender = req.body.gender;
     var race = req.body.race;
+    var className = req.body.className;
+    var background = req.body.background;
     var level = req.body.level;
 
     console.log(req.body);
@@ -52,6 +54,8 @@ router.post('/add', function(req,res){
     req.checkBody('age', 'Age is required').notEmpty();
     req.checkBody('gender', 'Gender is required').notEmpty();
     req.checkBody('race', 'Race is required').notEmpty();
+    req.checkBody('className', 'ClassName is required').notEmpty();
+    req.checkBody('background', 'Background is required').notEmpty();
     req.checkBody('level', 'Level is required').notEmpty();
 
     var errors = req.validationErrors();
@@ -67,6 +71,8 @@ router.post('/add', function(req,res){
             age: age, 
             gender: gender,
             race: race,
+            className: className,
+            background: background,
             level: level
         });
 
