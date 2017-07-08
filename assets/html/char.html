@@ -13,7 +13,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
 
 	<!-- Home JavaScript -->
-	 <!--<script type="text/javascript" src="../js/char-func.js" ></script>-->
+	<!--<script type="text/javascript" src="/js/raceNotes.js"></script>-->
 
 	<!-- Reset CSS Link -->
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
@@ -86,17 +86,15 @@
 			</div>
 			<div class="form-group">
 				<label>Race</label>
-				<select onchange=(loadJS(this)) class="form-control" name="race">
+				<select id="select-race" class="form-control" name="race">
 					<option>Dragonborn</option>
 					<option>Dwarf</option>
-					<option>Eladrin</option>
 					<option>Elf</option>
 					<option>Gnome</option>
 					<option>Half-Elf</option>
 					<option>Half-Orc</option>
 					<option>Halfling</option>
 					<option>Human</option>
-					<option>Kenku</option>
 					<option>Tiefling</option>
 				</select>
 			</div>
@@ -142,7 +140,7 @@
 		</form>
 	</div>
 	<div id="char-preview-container">
-		<textarea name="character_notes" cols="35" rows="30" defaultValue="character notes">Character Notes</textarea>
+		<textarea id="char-notes" name="character_notes" placeholder="Character Notes" cols="35" rows="30"></textarea>
 	</div>
 					<div class="outer-footer">
 						<div class="footer row">
@@ -155,5 +153,62 @@
 							</div>
 						</div>
 					</div>
-				</body>
-			</html>
+
+<script type="text/javascript">
+	var selectedRace = $("#select-race").val().trim();
+    $("#select-race").on("change", function() {
+		selectedRace = $("#select-race").val();
+		 $.get("/apiRace/" + selectedRace, function(data) {
+		function raceNotes() {
+		$("#char-notes").empty();
+		$("#char-notes").append(selectedRace,
+	"\n==============================\n"); 
+};
+    if (data) {
+		console.log(data);
+		raceNotes();
+        $("#char-notes").append(data.statsBonus.desc +
+		 "\n==============================\n");
+		getRacial();
+		getWeapons();
+		getLanguage();
+
+		function getRacial(){
+			var racial = data.racialTraits;
+			var traits = [];
+			for (var i = 0; i < racial.length; i++) {
+				traits.push(racial[i].name + ": " + racial[i].desc + "\n");
+			} if (racial.length > 0){
+			$("#char-notes").append("** Special Trait(s) ** \n" + traits.replace(",","") + "\n\n");
+		} 
+
+	};
+
+		function getWeapons(){
+			var weapons = data.startingProfs;
+			var profs = [];
+			for (var i = 0; i < weapons.length - 1; i++) {
+				profs.push(weapons[i].name + "\n")
+			} if (profs.length > 0){
+		 $("#char-notes").append("** Weapon Proficiencies ** \n" + profs.replace(",","")); 
+			}
+	};
+
+	function getLanguage(){
+			var generic = data.genericTraits;
+			var traitDesc = [];
+			for (var i = 0; i < generic.length; i++){
+				var language = generic[i].languageDesc;
+				if (language !== undefined){
+					language = language;
+				}
+			} 
+		 $("#char-notes").append("** Language Skills ** \n" + language); 
+	};
+}
+      });
+    });
+  </script>
+
+	</body>
+</html>
