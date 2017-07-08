@@ -88,22 +88,6 @@ passport.use(new LocalStrategy(
   }
 ));
 
-// ============ This is the basic from Passport ============
-// passport.use(new LocalStrategy(
-//   function(username, password, done) {
-//     User.findOne({ username: username }, function(err, user) {
-//       if (err) { return done(err); }
-//       if (!user) {
-//         return done(null, false, { message: 'Incorrect username.' });
-//       }
-//       if (!user.validPassword(password)) {
-//         return done(null, false, { message: 'Incorrect password.' });
-//       }
-//       return done(null, user);
-//     });
-//   }
-// ));
-
 passport.serializeUser(function(user, done) {
   done(null, user.id);
 });
@@ -116,14 +100,9 @@ passport.deserializeUser(function(id, done) {
 
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/login',failureFlash: true}),
+  passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/',failureFlash: true}),
   function(req, res) {
-    // console.log("router.post/login")
-    
-    // localStorage.setItem('currentUser', req.user.username);
-    // var currentUser = localStorage.getItem('currentUser');
-    // console.log("localStorage username");
-    // console.log(currentUser);
+
 
     res.redirect('/profile');
   });
