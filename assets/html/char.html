@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Roll Init</title>
 
     <!-- JQuery Link -->
@@ -53,7 +52,6 @@
 				<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
  						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> 
-						 <li class="nav-tab"><a class="nav-anc" href="/profile">Profile</a></li>
 						<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
 					</ul>
 				</div>
@@ -66,6 +64,8 @@
 
 <div class="container register-container" id="register-container">
 	<h2 class="page-header"> Character Creator </h2>
+				<!--<div class="alert alert-danger">
+				</div>-->
 				<div id="app"></div>
 		<form method="post" action="/characters/add">
 			<div class="form-group">
@@ -122,14 +122,14 @@
 		</form>
 	</div>
 	<div id="char-preview-container">
-		<textarea name="character_notes" cols="35" rows="30" defaultValue="character notes">Character Notes</textarea>
+		<textarea defaultValue="character notes"></textarea>
 	</div>
-					<div class="outer-footer">
+						<div class="outer-footer">
 						<div class="footer row">
 							<div class="col-md-12" id="footer-text">
 								<div class="row footer-center-row">
 									<div class="footer-textbox">
-										<div class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
+										<p class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
 									</div>
 								</div>
 							</div>

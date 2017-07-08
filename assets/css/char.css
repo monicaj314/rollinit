@@ -9,19 +9,17 @@
 
 #char-preview-container {
 	float:right;
-	position: relative;
-	top: -675px;
-	margin:auto;
 }
 #char-preview-container > textarea {
+	height: 600px;
 	max-width: 300px;
 	position: relative;
+	top: -700px;
 	margin-right:50px;
 }
 
 div#register-container.container.register-container {
     max-width: 40%;
-	margin:auto;
 }
 
 .charLibName {
@@ -38,14 +36,10 @@ label {
 }
 
 .outer-footer {
-    width: 100%;
+    width:100%;
     height: 100px;
-    position: fixed;
-    bottom: inherit;
+    position:relative;
+    bottom: 0;
     background-color: #2A3961;
     color: white;
-}
-
-div.footer-center-row {
-	margin:auto;
 }
