@@ -34,7 +34,7 @@ $( document ).ready(function() {
 
 	$("#signup, .check-us").on("click", function(){
 		$("#log-in, #login-tab").removeClass("active");
-		$("#register, #register-tab").addClass("active");
+		$("#register, #register-tab, #btnSignUp").addClass("active");
 	});
 
 	$("#login").on("click", function(){
