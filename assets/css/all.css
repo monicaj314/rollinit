@@ -7,19 +7,12 @@
 
 .navbar-brand{
     padding: 0px 15px;
-<<<<<<< HEAD
-    color: #fecc16;
-    border-right: solid 2px #ffffff;
-}
-
-=======
     position: absolute;
     color:white;
     left: 0;
 }
 
 
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 .navbar-brand:hover{
     background-color: #bb3636;
     color: #fecc16;
@@ -29,14 +22,6 @@
     margin: 10px;
 }
 
-<<<<<<< HEAD
-.navbar-nav>.nav-tab{
-    border-left: solid 2px #ffffff;
-    color: #bb3636;
-}
-
-=======
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 .navbar-nav>.nav-tab>a{
     color: #fecc16;
 }
@@ -44,9 +29,6 @@
 .navbar-nav>.nav-tab>a:hover{
     color: #fecc16;
     background-color: #bb3636;
-<<<<<<< HEAD
-}
-=======
 }
 
 .navbar, .navbar-inverse {
@@ -112,4 +94,3 @@ div.form-group > label {
 }
 
 
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
