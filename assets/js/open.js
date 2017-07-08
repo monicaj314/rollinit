@@ -32,7 +32,7 @@ $( document ).ready(function() {
 	});
 
 
-	$("#signup, .check-us").on("click", function(){
+	$("#signup, .check-us, #download-button").on("click", function(){
 		$("#log-in, #login-tab").removeClass("active");
 		$("#register, #register-tab").addClass("active");
 	});
