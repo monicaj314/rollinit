@@ -84,6 +84,14 @@ app.use('/users', users);
 require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
+db.on('error', function(err) {
+  console.log('Moongoose Error: ', err);
+});
+
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
+
 
 
 // =========  Database configuration with mongoose ===============
