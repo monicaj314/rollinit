@@ -66,6 +66,26 @@ p.footer-text.footer-name {
 	margin: 25px;
 	overflow:auto;
 	font-size: 1em;
+
+#register-container {
+    margin-left: 200px;
+}
+
+.poly-container {
+	float:left;
+	margin: 25px 50px 25px 25px;
+	overflow:auto;
+	font-size: 2em;
+}
+
+#output-box > textarea {
+    height: 50px;
+    width: 90px;
+    margin-left: 10px;
+}
+
+.dice-container > ul {
+    margin-left: -33px;
 }
 
 
