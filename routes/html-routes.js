@@ -69,6 +69,26 @@ app.get("/char", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/login.html"))
    });
 
+   app.get("/apiRace", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiRace.html"))
+   });
+
+   app.get("/apiClass", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiClass.html"))
+   });
+
+   app.get("/apiEquipment", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiEquipment.html"))
+   });
+
+   app.get("/apiSpells", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiSpells.html"))
+   });
+
+   app.get("/apiBackground", function(req, res){
+     res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiBackground.html"))
+   });
+
    app.get("/register", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/register.html"))
    });
