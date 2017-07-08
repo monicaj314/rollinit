@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-
-
-
-DS_Store
-node_modules
-=======
 .DS_Store
 node_modules/*
 
 
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904

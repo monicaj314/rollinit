@@ -28,13 +28,6 @@ div#register-container.container.register-container {
 	background-color: #f1dea3;
 }
 
-<<<<<<< HEAD
-p.footer-text.footer-name {
-    margin: 10px 0 10px 50px;
-}
-
-=======
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
 input.form-control, select.form-control {
 	width: 500px !IMPORTANT;
 	display: inline-block;
@@ -43,8 +36,6 @@ input.form-control, select.form-control {
 label {
 	width: 100px;
 }
-<<<<<<< HEAD
-=======
 
 .outer-footer {
     width: 100%;
@@ -58,4 +49,3 @@ label {
 div.footer-center-row {
 	margin:auto;
 }
->>>>>>> c55d461bf41c95eea8632044b66a8438c4d79904
