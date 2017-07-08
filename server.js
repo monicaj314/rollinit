@@ -88,7 +88,7 @@ require("./routes/html-routes.js")(app);
 
 // =========  Database configuration with mongoose ===============
 var localMongo = "mongoose.connect('mongodb://localhost/rollinit')";
-var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds125481.mlab.com:25481/heroku_0p3792pt"
+var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds153392.mlab.com:53392/heroku_pq8mzfbr";
 
 if (process.env.MONGODB_URI){
     // this executes if this is being executed in heroku app
