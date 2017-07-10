@@ -1,35 +1,5 @@
 console.log("open.js has been opened.");
 
-
-
-    // $.post("/users/login", user).then(function (x) {
-    //     console.log('x: ', x);
-    //     // if (x.response == 'this password is not correct') {
-    //     //     alert('incorrect password, please try again.');
-    //     //     document.getElementById('id01').style.display = 'block'
-    //     // } else {
-    //     //     document.getElementById('id01').style.display = 'none'
-    //     //     currentUser = x[0].playerName;
-    //     //     console.log('current user: ', currentUser);
-    //     //     $('h5').text("Logged in as: " + currentUser);
-    //     //     localStorage.setItem('currentUser', currentUser);
-
-    //     //     currentName = x[0].playerName;
-    //     //     console.log('current name: ', currentName);
-    //     //     localStorage.setItem('currentName', currentName);
-        
-    //     //     $(".main-bar-left").html("<h5 class='current-name'>Logged in as: " + (localStorage.getItem('currentName'))+ "</h5>");
-    //     //     $(".main-bar-right").html("<button class='logout-button'>Log-Out</button>");
-    //     //     $('.logout-button').attr('onClick', 'logOutFunction();');
-    //     //     displayScores();
-    //     //     console.log("should update the main-bar")
-    //     // }
-
-    // })
-
-
-
-
 $( document ).ready(function() {
 
 	var config = {
@@ -44,7 +14,6 @@ $( document ).ready(function() {
 
 	var database = firebase.database();
 	var ref = database.ref();
-
 
 	// Log In Button
 	$("#btnLogIn").on("click", function(){
@@ -63,6 +32,16 @@ $( document ).ready(function() {
 	});
 
 
+	$("#signup, .check-us, #download-button").on("click", function(){
+		$("#log-in, #login-tab").removeClass("active");
+		$("#register, #register-tab").addClass("active");
+	});
+
+	$("#login").on("click", function(){
+		$("#log-in, #login-tab").addClass("active");
+		$("#register, #register-tab").removeClass("active");
+	});
+
 	// Sign Up Button 
 	$("#btnSignUp").on("click", function(snap){
 	var firstName = $("#new-first-name-input").val().trim();
@@ -78,7 +57,7 @@ $( document ).ready(function() {
 		var errorCode = error.code;
 		var errorMessage = error.message;
 	});
-	});
+});
 
 	// When there is a change to who is logged in
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -95,11 +74,10 @@ $( document ).ready(function() {
 			var uid = user.uid;
 			var providerData = user.providerData;
 
-
 			//Removing Log-In page
 			$("#btnLogOut").removeClass("hide");
 			$("#main-cont").removeClass("hide");
-			$("#log-in-cont").addClass("hide");
+			$("#login").css("display", "none");
 			
 
 			//Log Out Button
@@ -114,16 +92,11 @@ $( document ).ready(function() {
 			});
 			location.reload(true);
 			});
-
-
-
 		};
 	});
-
-
-
-
 });
+
+
 
 
 

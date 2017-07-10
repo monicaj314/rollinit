@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Roll Init</title>
+		<!-- JQuery Link -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<!-- Firebase Link  -->
+		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+		<!-- Home JavaScript -->
+		<script type="text/javascript" src="../js/open.js" ></script>
+		<!-- Reset CSS Link -->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<!-- Bootstrap Link -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- Font Link -->
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
+		<!-- Local CSS Link -->
+		<link rel="stylesheet" type="text/css" href="../css/all.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	</head>
+    <body>
+        <pre>
+[
+  {
+    _id: "lightArmor",
+    category: "Light Armor",
+    armors: [
+      {
+        index: 1,
+        name: "Padded",
+        cost: "5 gp",
+        armorClass: "11 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: "Disadvantage",
+        weight: "8 lb.", 
+        def: "Padded armor consists of quilted lays cloth and batting"
+      },
+      {
+        index: 2,
+        name: "Leather",
+        cost: "10 gp",
+        armorClass: "11 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: null,
+        weight: "10 lb.", 
+        def: "The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials."
+      },
+      {
+        index: 3,
+        name: "Studded Leather",
+        cost: "45 gp",
+        armorClass: "12 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: null,
+        weight: "13 lb.", 
+        def: "Made from tough but flexible leather, studded leather is einforced with close-set rivets or spikes."
+      }
+    ],
+    _id: "mediumArmor",
+    category: "Medium Armor",
+    armors: [
+      {
+        index: 1,
+        name: "Hide",
+        cost: "10 gp",
+        armorClass: "13 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: null,
+        weight: "12 lb.", 
+        def: "This crude armor consists of thick furs and pelts. It is commonly worn by barbarian tribes, evil humanoids, and other folk who lack access to the tools and materials needed to create better armor."
+      },
+      {
+        index: 2,
+        name: "Chain Shirt",
+        cost: "50 gp",
+        armorClass: "14 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: null,
+        weight: "20 lb.", 
+        def: "Made of interlocking metal rings, a chain shirt is worn between layers of clothing or leather. This armor offers modest protection to the wearer’s upper body and allows the sound of the rings rubbing against one another to be muffled by outer layers."
+      },
+      {
+        index: 3,
+        name: "Scale Mail",
+        cost: "50 gp",
+        armorClass: "14 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: "Disadvantage",
+        weight: "45 lb.", 
+        def: "This armor consists of a coat and leggings(and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets."
+      },
+      {
+        index: 4,
+        name: "Breastplate",
+        cost: "400 gp",
+        armorClass: "14 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: null,
+        weight: "20 lb.", 
+        def: "This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer’s vital organs while leaving the wearer relatively unencumbered."
+      },
+      {
+        index: 5,
+        name: "Half Plate",
+        cost: "750 gp",
+        armorClass: "15 + Dex modifier",
+        strengthRequirement:  null,
+        stealthRestriction: "Disadvantage",
+        weight: "40 lb.", 
+        def: "Half plate consists of shaped metal plates that cover m ost of the wearer’s body. It does not include leg protection beyond simple greaves that are attached with leather straps."
+      }
+    ],
+    _id: "heavyArmor",
+    category: "Heavy Armor",
+    armors: [
+      {
+        index: 1,
+        name: "Ring Mail",
+        cost: "30 gp",
+        armorClass: "14",
+        strengthRequirement:  null,
+        stealthRestriction: "Disadvantage",
+        weight: "40 lb.", 
+        def: "This armor is leather armor with heavy rings sewn into it. The rings help reinforce the armor against blows from swords and axes. Ring mail is inferior to chain mail, and it's usually worn only by those who can’t afford better armor."
+      },
+      {
+        index: 2,
+        name: "Chain Mail",
+        cost: "75 gp",
+        armorClass: "16",
+        strengthRequirement: "STR 13",
+        stealthRestriction: "Disadvantage",
+        weight: "55 lb.", 
+        def: "Made of interlocking metal rings, chain mail includes a layer of quilted fabric w orn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets."
+      },
+      {
+        index: 3,
+        name: "Splint",
+        cost: "200 gp",
+        armorClass: "17",
+        strengthRequirement: "STR 13",
+        stealthRestriction: "Disadvantage",
+        weight: "60 lb.", 
+        def: "This armor is made of narrow vertical strips of metal riveted to a backing of leather that is worn over cloth padding. Flexible chain mail protects the joints."
+      },
+      {
+        index: 4,
+        name: "Plate",
+        cost: "1,500 gp",
+        armorClass: "18",
+        strengthRequirement: "STR 13",
+        stealthRestriction: "Disadvantage",
+        weight: "65 lb.", 
+        def: "Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a v isored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body."
+      }
+    ],
+    _id: "shield",
+    category: "Shields",
+    weapons: [
+      {
+        index: 1,
+        name: "Shield",
+        cost: "10 gp",
+        armorClass: "+2",
+        strengthRequirement:  null,
+        stealthRestriction: null,
+        weight: "6 lb.", 
+        def: "A shield is made from w o od or metal and is carried in one hand. Wielding a shield increases your A rmor Class by 2. You can benefit from only one shield at a time."
+      }
+    ]
+  },
+
+    {
+    _id: "adventuringGear",
+    category: "Adventuring Gear",
+    items: [
+      {
+        index: 1,
+        name: "Acid",
+        def: "As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage."
+      },
+      {
+        index: 2,
+        name: "Alchemist's Fire",
+        def: "This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames."
+      },
+      {
+        index: 3,
+        name: "Antitoxin",
+        def: "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs."
+      },
+      {
+        index: 4,
+        name: "Arcane Focus",
+        def: "An arcane focus is a special item— an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item— designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus, as described in chapter 10."
+      },
+      {
+        index: 5,
+        name: "Ball Bearings",
+        def: "As an action, you can spill these tiny metal balls from their pouch to cover a level area 10 feet square. A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone. A creature moving through the area at half speed doesn’t need to make the saving throw."
+      },
+      {
+        index: 6,
+        name: "Block and Tackle",
+        def: "A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift."
+      },
+      {
+        index: 7,
+        name: "Book",
+        def: "A b ook might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A b ook of spells is a spellbook (described later in this section)."
+      },
+      {
+        index: 8,
+        name: "Caltrops",
+        def: "As an action, you can spread a single bag of caltrops to cover a 5-foot-square area. Any creature that enters the area must succeed on a DC 15  Dexterity saving throw or stop moving and take 1 piercing damage. Until the creature regains at least 1 hit point, its walking speed is reduced by 10 feet. A creature moving through the area at half speed doesn’t need to make the saving throw."
+      },
+      {
+        index: 9,
+        name: "Cradle",
+        def: "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
+      },
+      {
+        index: 10,
+        name: "Case, Crossbow Bolt",
+        def: "This wooden case can hold up to twenty crossbow bolts."
+      },
+      {
+        index: 11,
+        name: "Case, Map or Scroll",
+        def: "This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment."
+      },
+      {
+        index: 12,
+        name: "Chain",
+        def: "A chain has 10 hit points. It can be burst with a successful DC 20 Strength check."
+      },
+      {
+        index: 13,
+        name: "Climber's Kit",
+        def: "A climber’s kit includes special pitons, boot tips, gloves, and a harness. You can use the climber’s kit as an action to anchor yourself; when you do, you can’t fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor."
+      },
+      {
+        index: 14,
+        name: "Component Pouch",
+        def: "A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description)."
+      },
+      {
+        index: 15,
+        name: "Crowbar",
+        def: "Using a crowbar grants advantage to Strength checks where the crowbar’s leverage can be applied."
+      },
+      {
+        index: 16,
+        name: "Druidic Focus",
+        def: "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus,"
+      },
+      {
+        index: 17,
+        name: "Fishing Tackle",
+        def: "This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting."
+      },
+      {
+        index: 18,
+        name: "Healer's Kit",
+        def: "This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check."
+      },
+      {
+        index: 19,
+        name: "Holy Symbol",
+        def: "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+      },
+      {
+        index: 20,
+        name: "Holy Water",
+        def: "As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon. If the target is a fiend or undead, it takes 2d6 radiant damage. A cleric or paladin may create holy water by performing a special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot."
+      },
+      {
+        index: 21,
+        name: "Hunting Trap",
+        def: "When you use your action to set it,this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature."
+      },
+      {
+        index: 22,
+        name: "Lamp",
+        def: "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+      },
+      {
+        index: 23,
+        name: "Lantern, Bullseye",
+        def: "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+      },
+      {
+        index: 24,
+        name: "Lantern, Hooded",
+        def: "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius."
+      },
+      {
+        index: 25,
+        name: "Lock",
+        def: "A key is provided with the lock. Without the key, a creature proficient with thieves’ tools can pick this lock with a successful DC 15 Dexterity check. Your DM may decide that better locks are available for higher prices."
+      },
+      {
+        index: 26,
+        name: "Magnifying Glass",
+        def: "This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to  focus, tinder to ignite, and about 5 minutes for the fire to ignite. A magnifying glass grants advantage on any ability check made to appraise or inspect an item that is small or highly detailed."
+      },
+      {
+        index: 27,
+        name: "Manacles",
+        def: "These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check. Each set of manacles comes with one key. Without the key, a creature proficient with thieves’ tools can pick the manacles’ lock with a successful DC 15 Dexterity check. Manacles have 15 hit points."
+      },
+      {
+        index: 28,
+        name: "Mess Kit",
+        def: "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+      },
+      {
+        index: 29,
+        name: "Oil",
+        def: "Oil usually comes in a clay flask that holds 1 pint. As an action, you can splash the oil in this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. Make a ranged attack against a target creature or object, treating the oil as an improvised weapon. On a hit, the target is covered in oil. If the target takes any fire damage before the oil dries (after 1 minute), the target takes an additional 5 fire damage from the burning oil. You can also pour a flask of oil on the ground to cover a 5-foot-square area, provided that the surface is level. If lit, the oil burns for 2 rounds and deals 5 fire damage to any creature that enters the area or ends its turn in the area. A creature can take this damage only once per turn."
+      },
+      {
+        index: 30,
+        name: "Poison, Basic",
+        def: "You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying."
+      },
+      {
+        index: 31,
+        name: "Potion of Healing",
+        def: "A character who drinks the magical red fluid in this vial regains 2d4 + 2 hit points. Drinking or administering a potion takes an action."
+      },
+      {
+        index: 32,
+        name: "Pouch",
+        def: "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+      },
+      {
+        index: 33,
+        name: "Quiver",
+        def: "A quiver can hold up to 20 arrows."
+      },
+      {
+        index: 34,
+        name: "Ram, Portable",
+        def: "You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help you use the ram, giving you advantage on this check."
+      },
+      {
+        index: 35,
+        name: "Rations",
+        def: "Rations consist of dry foods suitable  for extended travel, including jerky, dried fruit, hardtack, and nuts."
+      },
+      {
+        index: 36,
+        name: "Rope",
+        def: "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+      },
+      {
+        index: 37,
+        name: "Scale, Merchant's",
+        def: "A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to help determine their worth."
+      },
+      {
+        index: 38,
+        name: "Spellbook",
+        def: "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells."
+      },
+      {
+        index: 39,
+        name: "Spyglass",
+        def: "Objects viewed through a spyglass are magnified to twice their size."
+      },
+      {
+        index: 40,
+        name: "Tent",
+        def: "A simple and portable canvas shelter, a tent sleeps two."
+      },
+      {
+        index: 41,
+        name: "Tinderbox",
+        def: "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch—or anything else with abundant, exposed fuel—takes an action. Lighting any other fire takes 1 minute."
+      },
+      {
+        index: 42,
+        name: "Torch",
+        def: "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+      }
+    ]
+  }
+],
+[
+  {
+    _id: "tools",
+    category: "Tools",
+    items: [
+      {
+        index: 1,
+        name: "Artisan's Tools",
+        def: "These special tools include the items needed to pursue a craft or trade. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency."
+      },
+      {
+        index: 2,
+        name: "Disguise Kit",
+        def: "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+      },
+      {
+        index: 3,
+        name: "Forgery Kit",
+        def: "This small b ox contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add you proficiency bonus to any ability checks you make to create a physical forgery of a document."
+      },
+      {
+        index: 4,
+        name: "Gaming Set",
+        def: "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+      },
+      {
+        index: 5,
+        name: "Herbalism Kit",
+        def: "This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing."
+      },
+      {
+        index: 6,
+        name: "Musical Instrument",
+        def: "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus, as described in chapter 10. Each type of musical instrument requires a separate proficiency."
+      },
+      {
+        index: 7,
+        name: "Navigator's Tools",
+        def: "This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea."
+      },
+      {
+        index: 8,
+        name: "Poisoner's Kit",
+        def: "A poisoner’s kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons." 
+      },
+      {
+        index: 9,
+        name: "Thieves' Tools",
+        def: "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
+      },
+    ]
+  }, 
+
+  {
+    _id:"simpleMeleeWeapons",
+    category:"Simple Melee Weapons",
+    weapons:[
+    {
+        index:1,
+        name: "Club",
+        cost: "1 sp",
+        damage: "1d4", 
+        damageType: "bludgeoning", 
+        weight: "2 lb.",
+        properties: "Light",
+    },
+    {
+        index:2,
+        name: "Dagger",
+        cost: "2 gp",
+        damage: "1d4", 
+        damageType: "piercing", 
+        weight: "1 lb.",
+        properties: "Finesse, Light, Thrown (range 20/60)",
+    },
+    {
+        index:3,
+        name: "Great Club",
+        cost: "2 sp",
+        damage: "1d8", 
+        damageType: "bludgeoning", 
+        weight: "10 lb.",
+        properties: "Two-handed",
+    },
+    {
+        index:4,
+        name: "Hand Axe",
+        cost: "5 gp",
+        damage: "1d6", 
+        damageType: "slashing", 
+        weight: "2 lb.",
+        properties: "Light, Thrown (range 20/60)",
+    },
+    {
+        index:5,
+        name: "Javelin",
+        cost: "5 sp",
+        damage: "1d6", 
+        damageType: "piercing", 
+        weight: "2 lb.",
+        properties: "Thrown (range 20/60)",
+    },
+    {
+        index:6,
+        name: "Light Hammer",
+        cost: "2 gp",
+        damage: "1d4", 
+        damageType: "bludgeoning", 
+        weight: "2 lb.",
+        properties: "Light, Thrown (range 20/60)",
+    },
+    {
+        index:7,
+        name: "Mace",
+        cost: "5 gp",
+        damage: "1d6", 
+        damageType: "bludgeoning", 
+        weight: "4 lb.",
+        properties: null,
+    },
+    {
+        index:8,
+        name: "Quarterstaff",
+        cost: "2 sp",
+        damage: "1d6", 
+        damageType: "bludgeoning", 
+        weight: "4 lb.",
+        properties: "Versatile (1d8)",
+    },
+    {
+        index:9,
+        name: "Sickle",
+        cost: "1 gp",
+        damage: "1d4", 
+        damageType: "slashing", 
+        weight: "2 lb.",
+        properties: "Light",
+    },
+    {
+        index:10,
+        name: "Spear",
+        cost: "1 gp",
+        damage: "1d6", 
+        damageType: "piercing", 
+        weight: "3 lb.",
+        properties: "Thrown (range 20/60), Versatile (1d8)",
+    },
+    {
+        index:11,
+        name:"Unarmed Strike",
+        cost:null,
+        damage: "1", 
+        damageType: "bludgeoning", 
+        weight:null,
+        properties:null
+    }
+    ]
+}],
+[{
+    _id:"simpleRangedWeapons",
+    category:"Simple Ranged Weapons",
+    weapons:[
+    {
+        index: 1,
+        name:"Crossbow, light",
+        cost: "25 gp",
+        damage: "1d8", 
+        damageType: "piercing", 
+        weight: "5 lb",
+        properties: "Ammunition (range 80/320), Loading, Two-handed",
+    },
+    {
+        index: 2,
+        name: "Dart",
+        cost: "5 gp",
+        damage: "1d4", 
+        damageType: "piercing", 
+        weight: "1/4 lb",
+        properties: "Finesse, Thrown (range 20/60)",
+    },
+    {
+        index: 3,
+        name: "Shortbow",
+        cost: "25 gp",
+        damage: "1d6", 
+        damageType: "piercing", 
+        weight: "2 lb",
+        properties: "Ammunition (range 80/320), Two-Handed",
+    },
+    {
+        index: 4,
+        name: "Sling",
+        cost: "1 sp",
+        damage: "1d4", 
+        damageType: "bludgeoning", 
+        weight: null,
+        properties: "Ammunition (range 30/120)",
+    }
+    
+    ]
+}],
+
+[{
+    _id:"martialMeleeWeapons",
+    category:"Martial Melee Weapons",
+    weapons:[
+    {
+        index: 1,
+        name: "Battleaxe",
+        cost: "10 gp",
+        damage: "1d8", 
+        damageType: "slashing", 
+        weight: "4 lb.",
+        properties: "Versatile (1d10)",
+    },
+    {
+        index: 2,
+        name: "Flail",
+        cost: "10 gp",
+        damage: "1d8", 
+        damageType: "bludgeoning", 
+        weight: "2 lb.",
+        properties: null,
+    },
+    {
+        index: 3,
+        name: "Glaive",
+        cost: "20 gp",
+        damage: "1d10", 
+        damageType: "slashing", 
+        weight: "6 lb.",
+        properties: "Heavy, Reach, Two-Handed",
+    },
+    {
+        index: 4,
+        name: "Greataxe",
+        cost: "30 gp",
+        damage: "1d12", 
+        damageType: "slashing", 
+        weight: "7 lb.",
+        properties: "Heavy, Two-Handed",
+    },
+    {
+        index: 5,
+        name: "Greatsword",
+        cost: "50 gp",
+        damage: "2d6", 
+        damageType: "slashing", 
+        weight: "6 lb.",
+        properties: "Heavy, Two-Handed",
+    },
+    {
+        index: 6,
+        name: "Halberd",
+        cost: "20 gp",
+        damage: "1d10", 
+        damageType: "slashing", 
+        weight: "6 lb.",
+        properties: "Heavy, Reach, Two-Handed",
+    },
+    {
+        index: 7,
+        name: "Lance",
+        cost: "10 gp",
+        damage: "1d12", 
+        damageType: "piercing", 
+        weight: "6 lb.",
+        properties: "Reach, Special",
+    },
+    {
+        index: 8,
+        name: "Longsword",
+        cost: "15 gp",
+        damage: "1d8", 
+        damageType: "slashing", 
+        weight: "3 lb.",
+        properties: "Versatile (1d10)",
+    },
+    {
+        index: 9,
+        name: "Maul",
+        cost: "10 gp",
+        damage: "2d6", 
+        damageType: "bludgeoning", 
+        weight: "10 lb.",
+        properties: "Heavy, Two-Handed",
+    },
+    {
+        index: 10,
+        name: "Morningstar",
+        cost: "15 gp",
+        damage: "1d8", 
+        damageType: "bludgeoning", 
+        weight: "4 lb.",
+        properties: null
+    },
+    {
+        index: 11,
+        name: "Pike",
+        cost: "5 gp",
+        damage: "1d10", 
+        damageType: "piercing", 
+        weight: "18 lb.",
+        properties: "Heavy, Reach, Two-Handed",
+    },
+    {
+        index: 12,
+        name: "Rapier",
+        cost: "25 gp",
+        damage: "1d8", 
+        damageType: "piercing", 
+        weight: "2 lb.",
+        properties: "Finesse",
+    },
+    {
+        index: 13,
+        name: "Scimitar",
+        cost: "25 gp",
+        damage: "1d6", 
+        damageType: "slashing", 
+        weight: "3 lb.",
+        properties: "Finesse, Light",
+    },
+    {
+        index: 14,
+        name: "Shortsword",
+        cost: "10 gp",
+        damage: "1d6", 
+        damageType: "piercing", 
+        weight: "2 lb.",
+        properties: "Finesse, Light",
+    },
+    {
+        index: 15,
+        name: "Trident",
+        cost: "5 gp",
+        damage: "1d6", 
+        damageType: "piercing", 
+        weight: "4 lb.",
+        properties: "Thrown (range 20/60, versatile (1d8)",
+    },
+    {
+        index: 16,
+        name: "Warpick",
+        cost: "5 gp",
+        damage: "1d8", 
+        damageType: "piercing", 
+        weight: "2 lb.",
+        properties: null
+    },
+    {
+        index: 17,
+        name: "Warhammer",
+        cost: "15 gp",
+        damage: "1d8", 
+        damageType: "bludgeoning", 
+        weight: "2 lb.",
+        properties: "Versatile (1d10)",
+    },
+    {
+        index: 18,
+        name: "Whip",
+        cost: "2 gp",
+        damage: "1d4", 
+        damageType: "slashing", 
+        weight: "3 lb.",
+        properties: "Finesse, Reach",
+    }
+    
+    ]
+}],
+
+[{
+    _id:"martialMeleeWeapons",
+    category:"Martial Melee Weapons",
+    weapons:[
+        {
+        index: 1,  
+        name: "Blowgun",
+        cost: "10 gp",
+        damage: "1", 
+        damageType: "piercing", 
+        weight: "1 lb.",
+        properties: "Ammunition (range 25/100), Loading",
+    },
+    {
+        index: 2,  
+        name: "Crossbow, hand",
+        cost: "75 gp",
+        damage: "1d6", 
+        damageType: "piercing", 
+        weight: "3 lb.",
+        properties: "Ammunition (range 30/120), Light, Loading",
+    },
+    {
+        index: 3,  
+        name: "Crossbow, heavy",
+        cost: "50 gp",
+        damage: "1d10", 
+        damageType: "piercing", 
+        weight: "18 lb.",
+        properties: "Ammunition (range 100/400), Heavy, Loading, Two-Handed",
+    },
+    {
+        index: 4,  
+        name: "Longbow",
+        cost: "50 gp",
+        damage: "1d8", 
+        damageType: "piercing", 
+        weight: "2 lb.",
+        properties: "Ammunition (range 150/600), Heavy, Two-Handed",
+    },
+    {
+        index: 5,  
+        name: "Net",
+        cost: "1 gp",
+        damage: null, 
+        damageType: null, 
+        weight: "3 lb.",
+        properties: "Special, Thrown (range 5/15)",
+    }
+    ]
+}],
+
+[{
+    _id: weaponProperties,
+    category: "Weapon Properties",
+    properties:[
+    {
+        index: 1,
+        name: "Ammunition", 
+        def: "You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part o f the attack. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield. Your class grants proficiency in certain weapons, reflecting both the class's focus and the tools you are most likely to use. Whether you favor a longsword or a longbow, your weapon and your ability to wield it effectively can mean the difference between life and death while adventuring.",
+    }
+    {
+        index: 2,
+        name: "Finesse", 
+        def: "When making an attack with a finesse weapon, you use your choice o f your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+    },
+    {
+        index: 3,
+        name: "Heavy", 
+        def: "Small creatures have disadvantage on attack rolls with heavy weapons. A heavy weapon’s size and bulk make it too large for a Small creature to use effectively.",
+    },
+    {
+        index: 4,
+        name: "Light", 
+        def: "light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.",
+    },
+    {
+        index: 5,
+        name: "Loading", 
+        def: "Because o f the time required to load this weapon, you can fire only one piece o f ammunition from it when you use an action, bonus action, or reaction to fire it, regardless o f the number o f attacks you can normally make.",
+    },
+    {
+        index: 6,
+        name: "Range", 
+        def: "A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon’s normal range in feet, and the second indicates the weapon’s maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can’t attack a target beyond the weapon’s long range.",
+    },
+    {
+        index: 7,
+        name: "Reach", 
+        def: "This weapon adds 5 feet to your reach when you attack with it.",
+    },
+    {
+        index: 8,
+        name: "Special", 
+        def: "A weapon with the special property has unusual rules governing its use, explained in the weapon’s def see 'Special Weapons' later in this section).",
+    },
+    {
+        index: 9,
+        name: "Thrown", 
+        def: "If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.",
+    },
+    {
+        index: 10,
+        name: "Two-Handed", 
+        def: "This weapon requires two hands to use.",
+    },
+    {
+        index: 11,
+        name: "Versatile", 
+        def: "This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.",
+    }
+    ]
+}
+
+];
+        </pre>
+
+    </body>
+</html>
