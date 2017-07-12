@@ -1,72 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<title>Roll Init</title>
-		<!-- JQuery Link -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<!-- Home JavaScript -->
-	 	<script type="text/javascript" src="../js/char-func.js" ></script>
-		<script type="text/javascript" src="../js/open.js" ></script>
-		<!-- Reset CSS Link -->
-		<link rel="stylesheet" type="text/css" href="../css/reset.css">
-		<!-- Bootstrap Link -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<!-- Font Link -->
-		<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
-		<!-- Local CSS Link -->
-		<link rel="stylesheet" type="text/css" href="../css/all.css">
-		<!-- Firebase Link  -->
-		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-</head>
-<body>
-		<div class="header">
-			<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-				<a class="navbar-brand" href="/">
-					<h2>R I</h2>
-				</a>
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-menu">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-					</div>
-				</div>
-				<div class="collapse navbar-collapse" id="hamburger-menu">
-					<ul class="nav navbar-nav navbar-right">
- 						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li>
- 						<li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li> 
-						<li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
 
-				<div id="app"></div>
-<script src="../js/diceroller.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>Roll Init</title>
+    <!--Style Sheets-->
+    <link rel="icon" type="image/png" href="logo.ico" sizes="40x40">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/poly.css">
 
-	<div class="current-char-all">
-		 <h2> Current Characters: </h2>
-		<div class="current-char subtitle" id="current-char">
-			<h4>Looks like you currently have no characters.</h4>
-		</div> 
+    <link href="https://fonts.googleapis.com/css?family=Eagle+Lake" rel="stylesheet">
 
-							<div class="outer-footer">
-						<div class="footer row">
-							<div class="col-md-12" id="footer-text">
-								<div class="row footer-center-row">
-									<div class="footer-textbox">
-										<div class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-</body>
-</html>
+    <!-- Firebase/Script Tags-->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/open.js"></script>
+    <script type="text/javascript" src="../js/char-func.js"></script>
+  </head>
+  
+  <body>
+    <div id="index-banner" class="parallax-container" style="max-height:250px; min-width:100%">
+    <div class="section no-pad-bot">
+
+    <div class="container">
+      <nav role="navigation" style="z-index: 100">
+        <ul>
+          <!-- <li id="login" class="nav-tab" data-toggle="modal" data-target="#login-container"><a class="nav-anc">Login</a></li> -->
+          <li id="logout" class="nav-tab"><a class="nav-anc" href="/users/logout">Logout</a></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="/">Home</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/char">Character Creation</a></li>
+        </ul>
+        <!-- Dropdown Trigger -->
+        <ul class="right">
+
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="large material-icons right">view_headline</i></a></li>
+
+        </ul>
+              </nav>
+
+          <div class="container">
+            <h1 class="header center" id="shadowtext">Your Profile</h1>
+            <br><br>
+          </div>
+        </div>
+        <div class="parallax"><img id="crow" src="../images/crowdnd.png" alt="crow">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col l2">
+        <div class="container">
+            <div id="app"></div>
+            <script src="../bundle.js"></script>
+          </div>
+      </div>
+            
+<div class="container" id="charcontain">
+  <div class="col offset-l1">
+            <div class="current-char-all">
+              <h2 class="header center"> Current Characters: </h2>
+              <div class="current-char subtitle" id="current-char">
+                <h4>Looks like you currently have no characters.</h4>
+              </div>
+            </div>
+            </div>
+  </div>
+    </div>
+      
+    <!--Footer-->
+    <footer class="page-footer green darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5>Our Company</h5>
+            <p>We are a team of students working on this project like it's our full time
+              job.
+            </p>
+            <p>We also just love Dungeons & Dragons.</p>
+            <br>
+            <h5>Contact Us</h5>
+            <address>
+              <a href="mailto:rollinit@gmail.com">rollinit@gmail.com</a>
+            </address>
+          </div>
+          <div class="col l3 s12">
+          </div>
+          <div class="col l3 s12">
+            <h5>Connect</h5>
+            <i class="icon"> <a href="https://www.facebook.com"><img id="overlay"src="../images/facebook.png"></a></i>
+            <i class="icon"> <a href="https://www.instagram.com"><img id="overlay"src="../images/instagram.png"></a></i>
+            <br>
+            <i class="icon"><a href="https://www.twitter.com"><img id="overlay"src="../images/twitter.png"></a></i>
+            <i class="icon"> <a href="https://plus.google.com"><img id="overlay" src="../images/googleplus.png"></a></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <p id="ourNames">&copy2017 Made by Travis Nash, Paden Pace, Monica Jones, & Keli Poole
+            <a class="brown-text text-lighten-3"></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+            
+    <script>
+      $(document).ready(function () {
+        (function ($) {
+          $(function () {
+            $('div#login-container').modal();
+            $(".dropdown-button").dropdown();
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+          });
+        });
+      });
+    </script>
+  </body>
