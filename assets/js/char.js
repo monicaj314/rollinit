@@ -181,42 +181,11 @@ $( document ).ready(function() {
 					+ "</div></div>";
 					$("#add-char-here").append(newCharacter);
 
-					// // creating the delete button for an event
-					// var newCharButton = $('<button/>',{
-					// 	class: 'delete-button',
-					// 	text: 'Remove: '+snapshot.val().charName,
-					// 	value: 'remove',
-					// 	click: function removal(){
-					// 		console.log("remove clicked")
-					// 		removeRef.child(newKey).remove().key;
-					// 		location.reload(true);
-					// 	}
-					// });
-					// // adding new button to the page
-					// $("#newButtonGoHere").append(newEventButton);
-
-					// numberOfEvents++;
-
 				});
 		};
 	});
 });
 
-
-
-// function Character(name, profession, gender, age, strength, hitPoints) {
-		// 	this.name = name;
-		// 	this.profession = profession;
-		// 	this.gender = gender;
-		// 	this.age = age;
-		// 	this.levelUp = function(){
-		// 	    this.age = this.age + 1;
-		// 	    this.strength = this.strength + 5;
-		// 	    this.hitPoints = this.hitPoints + 25;
-		// 	};
-		// };
-
-		// var eastwayne = new Character("Eastwayne", "Gunslinger", "male", 24, 12, 11);
 
 
 

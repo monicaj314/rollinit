@@ -36,9 +36,6 @@ router.post('/register', function(req,res){
 
     var errors = req.validationErrors();
     if(errors){
-        // res.render('register',{
-        //     errors:errors
-        // });
         console.log('yes errors')
         console.log(errors);
         for (i=0; i < errors.length; i++){
@@ -88,7 +85,6 @@ passport.use(new LocalStrategy(
   }
 ));
 
-
 passport.serializeUser(function(user, done) {
   done(null, user.id);
 });
@@ -103,12 +99,6 @@ passport.deserializeUser(function(id, done) {
 router.post('/login',
   passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/',failureFlash: true}),
   function(req, res) {
-    // console.log("router.post/login")
-    
-    // localStorage.setItem('currentUser', req.user.username);
-    // var currentUser = localStorage.getItem('currentUser');
-    // console.log("localStorage username");
-    // console.log(currentUser);
 
     res.redirect('/profile');
   });
