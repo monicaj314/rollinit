@@ -15,7 +15,6 @@ var db = mongoose.connection;
 var users = require('./routes/users');
 var characters = require('./routes/characters');
 
-
 // Initialize Express
 var app = express();
 
@@ -81,19 +80,27 @@ app.use('/users', users);
 require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
+db.on('error', function(err) {
+  console.log('Moongoose Error: ', err);
+});
+
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
+
 
 
 // =========  Database configuration with mongoose ===============
 var localMongo = "mongoose.connect('mongodb://localhost/rollinit')";
-//var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds125481.mlab.com:25481/heroku_0p3792pt"
+var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds153392.mlab.com:53392/heroku_pq8mzfbr";
 
-//if (process.env.MONGODB_URI){
+if (process.env.MONGODB_URI){
     // this executes if this is being executed in heroku app
-    //mongoose.connect(process.env.MONGODB_URI);
-//} else {
-    // this ececutes if this is being executed on local machine
+    mongoose.connect(process.env.MONGODB_URI);
+} else {
+   /// this executes if this is being executed on local machine
     mongoose.connect(localMongo);
-//}
+}
 
 
 
