@@ -267,8 +267,21 @@ textarea#char-notes {
     height:700px;
     color: black;
 }
-h5 {
+
+textarea#char-background {
+    margin-left: 200px ;
+    background-color: #FFF5D3;
+    width: 75%;
+    height: 300px;
+    color: black;
+}
+
+#char-preview-container>h5 {
     text-align: center;
     margin-top:35px;
 
+}
+
+#background-container>h5 {
+    text-align: center;
 }

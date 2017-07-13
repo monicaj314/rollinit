@@ -14,6 +14,7 @@ var db = mongoose.connection;
 var Character = require('../models/character');
 var User = require('../models/user');
 var Races = require("./../assets/js/racesCollections/racesCollections.js")
+var Backgrounds = require("./../assets/js/backgroundsCollections.js") 
 
 // Routes
 // =============================================================
@@ -102,8 +103,25 @@ app.get("/char", function(req, res){
    });
 
    app.get("/apiBackground", function(req, res){
-     res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiBackground.html"))
+     res.sendFile(path.join(__dirname + "./../assets/js/backgroundsCollections.js"))
    });
+
+   app.get("/apiBackground/:Backgrounds?", function(req, res) {
+  var chosen = req.params.Backgrounds;
+  console.log(Backgrounds[0][chosen]);
+
+  if (chosen) {
+    for (chosen in Backgrounds[0]) {
+      if (Backgrounds[0].hasOwnProperty(chosen)) {
+        console.log(chosen, '!', Backgrounds[0][chosen])
+        return res.json(Backgrounds[0][chosen]);
+      }
+    }
+    return res.json(false);
+  }
+  return res.json(Backgrounds);
+});
+
 
    app.get("/register", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/register.html"))

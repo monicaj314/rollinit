@@ -1,4 +1,4 @@
-[
+var Backgrounds = [
     {
    Acolyte: 
         {
@@ -1141,3 +1141,5 @@
         }
     }
 ]
+
+module.exports = Backgrounds;
