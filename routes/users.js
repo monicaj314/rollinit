@@ -36,9 +36,6 @@ router.post('/register', function(req,res){
 
     var errors = req.validationErrors();
     if(errors){
-        // res.render('register',{
-        //     errors:errors
-        // });
         console.log('yes errors')
         console.log(errors);
         for (i=0; i < errors.length; i++){
@@ -102,7 +99,6 @@ passport.deserializeUser(function(id, done) {
 router.post('/login',
   passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/',failureFlash: true}),
   function(req, res) {
-
 
     res.redirect('/profile');
   });

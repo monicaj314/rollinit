@@ -1,0 +1,45 @@
+textarea {
+    text-align: center;
+    border: none;
+
+}
+
+#output-box {
+    height: 100%;
+    font-size: 3em;
+    text-align: center;
+    color: #FFE89a;
+    margin-bottom: 10px;
+}
+
+.die {
+    height: 100%;
+max-width:100;
+padding: 0;
+margin-top:5px;
+}
+
+div.col.l2 {
+    max-width: 200px;
+    margin: 35px;
+    padding: 20px;
+    border: thick solid;
+    border-color: #e4bb39;
+    text-align: center;
+    overflow: none;
+    padding: 0;
+}
+
+/*[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative !important;
+    left:10px;
+}
+
+[type="number"] {
+    position:relative;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+    width: 40px !important;
+    height:1.5em !important;
+    margin: 5px 10px 5px 10px !important;
+}*/

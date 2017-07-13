@@ -7,12 +7,13 @@
 
 div.container {
     width: 100%;
+    padding: 0;
 }
 
 nav,
 nav-wrapper {
     background-color: transparent;
-    padding: 0;
+    padding-right: 40px;
     width: 100%;
     margin: 0;
     box-shadow: none;
@@ -25,17 +26,18 @@ nav-wrapper {
 
 body {
     background-color: #051B06;
-    font-family: fantasy;
-    font-weight: bolder;
+    font-family: 'Germania One', cursive;
+    color: #FFF5D3;
 }
 
 p#ourNames {
+    color: #FFF5D3;
     text-align: center;
 }
 
 .dropdown-content li>a,
 .dropdown-content li>span {
-    color: #e4bb39;
+    color: #FFE89A;
     font-size: 20px;
     background-color: #3d4862;
     font-family: 'Eagle Lake', cursive;
@@ -47,7 +49,6 @@ ul:not(.browser-default) li {
 }
 
 label {
-    color: brown;
     font-size: 25px;
 }
 
@@ -59,21 +60,22 @@ dt>a {
 a#download-button.btn-large.waves-effect {
     background-color: rgba(32, 58, 119, .9);
     font-family: 'Eagle Lake', cursive;
+    color: #FFE89A;
 }
 
 i.large.material-icons.right {
-    font-size: 4rem;
-    color: #e4bb39;
+    font-size: 3rem;
+    color: #FFE89A;
 }
 
 p {
     line-height: 2rem;
-    color: #FFF5D3
+    color: #FFF5D3;
 }
 
 .parallax-container {
     margin: 0;
-    min-height: 450px;
+    /* min-height: 450px; */
     line-height: 0;
     height: auto;
     width: auto;
@@ -82,6 +84,11 @@ p {
 
 .parallax-container .section {
     width: 100%;
+}
+
+.parallax#crow img {
+    height: 50%;
+    margin: 0;
 }
 
 @media only screen and (max-width: 992px) {
@@ -127,21 +134,22 @@ h5.center {
 }
 
 li#login.nav-tab {
-    color: #FFF5D3;
+    color: #FFE89A;
     width: 100px;
     text-align: center;
 }
 
 li#logout.nav-tab {
-    color: #FFF5D3;
+    color: #FFE89A;
     width: 100px;
     text-align: center;
 }
 
 a.nav-anc {
-    color: #e4bb39;
-    font-size: 3rem;
+    color: #FFE89A;
+    font-size: 2rem;
     font-weight: bold;
+    padding-right: 15px;
 }
 
 div#index-banner.parallax-container {
@@ -149,7 +157,7 @@ div#index-banner.parallax-container {
 }
 
 h5 {
-    color: #FFF5D3;
+    color: #FFE89A;
 }
 
 div#imgdiv {
@@ -169,13 +177,111 @@ div.container.green.darken-4 {
 
 div.row {
     width: 100%;
-    padding-left: 22px;
-}
-
-footer.page-footer {
-    padding-left: 22px;
 }
 
 div.col.s4 {
+    text-align: center;
+}
+
+div.modal.dialog {
+    margin: 0;
+}
+
+h1#shadowtext.header.center {
+    margin-top: 0;
+    color: #FFE89A;
+}
+
+div.form-group>label {
+    margin: 10px 0 0 0;
+    color: #FFE89A;
+}
+
+input.form-control {
+    color: #FFF5D3;
+    font-size: 1.5rem;
+    color: #8c2d2d !important;
+}
+
+select.form-control {
+    background-color: #FFF5D3;
+    color: #3d4862;
+}
+
+div#register-container.container.register-container {
+    width: 500px;
+    margin: 0;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+button.btn.btn-default {
+    background-color: rgba(32, 58, 119, .9);
+    color: #FFE89A;
+}
+
+button#btnLogIn.btn.btn-primary {
+    background-color: rgba(32, 58, 119, .9);
+    color: #FFE89A
+}
+
+div.modal-content {
+    background-color: #FFF5D3;
+    color: #8c2d2d;
+}
+
+button#btnSignUp.btn.btn-primary {
+    background-color: rgba(32, 58, 119, .9);
+    color: #FFE89A
+}
+
+div#login-container.modal.fade.in {
+    background-color: transparent;
+}
+
+a {
+    color: #8c2d2d;
+}
+
+input.form-control {
+    color: #FFF5D3;
+}
+
+input:not([type]),
+input[type=text],
+input[type=text]:focus:not([readonly]),
+{
+    border-bottom: rgba(32, 58, 119, .9);
+}
+
+h2.header.center {
+    color: #FFE89A
+}
+
+h4 {
+    color: #FFE89A
+}
+
+textarea#char-notes {
+    background-color: #FFF5D3;
+    height:700px;
+    color: black;
+}
+
+textarea#char-background {
+    margin-left: 200px ;
+    background-color: #FFF5D3;
+    width: 75%;
+    height: 300px;
+    color: black;
+}
+
+#char-preview-container>h5 {
+    text-align: center;
+    margin-top:35px;
+
+}
+
+#background-container>h5 {
     text-align: center;
 }

@@ -1,7 +1,3 @@
-
-
-
-
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -84,6 +80,22 @@ app.use('/users', users);
 require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
+
+
+
+// =========  Database configuration with mongoose ===============
+var localMongo = "mongodb://localhost/rollinit";
+var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds153392.mlab.com:53392/heroku_pq8mzfbr";
+
+if (process.env.MONGODB_URI){
+    // this executes if this is being executed in heroku app
+    mongoose.connect(MONGODB_URI);
+} else {
+   /// this executes if this is being executed on local machine
+    mongoose.connect(localMongo);
+}
+
+
 db.on('error', function(err) {
   console.log('Moongoose Error: ', err);
 });
@@ -91,23 +103,6 @@ db.on('error', function(err) {
 db.once('open', function() {
   console.log('Mongoose connection successful.');
 });
-
-
-
-// =========  Database configuration with mongoose ===============
-var localMongo = "mongoose.connect('mongodb://localhost/rollinit')";
-var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds153392.mlab.com:53392/heroku_pq8mzfbr";
-
-if (process.env.MONGODB_URI){
-    // this executes if this is being executed in heroku app
-    mongoose.connect(process.env.MONGODB_URI);
-} else {
-   /// this executes if this is being executed on local machine
-    mongoose.connect(localMongo);
-}
-
-
-
 
 // Set Port
 var PORT = process.env.PORT || 8880;
