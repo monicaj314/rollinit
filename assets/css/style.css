@@ -200,6 +200,7 @@ div.form-group>label {
 input.form-control {
     color: #FFF5D3;
     font-size: 1.5rem;
+    color: #8c2d2d !important;
 }
 
 select.form-control {
@@ -264,8 +265,9 @@ h4 {
 textarea#char-notes {
     background-color: #FFF5D3;
     height:700px;
+    color: black;
 }
-h5#char-notes{
+h5 {
     text-align: center;
     margin-top:35px;
 
