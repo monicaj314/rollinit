@@ -30,9 +30,12 @@ body {
     color: #FFF5D3;
 }
 
-p#ourNames {
+.footer-copyright, #ourNames {
     color: #FFF5D3;
     text-align: center;
+    position:relative;
+    bottom:0;
+    margin:0;
 }
 
 .dropdown-content li>a,
@@ -112,8 +115,11 @@ div.icon-block .material-icons {
     color: #FFF5D3;
 }
 
-footer.page-footer {
+footer.page-footer.green.darken-4{
     margin: 0;
+    position:relative;
+    bottom: -150px;
+
 }
 
 .green.darken-4 {
@@ -237,6 +243,10 @@ button#btnSignUp.btn.btn-primary {
 
 div#login-container.modal.fade.in {
     background-color: transparent;
+}
+
+#login-container.container.login-container {
+    width:70%;
 }
 
 a {

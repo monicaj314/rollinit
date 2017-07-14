@@ -2256,6 +2256,8 @@ a {
 a:active,
 a:hover {
     outline: 0;
+    color: #FFF5D3;
+    text-decoration:none;
 }
 
 
@@ -2983,6 +2985,8 @@ ul.staggered-list li {
 footer.page-footer {
     padding-top: 20px;
     background-color: #ee6e73;
+    position:relative;
+    bottom:5px;
 }
 
 footer.page-footer .footer-copyright {
@@ -4447,11 +4451,11 @@ h6 a {
 h1 {
     font-size: 4.2rem;
     line-height: 110%;
-    margin: 2.1rem 0 1.68rem 0;
+    margin: 2rem 0 1.68rem 0;
 }
 
 h2 {
-    font-size: 3.56rem;
+    font-size: 2rem;
     line-height: 110%;
     margin: 1.78rem 0 1.424rem 0;
 }

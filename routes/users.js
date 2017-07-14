@@ -55,9 +55,7 @@ router.post('/register', function(req,res){
             if(err) throw err;
             console.log(user);
         });
-
-        //req.flash('success_msg', "You are registered and can now log-in");
-
+        req.flash('success_msg', "You are registered and can now log in");
         res.redirect('/login');
     }
 });
@@ -69,7 +67,7 @@ passport.use(new LocalStrategy(
         if(err) throw err;
         if(!user){
             console.log("Not a user"); 
-            //return done(null, false, {message: 'Unknown User'});
+            return done(null, false, {message: 'Unknown User'});
         }
 
         User.comparePassword(password, user.password, function(err, isMatch){
@@ -78,7 +76,7 @@ passport.use(new LocalStrategy(
                 return done(null, user);
             } else {
                 console.log("Not the right password.")
-                //return done(null, false, {message: 'Invalid password.'});
+                return done(null, false, {message: 'Invalid password.'});
             }
         });
     });
@@ -97,7 +95,7 @@ passport.deserializeUser(function(id, done) {
 
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/',failureFlash: true}),
+  passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/login',failureFlash: true}),
   function(req, res) {
 
     res.redirect('/profile');
