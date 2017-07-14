@@ -22,8 +22,6 @@ $(document).ready(function () {
 				var password = $("#password-input")
 						.val();
 
-				console.log("Log In clicked");
-
 				// Sign In to FBase
 				firebase
 						.auth()
