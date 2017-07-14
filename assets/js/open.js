@@ -17,7 +17,6 @@ $(document).ready(function () {
 
 		// Log In Button
 		$("#btnLogIn, #btnLogIn-modal").on("click", function () {
-			preventDefault();
 				var email = $("#email-input").val();
 				var password = $("#password-input")
 						.val();
