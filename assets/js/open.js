@@ -16,7 +16,7 @@ $(document).ready(function () {
 		var ref = database.ref();
 
 		// Log In Button
-		$("#btnLogIn").on("click", function () {
+		$("#btnLogIn, #btnLogIn-modal").on("click", function () {
 			preventDefault();
 				var email = $("#email-input").val();
 				var password = $("#password-input")
