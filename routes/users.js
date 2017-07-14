@@ -56,7 +56,7 @@ router.post('/register', function(req,res){
             console.log(user);
         });
 
-        //req.flash('success_msg', "You are registered and can now log-in");
+        req.flash('success_msg', "You are registered and can now log-in");
 
         res.redirect('/login');
     }
@@ -98,11 +98,10 @@ passport.deserializeUser(function(id, done) {
 
 router.post('/login',
   passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/login',failureFlash: true}),
-//   function(req, res) {
+  function(req, res) {
 
-//     res.redirect('/profile');
-//   });
-);
+    res.redirect('/profile');
+  });
 
 router.get('/logout', function(req, res){
     console.log("/users/logout has been clicked")
