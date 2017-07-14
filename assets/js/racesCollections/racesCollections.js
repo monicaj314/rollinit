@@ -353,7 +353,7 @@ var Races = [
         sizeDesc: "Dragonborn are taller and heavier than humans, standing w ell over 6 feet tall and averaging almost 250 pounds."
       },
       {
-        languageDesc: "You can speak,read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants."
+        languageDesc: "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants."
       }
     ],
     startingProfs: [],

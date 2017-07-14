@@ -5,7 +5,9 @@
 	<meta charset="utf-8">
 	<title>Roll Init</title>
 
-    <!-- JQuery Link -->
+	<!-- JQuery Link -->
+		      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	<!-- Home JavaScript -->
@@ -16,13 +18,15 @@
 
     <!-- Bootstrap Link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
 	<!-- Font Link -->
-   	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
+	   <link href="https://fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+English+SC|Montserrat|Playfair+Display+SC" rel="stylesheet">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
     <!-- Local CSS Link -->
-    <link rel="stylesheet" type="text/css" href="../css/all.css">
-    <link rel="stylesheet" type="text/css" href="../css/register.css">
+    <link rel="stylesheet" type="text/css" href="../css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
 	<!-- Firebase Link -->
@@ -33,11 +37,11 @@
  <body>
 		<div class="header">
 			<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-				<a class="navbar-brand" href="/">
-					<h2>R I</h2>
-				</a>
 				<div class="container-fluid">
 					<div class="navbar-header">
+					<a href="/">
+					<h2>R I</h2>
+					</a>
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-menu">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
@@ -45,31 +49,152 @@
 						<span class="icon-bar"></span>
 						</button>
 					</div>
-				</div>
-				<div class="collapse navbar-collapse" id="hamburger-menu">
+									<div class="collapse navbar-collapse" id="hamburger-menu">
 					<ul class="nav navbar-nav navbar-right">
  						<li class="nav-tab"><a class="nav-anc" href="/">Home</a></li> 
-    <!-- <li class="nav-tab"><a class="nav-anc" href="/char">Character Creator</a></li> -->
-						<li id="login" class="nav-tab" data-toggle="modal" data-target="#login-container"><a class="nav-anc">Login</a></li>
-						<li id="signup" class="nav-tab"><a class="nav-anc" data-toggle="modal" data-target="#login-container">Sign Up</a></li>
+						<li id="signup" class="nav-tab"><a class="nav-anc" data-toggle="modal" data-target="#login-container-modal">Sign Up</a></li>
 					</ul>
 				</div>
+				</div>
+
 			</div>
 		</nav>
 	</div>
-<div class="outter-footer">
-                        <div class="footer row">
-                            <div class="col-md-12" id="footer-text">
-                                <div class="row footer-center-row">
-                                    <div class="footer-textbox">
-                                        <p class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-</body>
+	<div class="container login-container" id="login-container">
+    <h2 class="page-header"> Login </h2>
+    <form method="post" action="/users/login">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+<!--Footer-->
+<br>
+<br>
+      <footer class="page-footer green darken-4">
+        <div class="container">
+          <div class="row">
+            <div class="contact-us col m5 push-m1 push-s1">
+              	<h5>Contact Us</h5>
+            	<address>
+                	<a href="mailto:rollinit@gmail.com">rollinit@gmail.com</a>
+              	</address>
+            </div>
+        	<div class=" col m6 push-s1 pull-s1 footer-copyright">
+            		<div id="ourNames">&copy2017 Made by Travis Nash, Paden Pace, Monica Jones, & Keli Poole
+		  		</div>
+			</div>
+		</div>
+		</div>
+      </footer>
 
-</html>
 
+      </div>
+	  </div>
+	
+	  <!--Modal-->
+  <div class="modal fade" tabindex="1" id="login-container-modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <ul class="nav nav-tabs" role="tablist">
+            <li id="login-tab" role="presentation"><a href="#log-in" data-toggle="tab" aria-controls="log-in" role="tab">Login</a></li>
+            <li id="register-tab" role="presentation" class="active"><a href="#register" data-toggle="tab" aria-controls="register" role="tab">Register</a></li>
+          </ul>
+          <!-- Register tab -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="register">
+              <form method="post" action="/users/register">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" class="form-control" placeholder="Name" name="name">
+                </div>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" placeholder="Username" name="username">
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="text" class="form-control" placeholder="Email" name="email">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" placeholder="Password" name="password">
+                </div>
+                <div class="form-group">
+                  <label>Confirm Password</label>
+                  <input type="password" class="form-control" placeholder="Password" name="password2">
+                </div>
+                <button type="submit" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <button id="btnSignUp" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+
+            <!-- Login Tab -->
+            <div role="tabpanel" class="tab-pane" id="log-in">
+              <form method="post" action="users/login">
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <button data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <button id="btnLogIn" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal -->
+ 
+    <script>
+      $(document).ready(function () {
+        (function ($) {
+          $(function () {
+            $('div#login-container').modal();
+            $(".dropdown-button").dropdown();
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+          });
+        });
+	  });
+	
+	  $("#signup").on("click", function () {
+				$("#log-in, #login-tab").removeClass("active");
+				$("#register, #register-tab").addClass("active");
+		});
+    </script>
+<!-- 					<div class="outer-footer">
+						<div class="footer row">
+							<div class="col-md-12" id="footer-text">
+								<div class="row footer-center-row">
+									<div class="footer-textbox">
+										<br>
+										<div class="footer-text footer-name">Roll Init <a href="https://github.com/monicaj314/rollinit">Github</a></div>
+										<ul> 
+										<br>
+										<li><a href="./apiRace">Race API</a></li>
+										<li><a href="./apiClass">Class API</a></li>
+										<li><a href="./apiEquipment">Equipment API</li>
+										<li><a href="./apiSpells">Spells API</a></li>
+										<li><a href="./apiBackground">Background API</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+				</body>
+			</html>

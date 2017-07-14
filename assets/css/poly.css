@@ -6,7 +6,7 @@ textarea {
 
 #output-box {
     height: 100%;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     color: #FFE89a;
     margin-bottom: 10px;
@@ -14,9 +14,9 @@ textarea {
 
 .die {
     height: 100%;
-max-width:100;
-padding: 0;
-margin-top:5px;
+    max-width:100;
+    padding: 0;
+    margin-top:5px;
 }
 
 div.col.l2 {

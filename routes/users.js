@@ -69,7 +69,7 @@ passport.use(new LocalStrategy(
         if(err) throw err;
         if(!user){
             console.log("Not a user"); 
-            //return done(null, false, {message: 'Unknown User'});
+            return done(null, false, {message: 'Unknown User'});
         }
 
         User.comparePassword(password, user.password, function(err, isMatch){
@@ -97,11 +97,12 @@ passport.deserializeUser(function(id, done) {
 
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/',failureFlash: true}),
-  function(req, res) {
+  passport.authenticate('local', {successRedirect: '/profile', failureRedirect: '/login',failureFlash: true}),
+//   function(req, res) {
 
-    res.redirect('/profile');
-  });
+//     res.redirect('/profile');
+//   });
+);
 
 router.get('/logout', function(req, res){
     console.log("/users/logout has been clicked")
