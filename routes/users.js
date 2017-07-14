@@ -55,9 +55,7 @@ router.post('/register', function(req,res){
             if(err) throw err;
             console.log(user);
         });
-
-        req.flash('success_msg', "You are registered and can now log-in");
-
+        req.flash('success_msg', "You are registered and can now log in");
         res.redirect('/login');
     }
 });
@@ -78,7 +76,7 @@ passport.use(new LocalStrategy(
                 return done(null, user);
             } else {
                 console.log("Not the right password.")
-                //return done(null, false, {message: 'Invalid password.'});
+                return done(null, false, {message: 'Invalid password.'});
             }
         });
     });

@@ -38,7 +38,7 @@
     "enzyme": "^2.8.2",
     "react-addons-test-utils": "^15.5.1",
     "react-scripts": "1.0.7",
-    "webpack": "^3.1.0"
+    "webpack": "^3.2.0"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -51,17 +51,17 @@
     "express-jquery": "^1.8.3",
     "express-messages": "^1.0.1",
     "express-session": "^1.15.3",
-    "express-validator": "^3.2.0",
+    "express-validator": "^3.2.1",
     "http-server": "^0.10.0",
-    "mongodb": "^2.2.29",
-    "mongoose": "^4.11.1",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.11.2",
+    "morgan": "^1.8.2",
     "passport": "^0.3.2",
     "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "raw-body": "^2.2.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "morgan": "^1.8.2"
+    "react-dom": "^15.6.1"
   }
 }

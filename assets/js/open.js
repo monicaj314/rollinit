@@ -19,8 +19,7 @@ $(document).ready(function () {
 		$("#btnLogIn").on("click", function () {
 				var email = $("#email-input").val();
 				var password = $("#password-input")
-						.val()
-						.trim();
+						.val();
 
 				console.log("Log In clicked");
 
