@@ -1,4 +1,4 @@
-[
+var druid = [
   {
     _id: "592d1ed5c9e7ce9f72157c6a",
     index: 4,
@@ -93,16 +93,17 @@
     },
     class_levels: {
       class: "Druid",
-      equipment:"You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a w ooden shield or (b) any simple weapon\n• (a) a scimitar or (b) any simple melee weapon\n• Leather armor, an explorer’s pack, and a druidic focus"
+      equipment:"You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a wooden shield or (b) any simple weapon\n• (a) a scimitar or (b) any simple melee weapon\n• Leather armor, an explorer’s pack, and a druidic focus"
     },
     
     spellcasting: {
       class: "Druid"
     },
-  },
 
-  featuresArray[
-    { _id: "druidLevel1",
+  featuresArray: 
+  [
+    { 
+      _id: "druidLevel1",
       level: 1,
       ability_score_bonuses: 0,
       prof_bonus: 2,
@@ -781,4 +782,7 @@
       },
     }
   ]
+  }
 ];
+  
+module.exports = druid;

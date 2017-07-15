@@ -1,4 +1,4 @@
-[
+var ranger = [
   {
     _id: "592d1ed5c9e7ce9f72157c6d",
     index: 8,
@@ -815,3 +815,4 @@
     ]
   }
 ];
+module.exports = ranger;

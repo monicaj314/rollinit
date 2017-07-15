@@ -13,8 +13,9 @@ var db = mongoose.connection;
 
 var Character = require('../models/character');
 var User = require('../models/user');
-var Races = require("./../assets/js/racesCollections/racesCollections.js")
-var Backgrounds = require("./../assets/js/backgroundsCollections.js") 
+var Races = require("./../assets/js/racesCollections/racesCollections.js");
+var Backgrounds = require("./../assets/js/backgroundsCollections.js"); 
+var Collections = require("./../assets/js/classCollections/classCollections.js");
 
 // Routes
 // =============================================================
@@ -38,8 +39,6 @@ app.get("/char", function(req, res){
           if (error) {
               res.send(error);
             } else {
-              console.log("doc")
-              console.log(doc)
               res.sendFile(path.join(__dirname + "./../assets/html/char.html"))
           }
         })
@@ -56,8 +55,6 @@ app.get("/char", function(req, res){
             if (error) {
               res.send(error);
             } else {
-              console.log("doc")
-              console.log(doc)
               res.sendFile(path.join(__dirname + "./../assets/html/profile.html"))
           }
         })
@@ -94,6 +91,22 @@ app.get("/char", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiClass.html"))
    });
 
+     app.get("/apiClass/:Collections?", function(req, res){
+     var selected = req.params.Collections;
+if (selected){
+  for (var chosen in Collections) {
+        if (Collections.hasOwnProperty(selected)) { 
+          selected = Collections[selected];
+            return res.json(selected)
+        }
+     } return res.json(false);
+}
+return res.json(Collections)
+
+   });
+
+
+
    app.get("/apiEquipment", function(req, res){
      res.sendFile(path.join(__dirname + "./../assets/html/htmlAPI/apiEquipment.html"))
    });
@@ -108,12 +121,11 @@ app.get("/char", function(req, res){
 
    app.get("/apiBackground/:Backgrounds?", function(req, res) {
   var chosen = req.params.Backgrounds;
-  console.log(Backgrounds[0][chosen]);
+  var selected = Backgrounds[0][chosen];
 
   if (chosen) {
-    for (chosen in Backgrounds[0]) {
-      if (Backgrounds[0].hasOwnProperty(chosen)) {
-        console.log(chosen, '!', Backgrounds[0][chosen])
+    for (selected in Backgrounds[0]) {
+      if (Backgrounds[0].hasOwnProperty(selected)) {
         return res.json(Backgrounds[0][chosen]);
       }
     }

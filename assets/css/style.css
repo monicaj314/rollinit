@@ -279,7 +279,7 @@ h4 {
 
 textarea#char-notes {
     background-color: #FFF5D3;
-    height: 700px;
+    height:500px;
     color: black;
 }
 
@@ -289,6 +289,10 @@ textarea#char-background {
     width: 75%;
     height: 300px;
     color: black;
+}
+
+textarea#char-class {
+    height: 300px;
 }
 
 #char-preview-container>h5 {

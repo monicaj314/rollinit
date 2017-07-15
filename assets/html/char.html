@@ -11,21 +11,20 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 		 integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
 		 crossorigin="anonymous">
+		   <!-- Materialize Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/materialize.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/poly.css">
-
 		<link href="https://fonts.googleapis.com/css?family=Eagle+Lake" rel="stylesheet">
 
-		<!-- Firebase/Script Tags-->
 		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 		<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		 crossorigin="anonymous"></script>
+		      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		 crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-		<!--<script type="text/javascript" src="../js/open.js"></script>-->
 		<script type="text/javascript" src="../js/char.js"></script>
 	</head>
 
@@ -108,8 +107,8 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label id="toon">Class</label>
-				<select  class="form-control" id="toon" name="className">
+				<label>Class</label>
+				<select id="select-class" class="form-control" name="className">
 					<option selected disabled="true">Select</option>
 					<option>Barbarian</option>
 					<option>Bard</option>
@@ -154,7 +153,8 @@
 <div class="col l3">
 	<div id="char-preview-container">
 		<h5>Character Notes</h5>
-		<textarea id="char-notes" name="character_notes" placeholder="Traits, Proficiencies, Languages, etc..." cols="35" rows="30"></textarea>
+		<textarea id="char-notes" name="character_notes" placeholder="Traits, Proficiencies, Languages, etc..." cols="35" rows="20"></textarea>
+		<textarea id="char-class" name="character-class" placeholder="Class Info" cols="35" rows="20"></textarea>
 	</div>
 	</div>
 	</div>
@@ -271,8 +271,6 @@
     });
 
 
-  </script>
-  <script>
 	var selectedBackground = $("#select-background").val();
     $("#select-background").on("change", function() {
 		selectedBackground = $("#select-background").val();
@@ -280,21 +278,51 @@
 		function getBackground() {
 		$("#char-background").empty();
 		$("#char-background").append(selectedBackground,
-	"\n==============================\n"); 
-}; 
-	// function grabSelected() {
-
-	// }
-
-	if (data) {
-		getBackground();
-        $("#char-background").append(
+		"\n==============================\n",
 			"Story: " + data.def + "\n-----------------------------\n",
 			"Skill proficiencies: " + data.skillProf + "\n-----------------------------\n",  
 			"Equipment: " + data.equipment + "\n-----------------------------\n",
-		 "\n==============================\n"
-		 );
+		 "\n==============================\n");
+}; 
+	if (data) {
+		getBackground();
 		}
+	});
+});
+	var selectedClass = $("#select-class").val();
+
+    $("#select-class").on("change", function() {
+		selectedClass = $("#select-class").val().toLowerCase();
+		 $.get("/apiClass/" + selectedClass, function(data) {
+		function getHitDie() {
+		$("#char-class").empty();
+		$("#char-class").append(selectedClass.toUpperCase(),
+		"\n==============================\n",
+		"Hit Die: " + data[0].hit_die + "\n------------------------------------\n");
+};
+	function getEquipment() {
+		data = data[0];
+		if (data.starting_equipment.equipment !== undefined) {
+		$("#char-class").append(
+			"*Starting Equipment*\n" + data.starting_equipment.equipment,
+			"\n@@@@@@@@@@@@@@@@@@@@@@@@\n"
+		)
+	} else {
+				$("#char-class").append(
+			"*Starting Equipment*\n" + data.class_levels.equipment,
+			"\n@@@@@@@@@@@@@@@@@@@@@@@@\n"
+		)
+	}
+	}
+		 console.log(data);
+		  if(data)
+				{
+					getHitDie();
+					getEquipment();
+				}
+			
+			// getSkillChoices();
+			// getEquipment();
 	})
 })
 	  </script>

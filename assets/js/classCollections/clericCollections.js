@@ -1,4 +1,4 @@
-[
+var cleric = [
   {
     _id: "clericClass",
     name: "Cleric",
@@ -784,3 +784,4 @@
     ]
   }
 ];
+ module.exports = cleric;

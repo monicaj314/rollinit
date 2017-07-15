@@ -1,4 +1,4 @@
-[
+var sorcerer = [
   {
     _id: "592d1ed5c9e7ce9f72157c72",
     index: 10,
@@ -1137,3 +1137,4 @@
     ]
   }
 ];
+ module.exports = sorcerer;

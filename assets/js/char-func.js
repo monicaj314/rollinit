@@ -57,7 +57,7 @@ $(document).on("click", ".close-char", function() {
 });
 
 $(document).on("click", ".delete-char", function() {
-  // Grab the id associated with the article from the submit button
+
   
   var thisId = $(this).attr("data-id");
   console.log("thisId");
@@ -66,9 +66,7 @@ $(document).on("click", ".delete-char", function() {
     method: "GET",
     url: "/characters/delete/" + thisId
   })
-    // With that done, add the comment information to the page
     .done(function(data) {
-        console.log("data");
-        console.log(data);
+       location.reload();
     });
 });
