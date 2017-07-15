@@ -1,4 +1,4 @@
-[
+var rogue = [
   {
     _id: "592d1ed5c9e7ce9f72157c6e",
     index: 9,
@@ -562,3 +562,4 @@
     ]
   }
 ];
+ module.exports = rogue;

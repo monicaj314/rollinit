@@ -2,7 +2,7 @@ const path = require('path');
 module.exports = {
   entry: "./src/app.js",
   output: {
-    filename: "assets/bundle.js"
+    filename: "./assets/bundle.js"
   },
   module: {
     loaders: [

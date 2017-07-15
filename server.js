@@ -89,7 +89,7 @@ var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds153392.mlab.com:53392/herok
 
 if (process.env.MONGODB_URI){
     // this executes if this is being executed in heroku app
-    mongoose.connect(MONGODB_URI);
+    mongoose.connect(process.env.MONGODB_URI);
 } else {
    /// this executes if this is being executed on local machine
     mongoose.connect(localMongo);

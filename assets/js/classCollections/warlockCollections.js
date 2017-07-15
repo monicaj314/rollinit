@@ -1,4 +1,4 @@
-[
+var warlock = [
   {
     _id: "592d1ed5c9e7ce9f72157c70",
     index: 11,
@@ -810,3 +810,4 @@
     ]
   }
 ];
+ module.exports = warlock;

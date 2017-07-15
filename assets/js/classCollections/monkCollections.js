@@ -1,4 +1,4 @@
-[
+var monk = [
   {
     _id: "592d1ed5c9e7ce9f72157c6f",
     index: 6,
@@ -153,7 +153,7 @@
     ],
     starting_equipment: {
       class: "Monk",
-      equipment:"You start with the following equipment, in addition tothe equipment granted by your background:\n• (a) a shortsword or (b) any simple weapon\n• (a) a dungeoneer’s pack or (b) an explorer’s pack\n• 10 darts"
+      equipment:"You start with the following equipment, in addition to the equipment granted by your background:\n• (a) a shortsword or (b) any simple weapon\n• (a) a dungeoneer’s pack or (b) an explorer’s pack\n• 10 darts"
     },
     class_levels: {
       class: "Monk"
@@ -737,3 +737,4 @@
     ]
   }
 ];
+ module.exports = monk;

@@ -1,4 +1,4 @@
-[
+var fighter = [
   {
     _id: "592d1ed5c9e7ce9f72157c69",
     index: 5,
@@ -560,3 +560,5 @@
     ]
   }
 ];
+
+module.exports = fighter;

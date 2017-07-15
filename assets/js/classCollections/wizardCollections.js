@@ -1,4 +1,4 @@
-[
+var wizard = [
   {
     _id: "592d1ed5c9e7ce9f72157c71",
     index: 12,
@@ -661,3 +661,4 @@
     ]
   }
 ];
+ module.exports = wizard;

@@ -1,4 +1,4 @@
-[
+var paladin = [
   {
     _id: "592d1ed5c9e7ce9f72157c6c",
     index: 7,
@@ -609,3 +609,4 @@
     ]
   }
 ];
+ module.exports = paladin;

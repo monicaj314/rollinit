@@ -1,5 +1,6 @@
-[
-  {_id: "bardClass",
+var bard = [
+  {
+    _id: "bardClass",
 	name: "Bard",
     hit_die: 8,
 	skillChoices: [
@@ -142,22 +143,22 @@
 	},
     
     featuresArray: [
-        {_id: "bardLevel1",
+        {
+            _id: "bardLevel1",
             level: 1,
             ability_score_bonuses: 0,
             prof_bonus: 2,
             feature_choices: [],
-            features: [
-            {
+            features: []
         },
-        { _id: "bardLevel2",
+        { 
+            _id: "bardLevel2",
             level: 2,
             ability_score_bonuses: 0,
             prof_bonus: 2,
             feature_choices: [],
-            features: [
-            {
-        },
+            features: []
+            },
         { _id: "bardLevel3",
             level: 3,
             ability_score_bonuses: 0,
@@ -209,8 +210,7 @@
             ability_score_bonuses: 1,
             prof_bonus: 2,
             feature_choices: [],
-            features: [
-            {
+            features: []
         },
         { _id: "bardLevel5",
             level: 5,
@@ -376,7 +376,7 @@
             feature_choices: [],
             features: [
             {
-                name: "Song of Rest (d8)"
+                name: "Song of Rest (d8)",
                 def: [
                 "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest, each of those creatures regains an extra 1d6 hit points.", "The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d 10 at 13th level, and to 1d 12 at 17th level."
                 ]
@@ -418,7 +418,7 @@
             ],
             features: [
             {
-                name: "Bardic Inspiration (d10)"
+                name: "Bardic Inspiration (d10)",
                 def: [
                 "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d10 at 10th level."
                 ]
@@ -431,7 +431,7 @@
                 ]
             },
             {
-                name: "Magical Secrets 1"
+                name: "Magical Secrets 1",
                 def: [
                 "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.",
                 "The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table.",
@@ -849,8 +849,9 @@
             index: 40,
             class: {
             name: "Bard",
-            },
+            }
         }
-        ];
-    }
-];
+            ]
+  }];
+
+  module.exports = bard;
