@@ -2,6 +2,13 @@
 ----
 ## A tabletop roleplaying game assistant
 
+#### Project guts:
+* Node
+* Express
+* Mongodb
+* React
+* Bootstrap & Materialize
+
 #### Key Features:
 * Simple Register/Login
 * Character creator with Race, Class, & Background look-up (Spells & Equipment soon to follow)
