@@ -20,3 +20,8 @@
 * Exportable character sheets
 * Campaign notator
 * Game Master tools
+
+
+#### Screen Shot:
+
+![alt text](https://github.com/monicaj314/rollinit/blob/tester/character-preview.png "app screen shot")
