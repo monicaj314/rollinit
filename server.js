@@ -10,7 +10,7 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-var db = mongoose.connection;
+
 
 var users = require('./routes/users');
 var characters = require('./routes/characters');
@@ -85,7 +85,7 @@ require("./routes/html-routes.js")(app);
 
 // =========  Database configuration with mongoose ===============
 var localMongo = "mongodb://localhost/rollinit";
-var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds159662.mlab.com:59662/rollinit";
+var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds153392.mlab.com:53392/heroku_pq8mzfbr";
 
 if (process.env.MONGODB_URI){
     // this executes if this is being executed in heroku app
@@ -95,12 +95,16 @@ if (process.env.MONGODB_URI){
     mongoose.connect(localMongo);
 }
 
-db.once('open', function() {
-  console.log('Mongoose connection successful.');
-});
+var db = mongoose.connection;
+
 db.on('error', function(err) {
   console.log('Moongoose Error: ', err);
 });
+
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
+
 
 
 
