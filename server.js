@@ -85,7 +85,7 @@ require("./routes/html-routes.js")(app);
 
 // =========  Database configuration with mongoose ===============
 var localMongo = "mongodb://localhost/rollinit";
-var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds153392.mlab.com:53392/heroku_pq8mzfbr";
+var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds159662.mlab.com:59662/rollinit";
 
 if (process.env.MONGODB_URI){
     // this executes if this is being executed in heroku app
@@ -95,14 +95,14 @@ if (process.env.MONGODB_URI){
     mongoose.connect(localMongo);
 }
 
-
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
 db.on('error', function(err) {
   console.log('Moongoose Error: ', err);
 });
 
-db.once('open', function() {
-  console.log('Mongoose connection successful.');
-});
+
 
 // Set Port
 var PORT = process.env.PORT || 8880;
