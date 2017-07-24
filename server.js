@@ -87,9 +87,14 @@ require("./routes/html-routes.js")(app);
 var localMongo = "mongodb://localhost/rollinit";
 var MONGODB_URI = "mongodb://<dbuser>:<dbpassword>@ds159662.mlab.com:59662/rollinit";
 
+var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
+    replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
+
+
+
 if (process.env.MONGODB_URI){
     // this executes if this is being executed in heroku app
-    mongoose.connect(process.env.MONGODB_URI);
+    mongoose.connect(MONGODB_URI, options);
 } else {
    /// this executes if this is being executed on local machine
     mongoose.connect(localMongo);
